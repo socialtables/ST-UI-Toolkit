@@ -1,0 +1,36 @@
+{
+  "name": "belleExamples",
+  "version": "2.0.3",
+  "description": "Playground for using & developing Belle components",
+  "author": {
+    "name": "Nik Graf",
+    "email": "nik@nikgraf.com",
+    "url": "http://www.nikgraf.com"
+  },
+  "main": "js/app.jsx",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nikgraf/belle.git"
+  },
+  "dependencies": {
+    "react": "=0.14.3",
+    "react-addons-linked-state-mixin": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "underscore": "=1.8.3"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.33",
+    "babel-loader": "^5.3.3",
+    "eslint": "^1.10.1",
+    "eslint-config-airbnb": "^1.0.0",
+    "express": "^4.13.3",
+    "node-libs-browser": "^0.5.3",
+    "react-transform-catch-errors": "^1.0.0",
+    "redbox-react": "^1.2.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
