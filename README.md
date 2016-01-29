@@ -2,7 +2,7 @@
 
 React Component Toolkit for Social Tables.
 
-Website & Documentation: [http://nikgraf.github.io/ui-stoolkit/](http://nikgraf.github.io/ui-stoolkit/)
+Website & Documentation: [http://socialtables.github.io/UI-SToolkit](http://socialtables.github.io/UI-SToolkit)
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ ReactDOM.render(<App/>, document.getElementById('react-root'));
 
 ### Learn more
 
-In addition you can dig through the [documentation](http://nikgraf.github.io/ui-stoolkit/) to learn about how to modify components.
+In addition you can dig through the [documentation](http://socialtables.github.io/UI-SToolkit) to learn about how to modify components.
 
 ## Browser Support
 
