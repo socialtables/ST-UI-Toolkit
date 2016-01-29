@@ -35,21 +35,23 @@ We recommend you get started with [React](https://facebook.github.io/react/) fir
 
 ```javascript
 const React = require('react');
-const Stoolkit = require('@socialtables/ui-stoolkit');
-const TextInput = Stoolkit.TextInput;
+const ReactDOM = require('react-dom');
+const SToolkit = require('@socialtables/ui-stoolkit');
+const Button = SToolkit.Button;
 
-const App = React.createClass({
-
-  render: function() {
-    return (
-      <div>
-        <TextInput defaultValue="Update here and see how the input grows …" />
-      </div>
-    );
+class App extends React.Component {
+  _clickHandler() {
+    alert("YOLO");
   }
-});
 
-React.render(<App/>, document.getElementById('react-root'));
+  render() {
+    return <div>
+      <Button onClick={this._clickHandler} />
+    </div>;
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('react-root'));
 ```
 
 ### Learn more
