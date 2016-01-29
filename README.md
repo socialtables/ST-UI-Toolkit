@@ -4,10 +4,6 @@ React Component Toolkit for Social Tables.
 
 Website & Documentation: [http://nikgraf.github.io/ui-stoolkit/](http://nikgraf.github.io/ui-stoolkit/)
 
-[![Build Status](https://travis-ci.org/nikgraf/belle.svg)](https://travis-ci.org/nikgraf/belle)
-[![Dependency Status](https://david-dm.org/nikgraf/belle.svg)](https://david-dm.org/nikgraf/belle)
-[![peerDependency Status](https://david-dm.org/nikgraf/belle/peer-status.svg)](https://david-dm.org/nikgraf/belle#info=peerDependencies)
-
 ## Getting Started
 
 UI-SToolkit is available as a private [npm](http://npmjs.org) package. Once you have npm you can install UI-SToolkit in your project folder with:
