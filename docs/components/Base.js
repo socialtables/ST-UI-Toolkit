@@ -78,7 +78,7 @@ export default React.createClass({
             </h1>
           </Link>
           <p style={{ fontSize: 22, marginTop: 0, paddingTop: 20, color: '#FEFEFE', clear: 'both'}}>
-            Configurable React Components with great UX
+            React Components for Common UI Patterns used at Social Tables
           </p>
         </Column>
       </header>
