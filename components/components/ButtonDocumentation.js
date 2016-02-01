@@ -14,7 +14,7 @@ export default class ButtonDocumentation extends Component {
 
       <h2 style={ {marginTop: 0, marginBottom: 40} }>Button</h2>
 
-      <Button onClick={() => console.log("yolo")}>Click Here</Button>
+      <Button onClick={() => console.log("yolo")}>CLICK HERE</Button>
 
       <Code value={ basicCodeExample } style={ {marginTop: 40} } />
 
@@ -23,7 +23,7 @@ export default class ButtonDocumentation extends Component {
       <table><tbody>
         <tr>
           <td style={ propertyNameStyle }>
-            primary
+            disabled
           </td>
         </tr>
         <tr>
@@ -31,8 +31,9 @@ export default class ButtonDocumentation extends Component {
             <p >
               <i>Boolean</i>
               <br />
-              default: false</p>
-            <p>If true the Button will be appear with the primary button styles</p>
+              default: <b>false</b>
+            </p>
+            <p>If true, the button will appear disabled and click handlers will not work</p>
           </td>
         </tr>
 
@@ -46,7 +47,7 @@ export default class ButtonDocumentation extends Component {
             <p>
               <i>String</i> of 'button', 'submit', 'reset'
               <br />
-              default: 'button'
+              default: <b>'button'</b>
             </p>
             <p>
               This button by is set to type 'button' by default. This different
@@ -58,22 +59,7 @@ export default class ButtonDocumentation extends Component {
 
         <tr>
           <td style={ propertyNameStyle }>
-            disabled
-          </td>
-        </tr>
-        <tr>
-          <td style={ propertyDescriptionStyle }>
-            <p>
-              <i>Boolean</i>
-              <br />
-              default: false</p>
-            <p>If true the Button will be disabled and can't be pressed by a user.</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style={ propertyNameStyle }>
-            hoverStyle
+            style
           </td>
         </tr>
         <tr>
@@ -81,121 +67,16 @@ export default class ButtonDocumentation extends Component {
             <p>
               <i>Object</i>
               <br />
-              optional
+              default: See <b>/src/components/Button/styles.js</b> file
             </p>
-            <p>
-              Works like React's built-in style property.
-              Becomes active once the user hovers over the button with the cursor.
-            </p>
+            <p>Radium-based inline-style</p>
           </td>
         </tr>
 
-        <tr>
-          <td style={ propertyNameStyle }>
-            focusStyle
-          </td>
-        </tr>
-        <tr>
-          <td style={ propertyDescriptionStyle }>
-            <p>
-              <i>Object</i>
-              <br />
-              optional
-            </p>
-            <p>
-              Works like React's built-in style property except that it extends
-              the properties from the base style.
-              Becomes active once the button is the element focused in the DOM.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style={ propertyNameStyle }>
-            activeStyle
-          </td>
-        </tr>
-        <tr>
-          <td style={ propertyDescriptionStyle }>
-            <p>
-              <i>Object</i>
-              <br />
-              optional
-            </p>
-            <p>
-              Works like React's built-in style property except that it extends
-              the properties from the base style.
-              Becomes active once the button is pressed by a user, but yet not release.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style={ propertyNameStyle }>
-            disabledStyle
-          </td>
-        </tr>
-        <tr>
-          <td style={ propertyDescriptionStyle }>
-            <p>
-              <i>Object</i>
-              <br />
-              optional
-            </p>
-            <p>
-              Works like React's built-in style property except that it extends
-              the properties from the base style.
-              Becomes active once the button is disabled.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style={ propertyNameStyle }>
-            disabledHoverStyle
-          </td>
-        </tr>
-        <tr>
-          <td style={ propertyDescriptionStyle }>
-            <p>
-              <i>Object</i>
-              <br />
-              optional
-            </p>
-            <p>
-              Works like React's built-in style property except that it extends
-              the properties from the base disabledStyle.
-              Becomes active once the button is disabled and a user hovers over it.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style={ propertyNameStyle }>
-            preventFocusStyleForTouchAndClick
-          </td>
-        </tr>
-        <tr>
-          <td style={ propertyDescriptionStyle }>
-            <p>
-              <i>Boolean</i>
-              <br />
-              optional (default: true)
-            </p>
-            <p>
-              Prevents the focus style being applied in case the buttons becomes
-              focused by a click or touch.<br />
-              <b>Background:</b>
-              Focus styles are helpful to identify which element is currently
-              in focus when tabbing through the elements e.g. a user wants to
-              switch to the next input element. Yet it feels somewhat distracting
-              when clicking on the Button. That's why Belle by default prevents
-              the focus style being applied in case the Button is focused on
-              by a touch or click event.
-            </p>
-          </td>
-        </tr>
       </tbody></table>
+
+      <p>Any other property valid for a HTML button like <b>className</b>, <b>onClick</b>, …<p>
+
 
       <h3>More Examples</h3>
 
