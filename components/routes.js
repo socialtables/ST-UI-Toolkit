@@ -2,7 +2,12 @@ import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 
 import Base from './Base';
-import IntroducingBelleGuide from './guides/IntroducingBelle';
+
+import Introducing from './guides/Introducing';
+import HowDoIUse from './guides/HowDoIUse';
+import AddingComponents from './guides/AddingComponents';
+import ComponentStyling from './guides/ComponentStyling';
+
 import Home from './Home';
 import About from './About';
 import Configuration from './Configuration';
@@ -20,7 +25,10 @@ const routes = (
     <Route path="configuration" component={Configuration}/>
     <Route path="philosophy" component={Philosophy}/>
     <Route path="about" component={About}/>
-    <Route path="guide/introducing-belle" component={IntroducingBelleGuide}/>
+    <Route path="guide/introducing" component={Introducing}/>
+    <Route path="guide/how-to-use" component={HowDoIUse}/>
+    <Route path="guide/adding-components" component={AddingComponents}/>
+    <Route path="guide/component-styling" component={ComponentStyling}/>
     <IndexRoute component={Home}/>
   </Route>
 );

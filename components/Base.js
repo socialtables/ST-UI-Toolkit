@@ -137,10 +137,10 @@ export default React.createClass({
           <span style={ { color: '#738088' } } >Guides / Philosophy</span>
           <ul style={ { listStyleType: 'none', paddingLeft: 0 } }>
             <li>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing-belle">What is UI-SToolkit?</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing-belle">How Do I Use a Component In My App?</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing-belle">How Do I Add a Component To the Toolkit?</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing-belle">Component Styling</Link>
+              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing">What is UI-SToolkit?</Link>
+              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/how-to-use">How Do I Use a Component In My App?</Link>
+              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/component-styling">Component Styling</Link>
+              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/adding-components">How Do I Add a Component To the Toolkit?</Link>
             </li>
           </ul>
           <span style={ { color: '#738088' } } >Other</span>
