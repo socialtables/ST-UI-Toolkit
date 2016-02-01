@@ -56,7 +56,7 @@ ReactDOM.render(<App/>, document.getElementById('react-root'));
 
 ### Learn more
 
-In addition you can dig through the [documentation](http://socialtables.github.io/UI-SToolkit) to learn about how to modify components.
+In addition you can dig through the [documentation](http://socialtables.github.io/UI-SToolkit) to learn about how to add and use components.
 
 ## Browser Support
 
@@ -68,25 +68,6 @@ In addition you can dig through the [documentation](http://socialtables.github.i
 ## Philosophy
 
 As we design the User Interfaces for various products here at Social Tables, we often times run into common patters or components that we end up re-implementing in multiple places. This library allows us to place all of our reusable patterns into a single module that can be used by any Social Table's application.
-
-## Extensible Styling
-
-
-### CSS Styling
-```js
-
-// TODO
-
-```
-
-
-### Inline Styling
-```js
-
-// TODO
-
-```
-
 
 ## Development
 
