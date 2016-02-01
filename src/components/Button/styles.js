@@ -1,4 +1,5 @@
 import colors from "../../shared-styles/colors";
+import fonts from "../../shared-styles/fonts";
 
 /*
   Default Styles

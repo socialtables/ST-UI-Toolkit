@@ -52,14 +52,14 @@ const stFonts = {
 };
 
 export default {
-  one: weight300StyleNormal,
-  two: weight300StyleItalic,
-  three: weight400StyleNormal,
-  four: weight400StyleItalic,
-  five: weight600StyleNormal,
-  six: weight600StyleItalic,
-  seventh: weight700StyleNormal,
-  eight: weight700StyleItalic,
-  nine: weight800StyleNormal,
-  ten: weight800StyleItalic
+  one: stFonts.weight300StyleNormal,
+  two: stFonts.weight300StyleItalic,
+  three: stFonts.weight400StyleNormal,
+  four: stFonts.weight400StyleItalic,
+  five: stFonts.weight600StyleNormal,
+  six: stFonts.weight600StyleItalic,
+  seventh: stFonts.weight700StyleNormal,
+  eight: stFonts.weight700StyleItalic,
+  nine: stFonts.weight800StyleNormal,
+  ten: stFonts.weight800StyleItalic
 };

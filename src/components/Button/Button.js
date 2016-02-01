@@ -1,5 +1,5 @@
 import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import {Component, PropTypes} from "react";
 
 import defaultStyles from "./styles";
 
@@ -15,22 +15,48 @@ export default class Button extends Component {
 
   constructor(properties) {
     super(properties);
+    const { style, ...childProps } = properties;
+    this._childProps = childProps;
+  }
+
+  /**
+   * Update the childProps based on the updated properties passed to the card.
+   */
+  componentWillReceiveProps(properties) {
+    const { style, ...childProps } = properties;
+    this._childProps = childProps;
   }
 
   render() {
     return (
       <button
-        disabled={this.props.disabled}
-        type={this.props.type || "button"}
+        {...this._childProps}
+        type={this.props.type}
         style={[
           defaultStyles.base,
           this.props.disabled && defaultStyles.disabled,
           this.props.style
         ]}
-        className={this.props.className}
-        onClick={this.props.onClick}>
+        onClick={(this.props.disabled) ? null : this.props.onClick} >
         { this.props.children }
       </button>
     );
   }
 }
+
+Button.displayName = "Button";
+
+Button.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
+  style: PropTypes.object,
+  type: PropTypes.string,
+  disabled: PropTypes.bool
+};
+
+Button.defaultProps = {
+  type: "button",
+  disabled: false
+};
