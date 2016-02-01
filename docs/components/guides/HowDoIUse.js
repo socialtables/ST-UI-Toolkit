@@ -28,9 +28,7 @@ export default class HowDoIUse extends Component {
       <h1 style={ {marginTop: 0, marginBottom: 20} }>How Do I Use a Component In My App?</h1>
 
       <p>
-        To use one of the components in your library, import the library into your application.
-        <br/><br/>
-        Access the component you want to use via the namespace, and then use it like you would any other React component!
+        To use one of the components in your application, import the library and access the component you want to use via the library namespace object, and then use it like you would any other React component!
         <br/><br/>
         See the documentation for the specific component to get more details regarding the props it consumes.
       </p>

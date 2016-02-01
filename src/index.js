@@ -1,12 +1,7 @@
-import Button from './components/Button';
-import Card from './components/Card';
-import buttonStyle from './style/button';
-import buttonConfig from './config/button';
+import Button from './components/Button/Button';
+import Card from './components/Card/Card';
 
 module.exports = {
   Button: Button,
-  Card: Card,
-  style: {
-    button: buttonStyle
-  }
+  Card: Card
 };
