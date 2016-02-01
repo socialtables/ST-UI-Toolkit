@@ -13,7 +13,7 @@ export default class Why extends Component {
         <br/><br/>
         As we design the User Interfaces for various products here at Social Tables, we often times run into common patters or components that we end up re-implementing in multiple places.
         <br/><br/>
-        This library allows us to place all of our reusable patterns into a single module that can be used by any Social Table's application.
+        This library allows us to consolidate all of our reusable patterns into a single module that can be used by any Social Table's application.
       </p>
     </div>);
   }

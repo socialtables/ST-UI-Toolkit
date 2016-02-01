@@ -10,9 +10,9 @@ const Button = SToolkit.Button;
 class App extends React.Component {
   render() {
     return <div>
-      /* Renders button with yellow color instead of #cb5599 */
+      /* Renders button with yellow (#ffff00) color instead of #cb5599 */
       <Button
-        style={backgroundColor: "#ffff00"}
+        style={background: "#ffff00"}
         onClick={this._clickHandler} />
     </div>;
   }
@@ -32,7 +32,7 @@ class App extends React.Component {
 
   render() {
     return <div>
-      /* CSS can style against .my-confirm-btn class (but cannot override default properties) */
+      /* CSS can style against .my-confirm-btn class (but cannot override default properties such as 'background') */
       <Button
         className="my-confirm-btn"
         onClick={this._clickHandler} />
@@ -48,20 +48,19 @@ export default class ComponentStyling extends Component {
     return (<div>
       <h1 style={ {marginTop: 0, marginBottom: 20} }>Component Styling</h1>
       <p>
-        Based on decisions made by recent popular React component toolkits such as Belle and MaterialUI, we have decided to have <b>default styles for components be done via inline styles using <a href="https://github.com/FormidableLabs/radium" target="_blank">Radium</a></b>
+        Based on recent decisions made by popular React component toolkits such as Belle and MaterialUI, we have decided to have <b>default styles for components be done via inline styles using <a href="https://github.com/FormidableLabs/radium" target="_blank">Radium</a></b>
         <br/>
         <br/>
         This provides the following benefits:
         <ul>
-          <li>Allows a component to be imported into a project and render immediately (style + functionality) without loading in an external stylesheet that contains all the component styles.</li>
+          <li>Allows a component to be imported into a project and render immediately (style + functionality) without having the application load in an external stylesheet that contains all the component styles.</li>
           <li>Radium has support for complex functionality such as browser states (:hover, :focus, :active) within inline-lines and generating vendor prefixes</li>
         </ul>
-        All components will have a set of default styles such that they can be imported into a project and immediately used, but if the user desires to override any of the defaults, they can do so by passing a <i>style</i>
-        property down to the component.
+        All components will have a set of default styles defined so that they can be imported into a project and immediately used, but if the user desires to override any of the defaults, they can do so by passing a <i>style</i> property down to the component.
 
         <Code value={ inlineStylesExample } style={ {marginTop: 40} } />
 
-        However, users can still specify a 'className' property that will be applied to the outermost element within the component, which allows them to style against non-default styles via CSS.
+        However, users can still specify a <i>className</i> property that will be applied to the outermost element within the component, which allows them to style against non-default styles via CSS.
 
         <Code value={ classNameExample } style={ {marginTop: 40} } />
 
