@@ -1,5 +1,5 @@
 {
-  "name": "@socialtables/ui-stoolkit",
+  "name": "@socialtables/st-ui-toolkit",
   "version": "0.0.0",
   "description": "Configurable React Components used at Social Tables",
   "author": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/socialtables/ui-stoolkit.git"
+    "url": "git://github.com/socialtables/st-ui-toolkit.git"
   },
   "main": "lib/index.js",
   "keywords": [

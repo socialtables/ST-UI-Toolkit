@@ -1,12 +1,12 @@
+import colorLib from "color";
 import colors from "../../shared-styles/colors";
 import fonts from "../../shared-styles/fonts";
-import colorLib from "color";
-
+import getColorFromTheme from "../../utils/get-color-from-theme";
 /*
   Default Styles
 */
-export default function({ color }) {
-  const btnBackgroundColor = color || colors.primary;
+export default function({ theme }) {
+  const btnBackgroundColor = getColorFromTheme(theme);
 
   return {
     base: {

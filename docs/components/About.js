@@ -18,6 +18,7 @@ export default class FuturePlans extends Component {
       <ul>
         <li>Add more components!</li>
         <li>Continue to dogfood the library interally until we deem it worthy of open-sourcing</li>
+        <li>Flesh out the test-suite</li>
       </ul>
     </div>);
   }

@@ -1,15 +1,15 @@
-# UI-SToolkit
+# ST-UI-Toolkit
 
 React Component Toolkit for Social Tables.
 
-Website & Documentation: [http://socialtables.github.io/UI-SToolkit](http://socialtables.github.io/UI-SToolkit)
+Website & Documentation: [http://socialtables.github.io/st-ui-toolkit](http://socialtables.github.io/st-ui-toolkit)
 
 ## Getting Started
 
-UI-SToolkit is available as a private [npm](http://npmjs.org) package. Once you have npm you can install UI-SToolkit in your project folder with:
+ST-UI-Toolkit is available as a private [npm](http://npmjs.org) package. Once you have npm you can install ST-UI-Toolkit in your project folder with:
 
 ```
-npm install @socialtables/ui-stoolkit
+npm install @socialtables/st-ui-toolkit
 ```
 
 ### Import & Use Components
@@ -36,8 +36,8 @@ We recommend you get started with [React](https://facebook.github.io/react/) fir
 ```javascript
 const React = require('react');
 const ReactDOM = require('react-dom');
-const SToolkit = require('@socialtables/ui-stoolkit');
-const Button = SToolkit.Button;
+const STUIToolkit = require('@socialtables/st-ui-toolkit');
+const Button = STUIToolkit.Button;
 
 class App extends React.Component {
   _clickHandler() {
@@ -56,7 +56,7 @@ ReactDOM.render(<App/>, document.getElementById('react-root'));
 
 ### Learn more
 
-In addition you can dig through the [documentation](http://socialtables.github.io/UI-SToolkit) to learn about how to add and use components.
+In addition you can dig through the [documentation](http://socialtables.github.io/st-ui-toolkit) to learn about how to add and use components.
 
 ## Browser Support
 
@@ -101,6 +101,7 @@ To run the test continuously you can use `npm run test:watch`.
 ## Special Thanks
 
 - [Belle](https://github.com/nikgraf/belle) for providing the initial starting point/framework
+- [Julian Haddad (Lead Designer at Social Tables)](http://julianhaddad.com/) for designing most if not all of the components!
 
 ## License
 

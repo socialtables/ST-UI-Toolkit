@@ -3,7 +3,7 @@ import color from "color";
 // The following color names were adapted from the ST Style Guide
 // https://app.frontify.com/d/D1f3khsW7KQG/social-tables-style-guide#/basics/colors
 
-const stColorPalette = {
+export const stColorPalette = {
   stPink: "#cb5599",
   stDarkGray: "#494949",
   stTeal: "#49c6b7",

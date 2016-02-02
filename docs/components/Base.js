@@ -74,7 +74,7 @@ export default React.createClass({
                              display: 'block',
                              float: 'left',
                              marginLeft: 10 }}>
-                UI-SToolkit
+                ST-UI-Toolkit
               </span>
             </h1>
           </Link>
@@ -101,7 +101,7 @@ export default React.createClass({
                 }}>
                 <img src="images/ST_Icon_White.png"
                      style={{ height: 50, width: 50, borderRadius: 50 }} />
-                <div style={{ marginLeft: 10}}>UI-SToolkit</div>
+                <div style={{ marginLeft: 10}}>ST-UI-Toolkit</div>
               </div>
             </h1>
           </Link>
@@ -138,7 +138,7 @@ export default React.createClass({
           <span style={ { color: '#738088' } } >Guides / Philosophy</span>
           <ul style={ { listStyleType: 'none', paddingLeft: 0 } }>
             <li>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing">What is UI-SToolkit?</Link>
+              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing">What is ST-UI-Toolkit?</Link>
               <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/how-to-use">How Do I Use a Component In My App?</Link>
               <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/component-styling">Component Styling</Link>
               <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/adding-components">How Do I Add a Component To the Toolkit?</Link>
@@ -150,10 +150,10 @@ export default React.createClass({
               <Link style={{ display: 'block', padding: '3px 0' }} to="/about">About</Link>
             </li>
             <li>
-              <a style={{ display: 'block', padding: '3px 0' }} href="https://github.com/socialtables/ui-stoolkit" target="_blank">Code on Github</a>
+              <a style={{ display: 'block', padding: '3px 0' }} href="https://github.com/socialtables/st-ui-toolkit" target="_blank">Code on Github</a>
             </li>
             <li>
-              <a style={{ display: 'block', padding: '3px 0' }} href="https://github.com/socialtables/ui-stoolkit/issues" target="_blank">Report an Issue</a>
+              <a style={{ display: 'block', padding: '3px 0' }} href="https://github.com/socialtables/st-ui-toolkit/issues" target="_blank">Report an Issue</a>
             </li>
           </ul>
         </Column>

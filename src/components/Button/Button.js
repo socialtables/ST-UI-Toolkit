@@ -28,7 +28,7 @@ export default class Button extends Component {
   }
 
   render() {
-    const defaultStyles = getDefaultStyles({ color: this.props.color });
+    const defaultStyles = getDefaultStyles({ theme: this.props.color });
 
     return (
       <button
@@ -62,5 +62,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: "button",
-  disabled: false
+  disabled: false,
+  color: "light"
 };
