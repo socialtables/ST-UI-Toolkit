@@ -1,7 +1,7 @@
 import Radium from "radium";
 import {Component, PropTypes} from "react";
 
-import defaultStyles from "./styles";
+import getDefaultStyles from "./styles";
 
 /**
  * Button component
@@ -28,12 +28,15 @@ export default class Button extends Component {
   }
 
   render() {
+    const defaultStyles = getDefaultStyles({ color: this.props.color });
+
     return (
       <button
         {...this._childProps}
         type={this.props.type}
         style={[
           defaultStyles.base,
+          !this.props.disabled && defaultStyles.active,
           this.props.disabled && defaultStyles.disabled,
           this.props.style
         ]}
@@ -53,7 +56,8 @@ Button.propTypes = {
   ]),
   style: PropTypes.object,
   type: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  color: PropTypes.string
 };
 
 Button.defaultProps = {

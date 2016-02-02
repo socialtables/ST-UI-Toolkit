@@ -67,12 +67,13 @@ export default React.createClass({
                             display: 'block',
                             float: 'left',
                             marginRight: 12, }}>
-                <img src="images/ST_Icon.png"
+                <img src="images/ST_Icon_White.png"
                      style={{ width: "100%", height: "100%", borderRadius: 55 }} />
               </div>
               <span style={{ marginTop: -6,
                              display: 'block',
-                             float: 'left', }}>
+                             float: 'left',
+                             marginLeft: 10 }}>
                 UI-SToolkit
               </span>
             </h1>
@@ -98,7 +99,7 @@ export default React.createClass({
                   justifyContent: "flex-start",
                   alignItems: "center"
                 }}>
-                <img src="images/ST_Icon.png"
+                <img src="images/ST_Icon_White.png"
                      style={{ height: 50, width: 50, borderRadius: 50 }} />
                 <div style={{ marginLeft: 10}}>UI-SToolkit</div>
               </div>

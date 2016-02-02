@@ -5,7 +5,8 @@ import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
 const basicCodeExample = `<Button onClick={() => console.log("yolo")}>Click Here</Button>`;
 const disabledButtonCodeExample = `<Button disabled>Follow</Button>`;
-const redButtonCodeExample = `<Button style={{ background: "red" }}>This Button Is Red</Button>`;
+const redButtonCodeExample = `<Button color="red">This Button Is Red</Button>`;
+const radiumStylesCodeExample = `<Button style={{ background: "orange", border: "solid black 2px" }}>Yolo</Button>`;
 
 export default class ButtonDocumentation extends Component {
 
@@ -59,6 +60,22 @@ export default class ButtonDocumentation extends Component {
 
         <tr>
           <td style={ propertyNameStyle }>
+            color
+          </td>
+        </tr>
+        <tr>
+          <td style={ propertyDescriptionStyle }>
+            <p>
+              <i>String</i> of 'pink', 'gray', 'green', 'red'
+              <br />
+              default: 'pink'
+            </p>
+            <p>String used to set primary color of button</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style={ propertyNameStyle }>
             style
           </td>
         </tr>
@@ -75,7 +92,7 @@ export default class ButtonDocumentation extends Component {
 
       </tbody></table>
 
-      <p>Any other property valid for a HTML button like <b>className</b>, <b>onClick</b>, …<p>
+      <p>Any other property valid for a HTML button like <b>className</b>, <b>onClick</b>, …</p>
 
 
       <h3>More Examples</h3>
@@ -88,8 +105,13 @@ export default class ButtonDocumentation extends Component {
         </li>
         <li>
           <h4>Red button</h4>
-          <Button style={{ background: "red" }}>This Button Is Red</Button>
-          <Code value={ redButtonCodeExample } style={ {marginTop: 20} } />
+          <Button color="red">This Button Is Red</Button>
+          <Code value={ redButtonCodeExample } />
+        </li>
+        <li>
+          <h4>Override default Radium styles</h4>
+          <Button style={{ background: "orange", border: "solid black 2px" }}>Yolo</Button>
+          <Code value={ radiumStylesCodeExample } />
         </li>
       </ul>
 
