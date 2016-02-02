@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Code from './Code';
 
-const installCommand = `npm install @socialtables/ui-stoolkit`;
+const installCommand = `npm install @socialtables/st-ui-toolkit`;
 
 const usageExampleHtml = `<!doctype html>
 <html lang="en">
@@ -21,8 +21,8 @@ const usageExampleHtml = `<!doctype html>
 
 const usageExampleJavaScript = `const React = require('react');
 const ReactDOM = require('react-dom');
-const SToolkit = require('@socialtables/ui-stoolkit');
-const Button = SToolkit.Button;
+const STUIToolkit = require('@socialtables/st-ui-toolkit');
+const Button = STUIToolkit.Button;
 
 class App extends React.Component {
   _clickHandler() {
@@ -45,7 +45,7 @@ export default class GettingStarted extends Component {
       <h2 style={ {marginTop: 0, marginBottom: 40} }>Getting Started</h2>
 
       <p>
-        UI-SToolkit is available as a private <a href="http://npmjs.org">NPM</a> package under the @socialtables organization. Once you have npm you can install UI-SToolkit in your project folder with:
+        ST-UI-Toolkit is available as a private <a href="http://npmjs.org">NPM</a> package under the @socialtables organization. Once you have npm you can install ST-UI-Toolkit in your project folder with:
       </p>
 
       <Code value={ installCommand } style={ {marginTop: 40} } />

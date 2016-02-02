@@ -1,16 +1,15 @@
 {
-  "name": "belleDocumentation",
+  "name": "stUIToolkitDocumentation",
   "version": "2.0.3",
-  "description": "Docuemtation for Belle",
+  "description": "Docuemtation for ST-UI-Toolkit",
   "author": {
-    "name": "Nik Graf",
-    "email": "nik@nikgraf.com",
-    "url": "http://www.nikgraf.com"
+    "name": "Social Tables",
+    "url": "http://www.socialtables.com"
   },
   "main": "js/App.jsx",
   "repository": {
     "type": "git",
-    "url": "http://github.com/nikgraf/belle.git"
+    "url": "http://github.com/socialtables/st-ui-toolkit.git"
   },
   "dependencies": {
     "highlight.js": "=8.9.1",

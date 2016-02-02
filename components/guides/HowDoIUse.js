@@ -4,8 +4,8 @@ import Code from '../Code';
 
 const usageExampleHtml = `const React = require('react');
 const ReactDOM = require('react-dom');
-const SToolkit = require('@socialtables/ui-stoolkit');
-const Button = SToolkit.Button;
+const STUIToolkit = require('@socialtables/st-ui-toolkit');
+const Button = STUIToolkit.Button;
 
 class App extends React.Component {
   _clickHandler() {
