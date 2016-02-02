@@ -30,9 +30,9 @@
     "postpublish": "./scripts/publish_gh_pages.sh",
     "test": "BABEL_ENV=test BABEL_JEST_STAGE=0 jest src/",
     "test:watch": "npm run test -- --watch",
-    "lint": "npm run lint:eslint  && npm run lint:jscs",
+    "lint": "npm run lint:eslint",
     "lint:eslint": "eslint --rule 'mocha/no-exclusive-tests:2' ./",
-    "lint:jscs": "jscs ./",
+    "dev": "",
     "alex": "alex README.md"
   },
   "devDependencies": {
@@ -64,11 +64,13 @@
   },
   "jest": {
     "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/color",
+      "<rootDir>/node_modules/underscore",
       "<rootDir>/node_modules/react",
-      "underscore",
-      "../utils/helpers",
-      "../utils/union-class-names",
-      "../utils/is-component-of-type"
+      "<rootDir>/node_modules/fbjs",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/src"
     ],
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "preprocessCachingDisabled": true

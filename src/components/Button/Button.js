@@ -1,7 +1,7 @@
 import Radium from "radium";
-import {Component, PropTypes} from "react";
+import React, {Component, PropTypes} from "react";
 
-import getDefaultStyles from "./styles";
+import getStyles from "./styles";
 
 /**
  * Button component
@@ -13,55 +13,55 @@ import getDefaultStyles from "./styles";
 @Radium
 export default class Button extends Component {
 
-  constructor(properties) {
-    super(properties);
-    const { style, ...childProps } = properties;
-    this._childProps = childProps;
-  }
+	constructor(properties) {
+		super(properties);
+		const { style, ...childProps } = properties;
+		this._childProps = childProps;
+	}
 
-  /**
-   * Update the childProps based on the updated properties passed to the card.
-   */
-  componentWillReceiveProps(properties) {
-    const { style, ...childProps } = properties;
-    this._childProps = childProps;
-  }
+	/**
+	 * Update the childProps based on the updated properties passed to the card.
+	 */
+	componentWillReceiveProps(properties) {
+		const { style, ...childProps } = properties;
+		this._childProps = childProps;
+	}
 
-  render() {
-    const defaultStyles = getDefaultStyles({ theme: this.props.color });
+	render() {
+		const buttonStyles = getStyles({ theme: this.props.color });
 
-    return (
-      <button
-        {...this._childProps}
-        type={this.props.type}
-        style={[
-          defaultStyles.base,
-          !this.props.disabled && defaultStyles.active,
-          this.props.disabled && defaultStyles.disabled,
-          this.props.style
-        ]}
-        onClick={(this.props.disabled) ? null : this.props.onClick} >
-        { this.props.children }
-      </button>
-    );
-  }
+		return (
+			<button
+				{...this._childProps}
+				type={this.props.type}
+				style={[
+					buttonStyles.base,
+					!this.props.disabled && buttonStyles.active,
+					this.props.disabled && buttonStyles.disabled,
+					this.props.style
+				]}
+				onClick={(this.props.disabled) ? null : this.props.onClick} >
+				{ this.props.children }
+			</button>
+		);
+	}
 }
 
 Button.displayName = "Button";
 
 Button.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]),
-  style: PropTypes.object,
-  type: PropTypes.string,
-  disabled: PropTypes.bool,
-  color: PropTypes.string
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]),
+	style: PropTypes.object,
+	type: PropTypes.string,
+	disabled: PropTypes.bool,
+	color: PropTypes.string
 };
 
 Button.defaultProps = {
-  type: "button",
-  disabled: false,
-  color: "light"
+	type: "button",
+	disabled: false,
+	color: "light"
 };

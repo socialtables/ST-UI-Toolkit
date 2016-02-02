@@ -1,37 +1,52 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [ "mocha" ],
-  "extends": "airbnb",
-  "rules": {
-    "comma-dangle": 0,
-    "react/sort-comp": [2, {         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
-      "order": [
-        "constructor",
-        "displayName",
-        "propTypes",
-        "contextTypes",
-        "childContextTypes",
-        "mixins",
-        "statics",
-        "defaultProps",
-        "getDefaultProps",
-        "state",
-        "getInitialState",
-        "getChildContext",
-        "componentWillMount",
-        "componentDidMount",
-        "componentWillReceiveProps",
-        "shouldComponentUpdate",
-        "componentWillUpdate",
-        "componentDidUpdate",
-        "componentWillUnmount",
-        "/^_on.+$/",
-        "/^_get.+$/",
-        "/^_trigger.+$/",
-        "/^_.+$/",
-        "/^_render.+$/",
-        "render"
-      ]
-    }]
-  }
+    "env": {
+        "node": true,
+        "browser": true, // eslint-loader does not yet support deep .eslintrc trees.
+        "es6": true,
+        "mocha": true
+    },
+    "parser": "babel-eslint",
+    "globals": {
+        "i18n": true,
+        "React": true,
+        "ReactDOM": true,
+        "require": true,
+        "__ENV__": true,
+        "__DEV__": true,
+        "__VERSION__": true,
+        "__DEV_TOOLS__": true
+    },
+    "rules": {
+        "brace-style": [2, "stroustrup", { "allowSingleLine": false }],
+        "default-case": 2,
+        "indent": [2, "tab", {"SwitchCase": 1}],
+        "new-cap": 0, // for things like Immutable.Map()
+        "no-catch-shadow": 2,
+        "no-eq-null": 2,
+        "no-floating-decimal": 2,
+        "no-inline-comments": 0,
+        "no-nested-ternary": 2,
+        "no-param-reassign": 0,
+        "quote-props": [2, "as-needed"],
+        "no-self-compare": 2,
+        "no-shadow": 0,
+        "no-throw-literal": 2,
+        "no-undefined": 0,
+        "no-void": 2,
+        "quotes": [1, "double"],
+        "space-after-keywords": 2,
+        "wrap-iife": [2, "outside"],
+        "no-underscore-dangle": 0, // Allow leading underscores for method names - REASON: we use underscores to denote private methods
+        "dot-notation": 0
+    },
+    "ecmaFeatures": {
+        "modules": true,
+        "blockBindings": true,
+        "forOf": true,
+        "jsx": true
+    },
+    "plugins": [
+        "react",
+        "mocha"
+    ]
 }
