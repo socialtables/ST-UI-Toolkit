@@ -40,19 +40,6 @@ export default class CardDocumentation extends Component {
           <span style={ {color: 'grey'} }> style, id, className, …</span>
         </p>
 
-        <h3>More Examples</h3>
-
-        <h4>Card with a full-width image</h4>
-
-        <Card style={{ borderTop: '1px solid #f2f2f2',
-                       width: 265,
-                       padding: '20px 0',
-                    }}>
-          <img src="images/ngorongoro_caldera_small.jpg"
-               width="100%" />
-        </Card>
-
-        <Code value={ imageCodeExample } style={ {marginTop: 40} } />
       </div>
     );
   }
