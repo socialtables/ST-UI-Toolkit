@@ -2,7 +2,7 @@
 
 React Component Toolkit for Social Tables.
 
-Website & Documentation: [http://socialtables.github.io/st-ui-toolkit](http://socialtables.github.io/st-ui-toolkit)
+Website & Documentation: [http://socialtables.github.io/ST-UI-Toolkit](http://socialtables.github.io/st-ui-toolkit)
 
 ## Status
 
