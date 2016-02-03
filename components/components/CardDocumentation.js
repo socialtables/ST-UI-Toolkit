@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card} from 'belle';
+import {Card} from '@socialtables/st-ui-toolkit';
 import Code from '../Code';
 
 const basicCodeExample = `<!-- basic card example -->

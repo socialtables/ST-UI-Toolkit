@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import Column from './Column';
-import {Card} from 'belle';
+import {Card} from '@socialtables/st-ui-toolkit';
 
 export default React.createClass({
 
