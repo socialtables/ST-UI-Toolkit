@@ -4,6 +4,10 @@ React Component Toolkit for Social Tables.
 
 Website & Documentation: [http://socialtables.github.io/st-ui-toolkit](http://socialtables.github.io/st-ui-toolkit)
 
+## Status
+
+[![Circle CI](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/master.svg?style=svg&circle-token=f6ba2e6c4db055963a0b4fd2ff2a79a378eb857c)](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/master)
+
 ## Getting Started
 
 ST-UI-Toolkit is available as a private [npm](http://npmjs.org) package. Once you have npm you can install ST-UI-Toolkit in your project folder with:
