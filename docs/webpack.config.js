@@ -18,7 +18,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      belle: path.join(__dirname, '..', 'src'),
+      "st-ui-toolkit": path.join(__dirname, '..', 'src'),
       react: path.join(__dirname, 'node_modules', 'react'),
     },
     extensions: ['', '.js'],

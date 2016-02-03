@@ -9,7 +9,6 @@ bundle.js
 
 # sources
 /src/
-/examples/
 
 # NPM debug
 npm-debug.log

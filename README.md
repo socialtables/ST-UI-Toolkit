@@ -81,7 +81,7 @@ npm install
 
 ### Run the examples or docs application
 
-To run the examples or docs you go into the folder `docs` or `examples` and run `npm install` and `npm start`. The app will run with hot reloading on `http://localhost:3000`.
+To run the examples/docs you go into the folder `docs` and run `npm install` and `npm start`. The app will run with hot reloading on `http://localhost:3000`.
 
 ### Tests
 
