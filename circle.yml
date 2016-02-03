@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 5.2.0
+test:
+  pre:
+    - rm -rf node_modules/
+  override:
+    - npm test

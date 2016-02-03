@@ -13,5 +13,8 @@ bundle.js
 # NPM debug
 npm-debug.log
 
+# Circle
+circle.yml
+
 tests
 docs
