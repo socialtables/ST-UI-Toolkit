@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import GettingStarted from './GettingStarted';
-import {Card} from 'belle';
+import {Card} from '@socialtables/st-ui-toolkit';
 
 export default class Home extends Component {
 

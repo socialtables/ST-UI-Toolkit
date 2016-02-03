@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Card, Toggle} from 'belle';
 import Code from '../Code';
 
 export default class Why extends Component {

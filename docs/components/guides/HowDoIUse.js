@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Toggle} from 'belle';
+import {Card, Toggle} from '@socialtables/st-ui-toolkit';
 import Code from '../Code';
 
 const usageExampleHtml = `const React = require('react');

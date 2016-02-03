@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button} from 'belle';
+import {Button} from '@socialtables/st-ui-toolkit';
 import Code from '../Code';
 import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
