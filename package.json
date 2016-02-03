@@ -29,12 +29,11 @@
     "prepublish": "npm run build",
     "postpublish": "./scripts/publish_gh_pages.sh",
     "test": "npm run lint && npm run test:js",
-    "test:js": "BABEL_ENV=test BABEL_JEST_STAGE=0 jest src/",
+    "test:js": "BABEL_ENV=test BABEL_JEST_STAGE=0 ./node_modules/.bin/jest src/",
     "test:watch": "npm run test -- --watch",
     "lint": "npm run lint:eslint",
-    "lint:eslint": "eslint --rule 'mocha/no-exclusive-tests:2' ./",
-    "dev": "",
-    "alex": "alex README.md"
+    "lint:eslint": "./node_modules/.bin/eslint --rule 'mocha/no-exclusive-tests:2' ./",
+    "alex": "./node_modules/.bin/alex README.md"
   },
   "devDependencies": {
     "alex": "^1.5.0",
