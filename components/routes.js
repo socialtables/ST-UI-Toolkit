@@ -14,12 +14,14 @@ import GettingStarted from './GettingStarted';
 
 import ButtonDocumentation from './components/ButtonDocumentation';
 import CardDocumentation from './components/CardDocumentation';
+import RoundTextBoxDocumentation from './components/RoundTextBoxDocumentation';
 
 const routes = (
   <Route path="/" component={Base}>
     <Route path="getting-started" component={GettingStarted}/>
     <Route path="component/button" component={ButtonDocumentation}/>
     <Route path="component/card" component={CardDocumentation}/>
+    <Route path="component/round-text-box" component={RoundTextBoxDocumentation}/>
     <Route path="about" component={About}/>
     <Route path="guide/introducing" component={Introducing}/>
     <Route path="guide/how-to-use" component={HowDoIUse}/>
