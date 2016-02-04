@@ -1,6 +1,6 @@
 import Radium from "radium";
 import React, {Component, PropTypes} from "react";
-import cardStyle from "./styles";
+import styles from "./styles";
 
 /**
  * Card component with a light shadow.
@@ -29,7 +29,7 @@ export default class Card extends Component {
 		return (
 			<div
 				{...this._childProps}
-				style={[cardStyle.base, this.props.style]}>
+				style={[styles.base, this.props.style]}>
 				{ this.props.children }
 			</div>
 		);

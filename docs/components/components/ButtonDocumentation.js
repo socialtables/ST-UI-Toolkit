@@ -32,7 +32,7 @@ export default class ButtonDocumentation extends Component {
             <p >
               <i>Boolean</i>
               <br />
-              default: <b>false</b>
+              <b>default:</b> false
             </p>
             <p>If true, the button will appear disabled and click handlers will not work</p>
           </td>
@@ -48,7 +48,7 @@ export default class ButtonDocumentation extends Component {
             <p>
               <i>String</i> of 'button', 'submit', 'reset'
               <br />
-              default: <b>'button'</b>
+              <b>default:</b> 'button'
             </p>
             <p>
               This button by is set to type 'button' by default. This different
@@ -68,7 +68,7 @@ export default class ButtonDocumentation extends Component {
             <p>
               <i>String</i> of 'light', 'dark', 'success', 'fail'
               <br />
-              default: 'light'
+              <b>default:</b>'light'
             </p>
             <p>String used to set primary color of button</p>
           </td>
@@ -84,7 +84,7 @@ export default class ButtonDocumentation extends Component {
             <p>
               <i>Object</i>
               <br />
-              default: See <b>/src/components/Button/styles.js</b> file
+              <b>default:</b> See <b>/src/components/Button/styles.js</b> file
             </p>
             <p>Radium-based inline-style</p>
           </td>

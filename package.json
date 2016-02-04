@@ -30,7 +30,7 @@
     "postpublish": "./scripts/publish_gh_pages.sh",
     "test": "npm run lint && npm run test:js",
     "test:js": "BABEL_ENV=test BABEL_JEST_STAGE=0 ./node_modules/.bin/jest src/",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "npm run test:js -- --watch",
     "lint": "npm run lint:eslint",
     "lint:eslint": "./node_modules/.bin/eslint --rule 'mocha/no-exclusive-tests:2' ./",
     "alex": "./node_modules/.bin/alex README.md"
@@ -57,6 +57,7 @@
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
+    "sinon": "^1.17.3",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.0",
@@ -70,6 +71,7 @@
       "<rootDir>/node_modules/fbjs",
       "<rootDir>/node_modules/react-dom",
       "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/sinon",
       "<rootDir>/src"
     ],
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
