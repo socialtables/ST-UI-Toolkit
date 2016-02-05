@@ -134,6 +134,7 @@ export default React.createClass({
               <Link style={{ display: 'block', padding: '3px 0' }} to="/component/button">Button</Link>
               <Link style={{ display: 'block', padding: '3px 0' }} to="/component/card">Card</Link>
               <Link style={{ display: 'block', padding: '3px 0' }} to="/component/round-text-box">RoundTextBox</Link>
+              <Link style={{ display: 'block', padding: '3px 0' }} to="/component/checkbox">Checkbox</Link>
             </li>
           </ul>
           <span style={ { color: '#738088' } } >Guides / Philosophy</span>
