@@ -56,15 +56,22 @@ export default class ComponentStyling extends Component {
           <li>Allows a component to be imported into a project and render immediately (style + functionality) without having the application load in an external stylesheet that contains all the component styles.</li>
           <li>Radium has support for complex functionality such as browser states (:hover, :focus, :active) within inline-lines and generating vendor prefixes</li>
         </ul>
-        All components will have a set of default styles defined so that they can be imported into a project and immediately used, but if the user desires to override any of the defaults, they can do so by passing a <i>style</i> property down to the component.
+        All components will have a set of default styles defined so that they can be imported into a project and immediately used.
+        <br/>
+        However, if the user desires to override any of the defaults, they can do so by passing a <i>style</i> property down to the component.
 
         <Code value={ inlineStylesExample } style={ {marginTop: 40} } />
 
-        However, users can still specify a <i>className</i> property that will be applied to the outermost element within the component, which allows them to style against non-default styles via CSS.
+        For information on how to use Radium, <a href="https://github.com/FormidableLabs/radium" target="_blank">please see the Radium documentation.</a>
+
+        <h2>CSS Styles</h2>
+
+        However, users can still specify a <i>className</i> property that will be applied to the outermost element within the component, which allows them to add style properties via CSS.
+        <br/>
+        <br/>
+        <b>NOTE:</b> that default styles cannot be overriden by CSS (since they are applied as inline styles).
 
         <Code value={ classNameExample } style={ {marginTop: 40} } />
-
-        For information on how to use Radium, <a href="https://github.com/FormidableLabs/radium" target="_blank">please see the Radium documentation.</a>
 
       </p>
     </div>);
