@@ -27,18 +27,24 @@ export default class Button extends Component {
 		this._childProps = childProps;
 	}
 
+	_getStyle(styleName, styles) {
+		return (this.props.style && this.props.style[styleName]) || styles[styleName];
+	}
+
 	render() {
-		const buttonStyles = getStyles({ theme: this.props.color });
+		const styles = getStyles({ theme: this.props.color });
+		const activeStateStyles = this._getStyle("active", styles);
+		const disabledStateStyles = this._getStyle("disabled", styles);
 
 		return (
 			<button
 				{...this._childProps}
 				type={this.props.type}
 				style={[
-					buttonStyles.base,
-					!this.props.disabled && buttonStyles.active,
-					this.props.disabled && buttonStyles.disabled,
-					this.props.style
+					styles.base,
+					!this.props.disabled && activeStateStyles,
+					this.props.disabled && disabledStateStyles,
+					this.props.style && this.props.style && this.props.style.base
 				]}
 				onClick={(this.props.disabled) ? null : this.props.onClick} >
 				{ this.props.children }

@@ -44,6 +44,20 @@ describe("Button", () => {
 		expect(wasClicked).toBeTruthy();
 	});
 
+	it("should supress onClick listener if disabled", () => {
+		let wasClicked = false;
+
+		// Render a button with an onClick handler
+		const button = TestUtils.renderIntoDocument(
+			<Button disabled onClick={ () => wasClicked = true }>Follow</Button>
+		);
+
+		// Simulate a click
+		TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(button, "button"));
+
+		expect(wasClicked).toBeFalsy();
+	});
+
 	it("should be able to provide a className", () => {
 		const button = TestUtils.renderIntoDocument(
 			<Button className="test-me">Follow</Button>

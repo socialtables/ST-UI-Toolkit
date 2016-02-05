@@ -6,7 +6,7 @@ import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 const basicCodeExample = `<Button onClick={() => console.log("yolo")}>Click Here</Button>`;
 const disabledButtonCodeExample = `<Button disabled>Follow</Button>`;
 const darkButtonCodeExample = `<Button color="dark">Dark Button</Button>`;
-const radiumStylesCodeExample = `<Button style={{ background: "orange", border: "solid black 2px" }}>Yolo</Button>`;
+const radiumStylesCodeExample = `<Button style={{ base: { background: "orange", border: "solid black 2px" } }}>Yolo</Button>`;
 
 export default class ButtonDocumentation extends Component {
 
@@ -110,7 +110,7 @@ export default class ButtonDocumentation extends Component {
         </li>
         <li>
           <h4>Override default Radium styles</h4>
-          <Button style={{ background: "orange", border: "solid black 2px" }}>Yolo</Button>
+          <Button style={{ base: { background: "orange", border: "solid black 2px" } }}>Yolo</Button>
           <Code value={ radiumStylesCodeExample } />
         </li>
       </ul>

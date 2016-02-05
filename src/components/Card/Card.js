@@ -29,7 +29,10 @@ export default class Card extends Component {
 		return (
 			<div
 				{...this._childProps}
-				style={[styles.base, this.props.style]}>
+				style={[
+					styles.base,
+					this.props.style && this.props.style && this.props.style.base
+				]}>
 				{ this.props.children }
 			</div>
 		);

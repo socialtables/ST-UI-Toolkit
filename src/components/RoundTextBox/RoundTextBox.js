@@ -27,14 +27,16 @@ export default class RoundTextBox extends Component {
 	}
 
 	render() {
+		const disabledStyles = (this.props.style && this.props.style.disabledStyles) || styles.disabled;
+
 		return (
 			<input
 				{...this._childProps}
 				type={this.props.type}
 				style={[
 					styles.base,
-					this.props.disabled && styles.disabled,
-					this.props.style
+					this.props.disabled && disabledStyles,
+					this.props.style && this.props.style && this.props.style.base
 				]}
 			/>
 		);
