@@ -1,6 +1,5 @@
 export default {
 	base: {
-		marginBottom: 20,
 		padding: 40,
 		borderRadius: 2,
 		background: "#fff",
