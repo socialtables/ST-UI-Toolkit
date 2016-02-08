@@ -19,7 +19,7 @@ export default class RoundTextBox extends Component {
 	}
 
 	/**
-	 * Update the childProps based on the updated properties passed to the card.
+	 * Update the childProps based on the updated properties passed to the text box.
 	 */
 	componentWillReceiveProps(properties) {
 		const { style, ...childProps } = properties;
@@ -27,14 +27,16 @@ export default class RoundTextBox extends Component {
 	}
 
 	render() {
+		const disabledStyles = (this.props.style && this.props.style.disabledStyles) || styles.disabled;
+
 		return (
 			<input
 				{...this._childProps}
 				type={this.props.type}
 				style={[
 					styles.base,
-					this.props.disabled && styles.disabled,
-					this.props.style
+					this.props.disabled && disabledStyles,
+					this.props.style && this.props.style && this.props.style.base
 				]}
 			/>
 		);

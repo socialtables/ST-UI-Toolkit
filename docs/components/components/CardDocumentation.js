@@ -3,14 +3,18 @@ import {Card} from '@socialtables/st-ui-toolkit';
 import Code from '../Code';
 
 const basicCodeExample = `<!-- basic card example -->
-<Card style={{ borderTop: '1px solid #f2f2f2' }}>
+<Card style={{ base: {borderTop: '1px solid #f2f2f2'} }}>
   Add any content here like paragraphs, images or other components …
 </Card>`;
 
 const imageCodeExample = `<!-- image card example -->
-<Card style={{ borderTop: '1px solid #f2f2f2',
-               width: 265,
-               padding: '20px 0' }}>
+<Card style={{
+  base: {
+    borderTop: '1px solid #f2f2f2',
+    width: 265,
+    padding: '20px 0'
+  }
+}}>
   <img src="images/ngorongoro_caldera_small.jpg"
        width="100%" />
 </Card>`;
@@ -22,7 +26,7 @@ export default class CardDocumentation extends Component {
       <div>
         <h2 style={ {marginTop: 0, marginBottom: 40} }>Card</h2>
 
-        <Card style={{ borderTop: '1px solid #f2f2f2' }}>
+        <Card style={{ base: {borderTop: '1px solid #f2f2f2'} }}>
           Add any content here like paragraphs, images or other components …
         </Card>
 

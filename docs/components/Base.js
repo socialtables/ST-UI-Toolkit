@@ -3,6 +3,13 @@ import { Link } from 'react-router';
 import Column from './Column';
 import {Card} from '@socialtables/st-ui-toolkit';
 
+
+const LEFT_HAND_MENU_LINK_STYLE = {
+  display: 'block',
+  padding: '3px 0'
+};
+
+
 export default React.createClass({
 
   propTypes: {
@@ -125,36 +132,37 @@ export default React.createClass({
                 className="navigation">
           <ul style={ { listStyleType: 'none', paddingLeft: 0, marginTop: 0 } }>
             <li>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/getting-started">Getting Started</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/getting-started">Getting Started</Link>
             </li>
           </ul>
           <span style={ { color: '#738088' } } >Components</span>
           <ul style={ { listStyleType: 'none', paddingLeft: 0 } }>
             <li>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/component/button">Button</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/component/card">Card</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/component/round-text-box">RoundTextBox</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/button">Button</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/card">Card</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/round-text-box">RoundTextBox</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/checkbox">Checkbox</Link>
             </li>
           </ul>
           <span style={ { color: '#738088' } } >Guides / Philosophy</span>
           <ul style={ { listStyleType: 'none', paddingLeft: 0 } }>
             <li>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/introducing">What is ST-UI-Toolkit?</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/how-to-use">How Do I Use a Component In My App?</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/component-styling">Component Styling</Link>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/guide/adding-components">How Do I Add a Component To the Toolkit?</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/guide/introducing">What is ST-UI-Toolkit?</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/guide/how-to-use">How Do I Use a Component In My App?</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/guide/component-styling">Component Styling</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/guide/adding-components">How Do I Add a Component To the Toolkit?</Link>
             </li>
           </ul>
           <span style={ { color: '#738088' } } >Other</span>
           <ul style={ { listStyleType: 'none', paddingLeft: 0 } }>
             <li>
-              <Link style={{ display: 'block', padding: '3px 0' }} to="/about">About</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/about">About</Link>
             </li>
             <li>
-              <a style={{ display: 'block', padding: '3px 0' }} href="https://github.com/socialtables/st-ui-toolkit" target="_blank">Code on Github</a>
+              <a style={LEFT_HAND_MENU_LINK_STYLE} href="https://github.com/socialtables/st-ui-toolkit" target="_blank">Code on Github</a>
             </li>
             <li>
-              <a style={{ display: 'block', padding: '3px 0' }} href="https://github.com/socialtables/st-ui-toolkit/issues" target="_blank">Report an Issue</a>
+              <a style={LEFT_HAND_MENU_LINK_STYLE} href="https://github.com/socialtables/st-ui-toolkit/issues" target="_blank">Report an Issue</a>
             </li>
           </ul>
         </Column>
