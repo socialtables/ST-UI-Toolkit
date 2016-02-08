@@ -17,7 +17,7 @@ export default class Checkbox extends Component {
 	}
 
 	/**
-	 * Update the childProps based on the updated properties passed to the card.
+	 * Update the childProps based on the updated properties passed to the checkbox.
 	 */
 	componentWillReceiveProps(properties) {
 		const { style, ...childProps } = properties;

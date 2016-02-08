@@ -19,7 +19,7 @@ export default class RoundTextBox extends Component {
 	}
 
 	/**
-	 * Update the childProps based on the updated properties passed to the card.
+	 * Update the childProps based on the updated properties passed to the text box.
 	 */
 	componentWillReceiveProps(properties) {
 		const { style, ...childProps } = properties;

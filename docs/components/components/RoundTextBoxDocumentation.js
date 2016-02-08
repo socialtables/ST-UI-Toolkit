@@ -93,7 +93,7 @@ export default class RoundTextBoxDocumentation extends Component {
 
       </tbody></table>
 
-      <p>Any other property valid for a HTML checkbox like <b>className</b>, …</p>
+      <p>Any other property valid for a HTML input like <b>className</b>, …</p>
 
 
       <h3>More Examples</h3>
