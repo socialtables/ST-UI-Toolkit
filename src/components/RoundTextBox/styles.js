@@ -3,7 +3,9 @@ import { default as colors, stColorPalette } from "../../shared-styles/colors";
 
 export default {
 	base: {
+		color: stColorPalette.stDarkGray,
 		padding: 10,
+		transition: "all .2s",
 		borderColor: stColorPalette.stSilver,
 		borderRadius: 5,
 		borderStyle: "solid",
