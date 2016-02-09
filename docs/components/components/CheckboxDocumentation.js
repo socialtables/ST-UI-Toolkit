@@ -5,7 +5,7 @@ import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
 const basicCodeExample = `<Checkbox
   checked={this.state.isChecked}
-  onClick={() => {
+  onChange={() => {
     this.setState({ isChecked: !this.state.isChecked })
   }} >
 </Checkbox>`;
@@ -16,10 +16,13 @@ const radiumStylesCodeExample = `
   checked
   style={{
     base: { width: 100, height: 100 },
-    checked: { background: "green" }
+    customCheckbox: {
+      checked: { background: "green" }
+    }
   }}>
 </Checkbox>`;
 const checkedExample = `<Checkbox checked></Checkbox>`;
+const uncontrolledExample = `<Checkbox defaultChecked={true}></Checkbox>`;
 const emptyExample = `<Checkbox></Checkbox>`;
 
 export default class CheckboxComponent extends Component {
@@ -113,7 +116,7 @@ export default class CheckboxComponent extends Component {
 
         </tbody></table>
 
-        <p>Any other property valid for a HTML button like <b>className</b>, <b>onClick</b>, …</p>
+        <p>Any other property valid for a HTML checkbox like <b>className</b>, …</p>
 
 
         <h3>More Examples</h3>
@@ -129,7 +132,8 @@ export default class CheckboxComponent extends Component {
             <Checkbox 
               checked
               disabled
-              onClick={() => {console.log("DED")}}></Checkbox>
+              onChange={() => console.log("yolo")}>
+            </Checkbox>
             <Code value={ disabledCheckedExample } />
           </li>
           <li>
@@ -143,12 +147,19 @@ export default class CheckboxComponent extends Component {
             <Code value={ emptyExample } />
           </li>
           <li>
+            <h4>Uncontrolled Component</h4>
+            <Checkbox defaultChecked={true}></Checkbox>
+            <Code value={ uncontrolledExample } />
+          </li>
+          <li>
             <h4>Override default Radium styles</h4>
             <Checkbox
               checked
               style={{
                 base: { width: 100, height: 100 },
-                checked: { background: "green" }
+                customCheckbox: {
+                  checked: { background: "green" }
+                }
               }}>
             </Checkbox>
             <Code value={ radiumStylesCodeExample } />

@@ -22,42 +22,87 @@ describe("Checkbox", () => {
 		expect(checkboxNode.className).toBeDefined();
 	});
 
-	it("should be able to bind to onClick", () => {
+	it("should be able to bind to onChange", () => {
 		let wasClicked = false;
 		const myCheckboxClass = "my-checkbox-class";
 
-		// Render a button with an onClick handler
+		// Render with an onClick handler
 		const checkbox = TestUtils.renderIntoDocument(
 			<Checkbox
 				className={myCheckboxClass}
-				onClick={ () => wasClicked = true }>
+				onChange={ () => wasClicked = true }>
 			</Checkbox>
 		);
 
-		// Simulate a click
-		TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(checkbox, myCheckboxClass));
+		// Simulate a change
+		TestUtils.Simulate.change(TestUtils.findRenderedDOMComponentWithClass(checkbox, myCheckboxClass));
 
 		expect(wasClicked).toBeTruthy();
 	});
 
-	it("should supress onClick listener if disabled", () => {
+	it("should supress onChange listener if disabled", () => {
 		let wasClicked = false;
 		const myCheckboxClass = "my-checkbox-class";
 
-		// Render a button with an onClick handler
+		// Render with an onChange handler
 		const checkbox = TestUtils.renderIntoDocument(
 			<Checkbox
 				disabled
 				className={myCheckboxClass}
-				onClick={() => {
+				onChange={() => {
 					wasClicked = true;
 				}}>
 			</Checkbox>
 		);
 
-		// Simulate a click
-		TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(checkbox, myCheckboxClass));
+		// Simulate a change
+		TestUtils.Simulate.change(TestUtils.findRenderedDOMComponentWithClass(checkbox, myCheckboxClass));
 
 		expect(wasClicked).toBeFalsy();
 	});
+
+	it("should apply `checked` attribute to invisible input element if passed down as prop", function() {
+		const checkbox = TestUtils.renderIntoDocument(
+			<Checkbox checked></Checkbox>
+		);
+
+		const hiddenInput = TestUtils.findRenderedDOMComponentWithTag(checkbox, "input");
+		const checked = hiddenInput.getAttribute("checked");
+
+		expect(checked).not.toBeNull();
+	});
+
+	it("should not apply `checked` attribute to invisible input element if it is not specified as prop", function() {
+		const checkbox = TestUtils.renderIntoDocument(
+			<Checkbox></Checkbox>
+		);
+
+		const hiddenInput = TestUtils.findRenderedDOMComponentWithTag(checkbox, "input");
+		const checked = hiddenInput.getAttribute("checked");
+
+		expect(checked).toBeNull();
+	});
+
+	it("should set `checked` attribute on invisible input element if `defaultChecked` prop is true", function() {
+		const checkbox = TestUtils.renderIntoDocument(
+			<Checkbox defaultChecked={true}></Checkbox>
+		);
+
+		const hiddenInput = TestUtils.findRenderedDOMComponentWithTag(checkbox, "input");
+		const checked = hiddenInput.getAttribute("checked");
+
+		expect(checked).not.toBeNull();
+	});
+
+	it("should not set `checked` attribute on invisible input element if `defaultChecked` prop is false", function() {
+		const checkbox = TestUtils.renderIntoDocument(
+			<Checkbox defaultChecked={false}></Checkbox>
+		);
+
+		const hiddenInput = TestUtils.findRenderedDOMComponentWithTag(checkbox, "input");
+		const checked = hiddenInput.getAttribute("checked");
+
+		expect(checked).toBeNull();
+	});
+
 });
