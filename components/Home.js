@@ -24,7 +24,7 @@ export default class Home extends Component {
           <li>Chrome (mobile and desktop)</li>
           <li>Safari (mobile and desktop)</li>
           <li>Firefox</li>
-          <li>Internet Explorer 10, 11</li>
+          <li>Internet Explorer 9, 10, 11</li>
           <li>Microsoft Edge</li>
         </ul>
 
