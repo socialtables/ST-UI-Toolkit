@@ -81,11 +81,16 @@ You can install the development environment with
 npm install
 ```
 
-`npm run build` will trigger a build into the `lib` folder. To develop a component it's convenient to use the examples or docs application.
+`npm run build` will trigger a build into the `lib` folder.
+
+While developing a component, it's convenient to use the docs application.
+
 
 ### Run the examples or docs application
 
-To run the examples/docs you go into the folder `docs` and run `npm install` and `npm start`. The app will run with hot reloading on `http://localhost:3000`.
+To run the examples/docs you go into the folder `/docs` and run `npm install` and `npm start`. The app will run with hot reloading on `http://localhost:3000`.
+
+As you update the code for the docs or the components, the changes will update in real-time within the browser via webpack-dev-server.
 
 ### Tests
 

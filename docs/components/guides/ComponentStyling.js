@@ -12,7 +12,7 @@ class App extends React.Component {
     return <div>
       /* Renders button with yellow (#ffff00) color instead of #cb5599 */
       <Button
-        style={background: "#ffff00"}
+        style={ {base: background: "#ffff00"} }
         onClick={this._clickHandler} />
     </div>;
   }
