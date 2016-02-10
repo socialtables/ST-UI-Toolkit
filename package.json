@@ -79,6 +79,6 @@
   "license": "MIT",
   "dependencies": {
     "exenv": "^1.2.0",
-	"radium": "^0.16.5"
+    "radium": "^0.16.5"
   }
 }
