@@ -6,31 +6,59 @@ const DEFAULT_CHECKBOX_SIZE = 25;
 export default {
 	base: {
 		height: DEFAULT_CHECKBOX_SIZE,
-		width: DEFAULT_CHECKBOX_SIZE,
-		borderRadius: 3,
-		borderStyle: "solid",
-		borderColor: stColorPalette.stSilver,
-		borderWidth: 2,
-		cursor: "pointer",
-		transition: "all 0.20s",
-		":focus": {
-			borderColor: colorLib(colors.primary).lighten(0.25).hexString(),
-			outline: 0
+		width: DEFAULT_CHECKBOX_SIZE
+	},
+	contentWrapper: {
+		position: "relative",
+		width: "100%",
+		height: "100%"
+	},
+	// Styles for the hidden checkbox <input> element
+	baseHiddenInput: {
+		base: {
+			position: "absolute",
+			opacity: 0,
+			height: "100%",
+			width: "100%",
+			cursor: "pointer",
+			zIndex: 2
+		},
+		disabled: {
+			cursor: "not-allowed"
 		}
 	},
-	checked: {
-		background: colors.primary,
-		borderColor: colors.primary,
-		":focus": {
-			borderColor: colors.primary
-		}
-	},
-	disabled: {
-		background: colors.disabledBg,
-		borderColor: stColorPalette.stSilver,
-		cursor: "not-allowed",
-		":focus": {
-			borderColor: stColorPalette.stSilver
+	// Styles for custom checkbox element
+	customCheckbox: {
+		base: {
+			height: "100%",
+			width: "100%",
+			position: "absolute",
+			borderRadius: 3,
+			borderStyle: "solid",
+			borderColor: stColorPalette.stSilver,
+			borderWidth: 2,
+			cursor: "pointer",
+			transition: "all 0.20s",
+			zIndex: 1,
+			":focus": {
+				borderColor: colorLib(colors.primary).lighten(0.25).hexString(),
+				outline: 0
+			}
+		},
+		checked: {
+			background: colors.primary,
+			borderColor: colors.primary,
+			":focus": {
+				borderColor: colors.primary
+			}
+		},
+		disabled: {
+			background: colors.disabledBg,
+			borderColor: stColorPalette.stSilver,
+			cursor: "not-allowed",
+			":focus": {
+				borderColor: stColorPalette.stSilver
+			}
 		}
 	},
 	// Styles for checkbox content container
