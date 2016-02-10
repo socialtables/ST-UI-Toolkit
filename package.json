@@ -50,7 +50,6 @@
     "eslint-plugin-react": "^3.10.0",
     "jest-cli": "^0.8.0",
     "jscs": "^2.6.0",
-    "radium": "^0.16.5",
     "react": "^0.14.3",
     "react-addons-test-utils": "^0.14.3",
     "react-dom": "^0.14.3",
@@ -79,6 +78,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "exenv": "^1.2.0"
+    "exenv": "^1.2.0",
+	"radium": "^0.16.5"
   }
 }
