@@ -3,8 +3,26 @@ import {Tab, Tabs, Checkbox} from "@socialtables/st-ui-toolkit";
 import Code from "../Code";
 import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
-const basicCodeExample = `<Tabs label={"Example Tabs With Label"}><Tab label="Tab 1"><p>This is example tab content. Update the checkbox and watch how I keep my state!</p><Checkbox defaultChecked={true}></Checkbox></Tab><Tab label="Second Tab"><p>This is the second example tab and has a longer name than the others.</p></Tab><Tab label="Tab 3"><p>This is the third example tab. Only Tab Components can be passed as children to Tabs.</p></Tab></Tabs>`;
-const justifiedCodeExample = `<Tabs justify={"right"}><Tab label="TAB A"><p>This example doesn't have a label.</p></Tab><Tab label="TAB B"><p>Notice that the tabs are right-justified.</p></Tab></Tabs>`;
+const basicCodeExample = `<Tabs label={"Example Tabs With Label"}>
+  <Tab label="Tab 1">
+    <p>This is example tab content. Update the checkbox and watch how I keep my state!</p>
+    <Checkbox defaultChecked={true}></Checkbox>
+  </Tab>
+  <Tab label="Second Tab">
+    <p>This is the second example tab and has a longer name than the others.</p>
+  </Tab>
+  <Tab label="Tab 3">
+    <p>This is the third example tab. Only Tab Components can be passed as children to Tabs.</p>
+  </Tab>
+</Tabs>`;
+const justifiedCodeExample = `<Tabs justify={"right"}>
+  <Tab label="TAB A">
+    <p>This example doesn't have a label.</p>
+  </Tab>
+  <Tab label="TAB B">
+    <p>Notice that the tabs are right-justified.</p>
+  </Tab>
+</Tabs>`;
 const noLabelExample = ``;
 
 export default class TabsDocumentation extends Component {
