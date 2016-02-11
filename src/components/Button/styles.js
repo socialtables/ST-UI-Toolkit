@@ -14,7 +14,8 @@ export default function({ theme }) {
 			color: colors.white,
 			border: 0,
 			outline: 0,
-			userSelect: "none"
+			userSelect: "none",
+			cursor: "pointer"
 		},
 		active: {
 			transition: "background 0.2s",
