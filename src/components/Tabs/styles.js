@@ -35,9 +35,7 @@ export default function({ justify }) {
 		},
 		tabContainer: {
 			background: colors.colorMain,
-			padding: "0 8%",
-			fontFamily: "Open-Sans, sans-serif",
-			fontWeight: "300"
+			padding: "0 8%"
 		},
 		header: {
 			background: colors.colorMain,
@@ -52,9 +50,7 @@ export default function({ justify }) {
 			justifyContent: justification
 		},
 		tabContent: {
-			margin: "0 8%",
-			fontFamily: "Open-Sans, sans-serif",
-			fontWeight: "300"
+			margin: "0 8%"
 		}
 	}
 };
