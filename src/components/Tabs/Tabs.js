@@ -13,6 +13,7 @@ export default class Tabs extends Component {
 	constructor(props) {
 		super(props);
 		const { style, ...childProps } = props;
+		this._childProps = childProps;
 
 		const initialIndex = props.initialSelectedIndex
 		this.state = {
@@ -20,6 +21,14 @@ export default class Tabs extends Component {
 		};
 
 		this._handleTabSelection = this._handleTabSelection.bind(this);
+	}
+
+	/**
+	 * Update the childProps based on the updated properties passed to the card.
+	 */
+	componentWillReceiveProps(properties) {
+		const { style, ...childProps } = properties;
+		this._childProps = childProps;
 	}
 
 	getTabCount() {
@@ -86,7 +95,7 @@ export default class Tabs extends Component {
 		) : null;
 
 		return (
-			<div>
+			<div {...this._childProps}>
 				<div style={tabContainerStyle}>
 					{label}
 					<div style={tabBarStyle}>
