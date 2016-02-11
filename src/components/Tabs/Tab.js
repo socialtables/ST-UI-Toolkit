@@ -50,7 +50,11 @@ export default class Tab extends Component {
 
 		return (
 			<Button
-				style={{ base: Object.assign(styles.base, tabStyle), active: styles.active }}
+				{...this._childProps}
+				style={{
+					base: [styles.base, tabStyle],
+					active: styles.active
+				}}
 				color="dark"
 				onClick={this._handleSelect}
 			>
