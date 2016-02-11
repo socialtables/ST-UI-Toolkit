@@ -83,7 +83,7 @@ npm install
 
 `npm run build` will trigger a build into the `lib` folder.
 
-While developing a component, it's convenient to use the docs application.
+While developing a component, it's convenient to use the docs application. To do so, create a documentation file for your component in `/docs/components/components`, add a path to that file in `/docs/componenents/routes` and link to it from `/docs/components/Base.js`.
 
 
 ### Run the examples or docs application
