@@ -21,6 +21,7 @@ export default class Tabs extends Component {
 		};
 
 		this._handleTabSelection = this._handleTabSelection.bind(this);
+		this._renderTabsAndContent = this._renderTabsAndContent.bind(this);
 	}
 
 	/**
@@ -52,15 +53,7 @@ export default class Tabs extends Component {
 		}
 	}
 
-	render() {
-		const {
-			children,
-			initialSelectedIndex,
-			onChange,
-			style,
-			value
-		} = this.props;
-
+	_renderTabsAndContent(children) {
 		let tabContent = [];
 		let tabs = React.Children.map(children, (tab, index) => {
 			if (tab.type && tab.type.displayName !== "Tab") {
@@ -83,6 +76,23 @@ export default class Tabs extends Component {
 				});
 			}
 		});
+
+		return { tabs, tabContent };
+	}
+
+	render() {
+		const {
+			children,
+			initialSelectedIndex,
+			onChange,
+			style,
+			value
+		} = this.props;
+
+		const {
+			tabs,
+			tabContent
+		} = this._renderTabsAndContent(children);
 
 		const styles = getStyles();
 		const tabContainerStyle = this._getStyle("tabContainer", styles);
