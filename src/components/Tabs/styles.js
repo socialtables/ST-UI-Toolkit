@@ -1,26 +1,10 @@
 import colors from "../../shared-styles/colors";
 
-function getJustification(justify) {
-	switch (justify) {
-		case "left":
-			return "flex-start";
-		case "right":
-			return "flex-end";
-		case "center":
-			return "center";
-		default:
-			return "flex-start";
-	}
-}
-
-export default function({ justify }) {
-	const justification = getJustification(justify);
-
+export default function() {
 	return {
 		base: {
 			height: "50px",
 			padding: "0 5%",
-			flexBasis: "auto",
 			lineHeight: "50px"
 		},
 		active: {
@@ -44,10 +28,7 @@ export default function({ justify }) {
 			padding: "20px 0"
 		},
 		tabBar: {
-			background: colors.colorMain,
-			display: "flex",
-			flexDirection: "row",
-			justifyContent: justification
+			background: colors.colorMain
 		},
 		tabContent: {
 			margin: "0 8%"

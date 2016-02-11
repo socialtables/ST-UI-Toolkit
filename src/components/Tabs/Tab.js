@@ -45,7 +45,7 @@ export default class Tab extends Component {
 			value
 		} = this.props;
 
-		const styles = getStyles({});
+		const styles = getStyles();
 		const tabStyle = this.props.selected ? this._getStyle("selected", styles) : {};
 
 		return (

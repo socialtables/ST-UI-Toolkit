@@ -45,16 +45,4 @@ describe("Tabs", () => {
 		const oneDivTabsNode = TestUtils.findRenderedDOMComponentWithClass(oneDivTabs, "oneDivTabs");
 		expect(oneDivTabsNode.children[0].children[0].children.length).toBe(1);
 	});
-
-	it("should be able to change the justification to center or right", () => {
-		const centeredTabs = TestUtils.renderIntoDocument(
-				<Tabs justify="center"><Tab></Tab></Tabs>
-		);
-		expect(centeredTabs.props.justify).toBe("center");
-
-		const rightTabs = TestUtils.renderIntoDocument(
-				<Tabs justify="right"><Tab></Tab></Tabs>
-		);
-		expect(rightTabs.props.justify).toBe("right");
-	});
 });

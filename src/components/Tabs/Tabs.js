@@ -84,7 +84,7 @@ export default class Tabs extends Component {
 			}
 		});
 
-		const styles = getStyles({ justify: this.props.justify });
+		const styles = getStyles();
 		const tabContainerStyle = this._getStyle("tabContainer", styles);
 		const headerStyle = this._getStyle("header", styles);
 		const tabBarStyle = this._getStyle("tabBar", styles);

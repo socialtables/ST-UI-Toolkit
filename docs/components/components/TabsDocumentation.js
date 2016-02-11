@@ -15,15 +15,14 @@ const basicCodeExample = `<Tabs label={"Example Tabs With Label"}>
     <p>This is the third example tab. Only Tab Components can be passed as children to Tabs.</p>
   </Tab>
 </Tabs>`;
-const justifiedCodeExample = `<Tabs justify={"right"}>
+const noLabelExample = `<Tabs>
   <Tab label="TAB A">
     <p>This example doesn't have a label.</p>
   </Tab>
   <Tab label="TAB B">
-    <p>Notice that the tabs are right-justified.</p>
+    <p>More info...</p>
   </Tab>
 </Tabs>`;
-const noLabelExample = ``;
 
 export default class TabsDocumentation extends Component {
 	render() {
@@ -47,16 +46,16 @@ export default class TabsDocumentation extends Component {
 
 			<Code value={ basicCodeExample } style={ {marginTop: 40} } />
 
-			<Tabs justify={"right"}>
+			<Tabs>
 				<Tab label="TAB A">
 					<p>This example doesn't have a label.</p>
 				</Tab>
 				<Tab label="TAB B">
-					<p>Notice that the tabs are right-justified.</p>
+					<p>More info...</p>
 				</Tab>
 			</Tabs>
 
-			<Code value={ justifiedCodeExample } style={ {marginTop: 40} } />
+			<Code value={ noLabelExample } style={ {marginTop: 40} } />
 
 			<h3>Properties</h3>
 
@@ -92,22 +91,6 @@ export default class TabsDocumentation extends Component {
 					<b>default:</b> null
 				</p>
 				<p>If set, a label will appear for the set of tabs.</p>
-				</td>
-			</tr>
-
-			<tr>
-				<td style={ propertyNameStyle }>
-				justify
-				</td>
-			</tr>
-			<tr>
-				<td style={ propertyDescriptionStyle }>
-				<p>
-					<i>String</i> of 'left', 'right', 'center'
-					<br />
-					<b>default:</b> 'left'
-				</p>
-				<p>Specify the justification of the tabs. Justification is set by default to 'left'.</p>
 				</td>
 			</tr>
 
