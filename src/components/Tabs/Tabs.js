@@ -67,20 +67,21 @@ export default class Tabs extends Component {
 				console.warn(`Tabs only accepts Tab Components as children.
 					Found ${tab.type.displayName || tab.type} as child number ${index + 1} of Tabs`);
 			}
-
-			tabContent.push(
-				(tab.props.children) ? React.createElement(TabTemplate, {
+			else {
+				tabContent.push(
+					(tab.props.children) ? React.createElement(TabTemplate, {
+						key: index,
+						selected: this._getSelected(tab, index)
+					}, tab.props.children) : undefined
+				);
+				
+				return React.cloneElement(tab, {
 					key: index,
-					selected: this._getSelected(tab, index)
-				}, tab.props.children) : undefined
-			);
-
-			return React.cloneElement(tab, {
-				key: index,
-				selected: this._getSelected(tab, index),
-				tabIndex: index,
-				onSelect: this._handleTabSelection
-			});
+					selected: this._getSelected(tab, index),
+					tabIndex: index,
+					onSelect: this._handleTabSelection
+				});
+			}
 		});
 
 		const styles = getStyles({ justify: this.props.justify });
