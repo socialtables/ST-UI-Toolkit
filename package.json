@@ -74,6 +74,7 @@
       "<rootDir>/src"
     ],
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/__tests__/utils/setupTestFrameworkScriptFile.js",
     "preprocessCachingDisabled": true
   },
   "license": "MIT",

@@ -5,7 +5,7 @@ import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
 const basicCodeExample = `<RoundTextBox placeholder="Placeholder Text"></RoundTextBox>`;
 const disabledRoundTextBoxCodeExample = `<RoundTextBox disabled placeholder="Placeholder Text"></RoundTextBox>`;
-const radiumStylesCodeExample = `<RoundTextBox style={{ base: {background: "orange", color: "black", border: "solid black 2px"} }}></RoundTextBox>`;
+const radiumStylesCodeExample = `<RoundTextBox style={{ base: {background: "orange", color: "black", borderColor: "black"} }}></RoundTextBox>`;
 
 export default class RoundTextBoxDocumentation extends Component {
 
@@ -106,7 +106,7 @@ export default class RoundTextBoxDocumentation extends Component {
         </li>
         <li>
           <h4>Override default Radium styles</h4>
-          <RoundTextBox style={{ base: {background: "orange", color: "black", border: "solid black 2px"} }}></RoundTextBox>
+          <RoundTextBox style={{ base: {background: "orange", color: "black", borderColor: "black"} }}></RoundTextBox>
           <Code value={ radiumStylesCodeExample } />
         </li>
       </ul>

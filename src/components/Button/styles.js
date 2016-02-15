@@ -15,10 +15,10 @@ export default function({ theme }) {
 			border: 0,
 			outline: 0,
 			userSelect: "none",
-			cursor: "pointer"
+			cursor: "pointer",
+			transition: "background 0.2s"
 		},
 		active: {
-			transition: "background 0.2s",
 			":hover": {
 				background: colorLib(btnBackgroundColor).darken(0.25).hexString(),
 			}
