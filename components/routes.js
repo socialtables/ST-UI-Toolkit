@@ -17,6 +17,7 @@ import CardDocumentation from './components/CardDocumentation';
 import RoundTextBoxDocumentation from './components/RoundTextBoxDocumentation';
 import CheckboxDocumentation from './components/CheckboxDocumentation';
 import TabsDocumentation from './components/TabsDocumentation';
+import ModalDocumentation from './components/ModalDocumentation';
 
 const routes = (
   <Route path="/" component={Base}>
@@ -26,6 +27,7 @@ const routes = (
     <Route path="component/round-text-box" component={RoundTextBoxDocumentation}/>
     <Route path="component/checkbox" component={CheckboxDocumentation}/>
     <Route path="component/tabs" component={TabsDocumentation}/>
+    <Route path="component/modal" component={ModalDocumentation}/>
     <Route path="about" component={About}/>
     <Route path="guide/introducing" component={Introducing}/>
     <Route path="guide/how-to-use" component={HowDoIUse}/>
