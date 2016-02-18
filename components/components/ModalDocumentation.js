@@ -190,7 +190,13 @@ export default class ModalDocumentation extends Component {
               <br />
               <b>default:</b> true
             </p>
-            <p>If true, the <b>onCloseRequest()</b> callback will be triggered when the <i>Esc</i> key is pressed</p>
+            <div>
+              If true, the <b>onCloseRequest()</b> callback will be triggered when either of the follow events occurs:
+              <ul>
+                <li><i>Esc</i> key is pressed</li>
+                <li>Clicking outside the modal content box</li>
+              </ul>
+            </div>
           </td>
         </tr>
 
