@@ -97,7 +97,7 @@ export default class ModalDocumentation extends Component {
     super(props);
 
     this.state = {
-      isOpen: true,
+      isOpen: false,
       modalHeader: "Modal Header",
       isFirstModalOpen: false,
       isSecondModalOpen: false,
