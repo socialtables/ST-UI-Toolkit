@@ -17,7 +17,7 @@ const basicCodeExample = `<Button onClick={() => this.setState({isOpen: true})}>
       <div>
         <a onClick={() => this.setState({modalHeader: "My New Title!"})}>Click Here</a> to change the title of the header
       </div>
-      <div>To close the modal, press the \`Esc\` key or click the Close button</div>
+      <div>To close the modal, press the \`Esc\` key, click outside the Modal content, or click the Close button</div>
       <Button
         color="fail"
         onClick={() => this.setState({isOpen: false})}>
@@ -97,7 +97,7 @@ export default class ModalDocumentation extends Component {
     super(props);
 
     this.state = {
-      isOpen: false,
+      isOpen: true,
       modalHeader: "Modal Header",
       isFirstModalOpen: false,
       isSecondModalOpen: false,
@@ -123,7 +123,7 @@ export default class ModalDocumentation extends Component {
           <div>
             <div><a onClick={() => this.setState({modalHeader: "My New Title!"})}>Click Here</a> to change the title of the header</div>
             <br/>
-            <div>To close the modal, press the `Esc` key or click the Close button</div>
+            <div>To close the modal, press the `Esc` key, click outside the Modal content, or click the Close button</div>
             <br/>
             <br/>
             <Button

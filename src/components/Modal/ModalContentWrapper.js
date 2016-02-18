@@ -31,7 +31,3 @@ ModalContentWrapper.propTypes = {
 		PropTypes.node
 	])
 };
-
-ModalContentWrapper.defaultProps = {
-	open: false
-};

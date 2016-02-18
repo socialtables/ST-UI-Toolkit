@@ -31,7 +31,9 @@ export default class Modal extends Component {
 		super(properties);
 		const { style, ...childProps } = properties;
 		this._childProps = childProps;
+
 		this._triggerOnCloseRequestOnEscKeyPress = this._triggerOnCloseRequestOnEscKeyPress.bind(this);
+		this._triggerOnCloseRequest = this._triggerOnCloseRequest.bind(this);
 
 		if (!this._modalTopLayer) {
 			this._createModalContainer();
@@ -143,16 +145,23 @@ export default class Modal extends Component {
 	_bindCloseRequestListeners() {
 		// trigger closeRequest on ESC key press
 		document.addEventListener("keyup", this._triggerOnCloseRequestOnEscKeyPress, false);
+		// trigger closeRequest when clicking outside modal content
+		this._overlayElement.addEventListener("click", this._triggerOnCloseRequest, false);
 	}
 
 	_removeCloseRequestListeners() {
 		document.removeEventListener("keyup", this._triggerOnCloseRequestOnEscKeyPress, false);
+		this._overlayElement.removeEventListener("click", this._triggerOnCloseRequest, false);
 	}
 
 	_triggerOnCloseRequestOnEscKeyPress(e) {
 		if (e.keyCode === 27) {
 			this.props.onCloseRequest();
 		}
+	}
+
+	_triggerOnCloseRequest(e) {
+		this.props.onCloseRequest(e);
 	}
 
 	_createModalContainer() {
@@ -176,6 +185,7 @@ export default class Modal extends Component {
 		this._overlayElement.style.width = "100%";
 		this._overlayElement.style.height = "100%";
 		this._overlayElement.style.transition = "background 0.15s";
+		this._overlayElement.className = "ST_UI_MODAL_OVERLAY";
 
 		// Create content element
 		this._modalContentElement = document.createElement("div");
