@@ -47,7 +47,7 @@ export default class ComponentStyling extends Component {
   render() {
     return (<div>
       <h1 style={ {marginTop: 0, marginBottom: 20} }>Component Styling</h1>
-      <p>
+      <div>
         Based on recent decisions made by popular React component toolkits such as Belle and MaterialUI, we have decided to have <b>default styles for components be done via inline styles using <a href="https://github.com/FormidableLabs/radium" target="_blank">Radium</a></b>
         <br/>
         <br/>
@@ -63,6 +63,11 @@ export default class ComponentStyling extends Component {
         <Code value={ inlineStylesExample } style={ {marginTop: 40} } />
 
         For information on how to use Radium, <a href="https://github.com/FormidableLabs/radium" target="_blank">please see the Radium documentation.</a>
+        <br/>
+        For quick reference, Radium enforces following rules for its styles:
+        <ul>
+          <li>Radium styles must be longhand instead of shorthand (for ex: <b>borderStyle: "solid", borderColor: "black", borderWidth: "1px"</b> instead of <b>border: "solid 1px black"</b>)</li>
+        </ul>
 
         <h2>CSS Styles</h2>
 
@@ -73,7 +78,7 @@ export default class ComponentStyling extends Component {
 
         <Code value={ classNameExample } style={ {marginTop: 40} } />
 
-      </p>
+      </div>
     </div>);
   }
 }
