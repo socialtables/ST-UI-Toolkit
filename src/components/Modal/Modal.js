@@ -199,7 +199,7 @@ export default class Modal extends Component {
 		this._modalContentElement.style.opacity = 1;
 		this._modalContentElement.style.transition = "transform 0.28s ease-in";
 		this._modalContentElement.style.background = "white";
-		this._modalContentElement.style.width = "75%";
+		this._modalContentElement.style.width = "30%";
 		this._modalContentElement.style.maxWidth = "750px";
 
 		// Construct complete modal layer
