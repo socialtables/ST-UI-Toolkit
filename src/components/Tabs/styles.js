@@ -4,7 +4,7 @@ export default function() {
 	return {
 		base: {
 			height: "50px",
-			padding: "0 5%",
+			padding: "0 20px",
 			lineHeight: "50px"
 		},
 		active: {
