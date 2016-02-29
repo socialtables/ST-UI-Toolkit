@@ -24,6 +24,23 @@ const noLabelExample = `<Tabs>
   </Tab>
 </Tabs>`;
 
+const radiumStylesCodeExample = `<Tabs style={{
+	tabContainer: {
+		background: "black"
+	},
+	tabBar: {
+		background: "black",
+		paddingLeft: 120
+	}
+}}>
+  <Tab label="First Tab">
+    First Tab
+  </Tab>
+  <Tab label="Second Tab">
+    Second Tab
+  </Tab>
+</Tabs>`;
+
 export default class TabsDocumentation extends Component {
 	render() {
 		return (
@@ -72,8 +89,8 @@ export default class TabsDocumentation extends Component {
 					<br />
 					<b>default:</b> 0
 				</p>
-				<p>Specify initial visible tab index. Initial selected index is set by default to 0. 
-				If initialSelectedIndex is set but larger than the total amount of specified tabs, 
+				<p>Specify initial visible tab index. Initial selected index is set by default to 0.
+				If initialSelectedIndex is set but larger than the total amount of specified tabs,
 				initialSelectedIndex will revert back to default.</p>
 				</td>
 			</tr>
@@ -111,6 +128,31 @@ export default class TabsDocumentation extends Component {
 			</tr>
 
 			</tbody></table>
+
+			<h3>More Examples</h3>
+
+      <ul>
+        <li>
+          <h4>Override Radium Styles</h4>
+          <Tabs style={{
+						tabContainer: {
+							background: "black"
+						},
+						tabBar: {
+							background: "black",
+							paddingLeft: 120
+						}
+					}}>
+					  <Tab label="First Tab">
+					    First Tab
+					  </Tab>
+					  <Tab label="Second Tab">
+					    Second Tab
+					  </Tab>
+					</Tabs>
+          <Code value={ radiumStylesCodeExample } style={ {marginTop: 20} } />
+        </li>
+      </ul>
 
 		</div>)
 	}
