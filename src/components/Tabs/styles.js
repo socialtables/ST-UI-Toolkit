@@ -5,7 +5,8 @@ export default function() {
 		base: {
 			height: "50px",
 			padding: "0 20px",
-			lineHeight: "50px"
+			lineHeight: "50px",
+			background: "transparent"
 		},
 		active: {
 			transition: "color 0.2s",
