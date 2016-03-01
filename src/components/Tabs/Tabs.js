@@ -47,6 +47,7 @@ export default class Tabs extends Component {
 	_handleTabSelection(event, tab) {
 		const tabIndex = tab.props.tabIndex;
 		if (this.state.selectedIndex !== tabIndex) {
+			this.props.onChange(tabIndex);
 			this.setState({
 				selectedIndex: tabIndex
 			});
@@ -67,7 +68,7 @@ export default class Tabs extends Component {
 						selected: this._getSelected(tab, index)
 					}, tab.props.children) : undefined
 				);
-				
+
 				return React.cloneElement(tab, {
 					key: index,
 					selected: this._getSelected(tab, index),
@@ -132,4 +133,8 @@ Tabs.propTypes = {
 	onChange: PropTypes.func,
 	style: PropTypes.object,
 	value: PropTypes.any
+};
+
+Tabs.defaultProps = {
+	onChange: function() {}
 };

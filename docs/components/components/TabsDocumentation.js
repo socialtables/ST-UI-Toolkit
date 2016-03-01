@@ -97,6 +97,23 @@ export default class TabsDocumentation extends Component {
 
 			<tr>
 				<td style={ propertyNameStyle }>
+				onChange(int newTabIndex newTabIndex)
+				</td>
+			</tr>
+			<tr>
+				<td style={ propertyDescriptionStyle }>
+				<p >
+					<i>onChange(number newTabIndex)</i>
+					<br />
+					<b>default:</b> no-op function
+				</p>
+				<p>Callback function that is triggered when a new tab is selected. The function is invoked with
+				the index of the newly-selected tab.</p>
+				</td>
+			</tr>
+
+			<tr>
+				<td style={ propertyNameStyle }>
 				label
 				</td>
 			</tr>

@@ -95,4 +95,26 @@ describe("Tabs", () => {
 		expect(tabsNode.hasAttribute("label")).toBe(true);
 		expect(tabsNode.children[0].children[0].innerHTML).toBe("Account Settings");
 	});
+
+	it("should trigger `onChange()` prop when un-selected Tab is clicked on and selected", () => {
+		let selectedIndex = null;
+
+		const tabs = TestUtils.renderIntoDocument(
+			<Tabs
+				initialSelectedIndex={0}
+				className="tabs"
+				label="Account Settings"
+				onChange={(newIndex) => {
+					selectedIndex = newIndex;
+				}}>
+				<Tab className="firstTab"></Tab>
+				<Tab className="secondTab"></Tab>
+			</Tabs>
+		);
+		// Simulate a click on second tab
+		TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(tabs, "secondTab"));
+
+		// Assert
+		expect(selectedIndex).toEqual(1);
+	});
 });
