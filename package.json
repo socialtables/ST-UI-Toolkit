@@ -43,7 +43,6 @@
     "babel-jest": "^5.3.0",
     "babel-loader": "^5.3.3",
     "babel-plugin-react-transform": "^1.1.1",
-    "color": "^0.11.1",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "1.0.0",
     "eslint-plugin-mocha": "^1.1.0",
@@ -52,7 +51,6 @@
     "jscs": "^2.6.0",
     "react": "^0.14.3",
     "react-addons-test-utils": "^0.14.3",
-    "react-dom": "^0.14.3",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
@@ -79,7 +77,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "color": "^0.11.1",
     "exenv": "^1.2.0",
-    "radium": "^0.16.5"
+    "radium": "^0.16.5",
+    "react-dom": "^0.14.3"
   }
 }
