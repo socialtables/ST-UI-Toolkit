@@ -20,7 +20,7 @@ export default function() {
 		},
 		tabContainer: {
 			background: colors.colorMain,
-			padding: "0 8%"
+			padding: "0 46px"
 		},
 		header: {
 			background: colors.colorMain,
@@ -32,7 +32,7 @@ export default function() {
 			background: colors.colorMain
 		},
 		tabContent: {
-			margin: "0 8%"
+			margin: "0 46px"
 		}
 	}
 };
