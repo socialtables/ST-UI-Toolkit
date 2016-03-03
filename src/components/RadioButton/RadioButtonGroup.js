@@ -40,8 +40,12 @@ export default class RadioButtonGroup extends Component {
 			this.props.onSelect(event, newSelection);
 		}
 	}
+	_getStyle(styleName, styles) {
+		return (this.props.style && this.props.style[styleName]) || styles[styleName];
+	}
 	render() {
 		const styles = getStyles();
+		const radioButtonGroupStyles = this._getStyle("radioButtonGroup", styles);
 		const options = React.Children.map(this.props.children, (option) => {
 			const {
 				name,
@@ -69,7 +73,7 @@ export default class RadioButtonGroup extends Component {
 		}, this);
 
 		return (
-			<div {...this._childProps} style={[styles.radioButtonGroup]}>
+			<div {...this._childProps} style={[radioButtonGroupStyles]}>
 				{options}
 			</div>
 		)
