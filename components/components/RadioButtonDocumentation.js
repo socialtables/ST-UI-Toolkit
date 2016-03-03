@@ -27,6 +27,18 @@ const rowCodeExample = `<RadioButtonGroup name="row-example" align="row">
     label="Three"/>
 </RadioButtonGroup>`;
 
+const radiumStylesCodeExample = `<RadioButtonGroup
+  style={{
+    selected: {background: "teal"},
+    radio: {
+      height: "20px",
+      width: "20px"}
+  }}
+  defaultSelected="agree">
+  <RadioButton value="agree" label="Agree"/>
+  <RadioButton value="disagree" label="Disagree"/>
+</RadioButtonGroup>`
+
 export default class RadioButtonDocumentation extends Component {
 	render() {
 		return (<div>
@@ -229,6 +241,26 @@ export default class RadioButtonDocumentation extends Component {
       </tbody></table>
 
       <p>Any other property valid for a HTML button like <b>className</b>, <b>onClick</b>, …</p>
+
+      <h3>More Examples</h3>
+
+      <ul>
+        <li>
+          <h4>Override default Radium styles</h4>
+          <RadioButtonGroup
+            style={{
+              selected: {background: "teal"},
+              radio: {
+                height: "20px",
+                width: "20px"}
+            }}
+            defaultSelected="agree">
+            <RadioButton value="agree" label="Agree"/>
+            <RadioButton value="disagree" label="Disagree"/>
+          </RadioButtonGroup>
+          <Code value={ radiumStylesCodeExample } />
+        </li>
+      </ul>
 
     </div>);
 	}
