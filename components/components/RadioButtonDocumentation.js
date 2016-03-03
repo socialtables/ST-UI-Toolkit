@@ -132,6 +132,20 @@ export default class RadioButtonDocumentation extends Component {
 
         <tr>
           <td style={ propertyNameStyle }>
+            onSelect
+          </td>
+        </tr>
+        <tr>
+          <td style={ propertyDescriptionStyle }>
+            <p >
+              <i>Function</i>
+            </p>
+            <p>Callback function that is fired when a radio button has been clicked.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style={ propertyNameStyle }>
             style
           </td>
         </tr>
