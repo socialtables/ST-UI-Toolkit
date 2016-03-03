@@ -70,4 +70,21 @@ describe("RadioButton", () => {
 
 		expect(wasClicked).toBeFalsy();
 	});
+
+	it("should be able to select on label click", () => {
+		let wasClicked = false;
+
+		// Render a RadioButtonGroup with an onSelect handler
+		const radioButtonGroup = TestUtils.renderIntoDocument(
+			<RadioButtonGroup onSelect={ () => wasClicked = true}>
+				<RadioButton value="test" label="Test" className="radioButton"/>
+			</RadioButtonGroup>
+		);
+		const labelDivNode = TestUtils.findRenderedDOMComponentWithClass(radioButtonGroup, "radioButton").children[0];
+
+		// Simulate a click
+		TestUtils.Simulate.click(labelDivNode);
+
+		expect(wasClicked).toBeTruthy();
+	});
 });
