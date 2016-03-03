@@ -18,6 +18,7 @@ import RoundTextBoxDocumentation from './components/RoundTextBoxDocumentation';
 import CheckboxDocumentation from './components/CheckboxDocumentation';
 import TabsDocumentation from './components/TabsDocumentation';
 import ModalDocumentation from './components/ModalDocumentation';
+import RadioButtonDocumentation from './components/RadioButtonDocumentation';
 
 const routes = (
   <Route path="/" component={Base}>
@@ -28,6 +29,7 @@ const routes = (
     <Route path="component/checkbox" component={CheckboxDocumentation}/>
     <Route path="component/tabs" component={TabsDocumentation}/>
     <Route path="component/modal" component={ModalDocumentation}/>
+    <Route path="component/radio-button" component={RadioButtonDocumentation}/>
     <Route path="about" component={About}/>
     <Route path="guide/introducing" component={Introducing}/>
     <Route path="guide/how-to-use" component={HowDoIUse}/>
