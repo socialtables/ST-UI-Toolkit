@@ -54,6 +54,7 @@ export default class RadioButtonGroup extends Component {
 			return (
 				<RadioButton
 					{...other}
+					style={this.props.style}
 					ref={option.props.value}
 					name={this.props.name}
 					key={option.props.value}
