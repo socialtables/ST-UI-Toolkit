@@ -5,6 +5,8 @@ import Checkbox from "./components/Checkbox/Checkbox";
 import Tab from "./components/Tabs/Tab";
 import Tabs from "./components/Tabs/Tabs";
 import Modal from "./components/Modal/Modal";
+import RadioButton from "./components/RadioButton/RadioButton";
+import RadioButtonGroup from "./components/RadioButton/RadioButtonGroup";
 
 export default {
 	Button,
@@ -13,5 +15,7 @@ export default {
 	Checkbox,
 	Tab,
 	Tabs,
-	Modal
+	Modal,
+	RadioButton,
+	RadioButtonGroup
 };
