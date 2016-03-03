@@ -32,6 +32,7 @@ export default function() {
 		disabled: {
 			background: colors.disabledBg,
 			cursor: "not-allowed",
+			opacity: "0.5",
 			":focus:": {
 				borderColor: stColorPalette.stSilver
 			}
