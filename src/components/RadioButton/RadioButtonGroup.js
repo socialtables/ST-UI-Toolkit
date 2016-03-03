@@ -84,12 +84,5 @@ RadioButtonGroup.propTypes = {
 	]),
 	style: PropTypes.object,
 	name: PropTypes.string,
-	defaultSelected: PropTypes.string,
-	numberCheckedRadioButtons: PropTypes.number
+	defaultSelected: PropTypes.string
 };
-
-RadioButtonGroup.defaultProps = {
-
-};
-
-// TODO: figure out the deal with checked keyword vs using selected
