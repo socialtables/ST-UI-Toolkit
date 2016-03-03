@@ -33,12 +33,13 @@ export default class RadioButton extends Component {
 
 		return (
 			<div {...this._childProps} style={[styles.base, makeRow && rowStyles]}>
-				<div style={[
+				<div
+				onClick={this._handleSelect}
+				style={[
 					styles.radio,
 					this.props.style && this.props.style.radio,
 					this.props.selected && selectedStyles,
-					this.props.disabled && disabledStyles
-				]}>
+					this.props.disabled && disabledStyles]}>
 					<div style={[styles.radioButtonContentContainer]}>
 						<input
 							type="radio"
