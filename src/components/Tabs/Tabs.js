@@ -32,6 +32,10 @@ export default class Tabs extends Component {
 		this._childProps = childProps;
 	}
 
+	componentWillUnmount() {
+		this._childProps = null;
+	}
+
 	getTabCount() {
 		return React.Children.count(this.props.children);
 	}
