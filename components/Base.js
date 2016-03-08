@@ -145,6 +145,7 @@ export default React.createClass({
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/tabs">Tabs</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/modal">Modal</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/radio-button">Radio Button</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/round-select-box">RoundSelectBox</Link>
             </li>
           </ul>
           <span style={ { color: '#738088' } } >Guides / Philosophy</span>
