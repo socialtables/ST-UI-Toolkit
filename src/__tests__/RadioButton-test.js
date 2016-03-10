@@ -55,6 +55,27 @@ describe("RadioButton", () => {
 		expect(wasClicked).toBeTruthy();
 	});
 
+	it("should call onSelect with the event and value", () => {
+		const handler = jest.genMockFunction();
+
+		// Render a RadioButtonGroup with an onSelect handler
+		const radioButtonGroup = TestUtils.renderIntoDocument(
+			<RadioButtonGroup onSelect={ handler }>
+				<RadioButton value="test1" label="Test2"/>
+				<RadioButton value="test2" label="Test2" className="test2"/>
+			</RadioButtonGroup>
+		);
+
+		// Simulate a click
+		const el = TestUtils.scryRenderedDOMComponentsWithTag(radioButtonGroup, "input")[1]
+		TestUtils.Simulate.click(el);
+		const calledWith = handler.mock.calls[0]
+		
+		// make sure called with a synthetic event
+		expect(calledWith[0].nativeEvent).toBeDefined()
+		expect(calledWith[1]).toBe("test2");
+	});
+
 	it("should surpress onSelect listener if disabled", () => {
 		let wasClicked = false;
 
@@ -87,4 +108,5 @@ describe("RadioButton", () => {
 
 		expect(wasClicked).toBeTruthy();
 	});
+
 });
