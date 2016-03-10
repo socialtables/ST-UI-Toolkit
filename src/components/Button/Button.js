@@ -36,7 +36,7 @@ export default class Button extends Component {
 	}
 
 	render() {
-		const styles = getStyles({ theme: this.props.color });
+		const styles = getStyles({ theme: this.props.color, shape: this.props.shape });
 		const activeStateStyles = this._getStyle("active", styles);
 		const disabledStateStyles = this._getStyle("disabled", styles);
 
@@ -51,7 +51,7 @@ export default class Button extends Component {
 					this.props.style && this.props.style && this.props.style.base
 				]}
 				onClick={(this.props.disabled) ? null : this.props.onClick} >
-				{ this.props.children }
+					{ this.props.children }
 			</button>
 		);
 	}
@@ -67,11 +67,13 @@ Button.propTypes = {
 	style: PropTypes.object,
 	type: PropTypes.string,
 	disabled: PropTypes.bool,
-	color: PropTypes.string
+	color: PropTypes.string,
+	shape: PropTypes.string
 };
 
 Button.defaultProps = {
 	type: "button",
 	disabled: false,
-	color: "light"
+	color: "light",
+	shape: "square"
 };
