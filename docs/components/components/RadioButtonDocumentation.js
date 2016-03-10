@@ -151,8 +151,13 @@ export default class RadioButtonDocumentation extends Component {
           <td style={ propertyDescriptionStyle }>
             <p >
               <i>Function</i>
+              <br />
+              <i>onChange(Event event, String value)</i>
+              <br />
+              <b>default:</b> no-op function
             </p>
-            <p>Callback function that is fired when a radio button has been clicked.</p>
+            <p>Callback function that is fired when a radio button has been clicked. The callback receives the event
+            and the `value` of the currently-selected radio button. </p>
           </td>
         </tr>
 
