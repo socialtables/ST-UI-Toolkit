@@ -28,6 +28,9 @@ export default class RadioButtonGroup extends Component {
 			})
 		}
 	}
+	componentWillUnmount() {
+		this._childProps = null;
+	}
 	_updateRadioButtons(newSelection) {
 		if (this.state.numberCheckedRadioButtons === 0) {
 			this.setState({selected: newSelection});

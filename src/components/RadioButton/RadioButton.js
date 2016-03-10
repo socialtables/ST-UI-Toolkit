@@ -16,6 +16,9 @@ export default class RadioButton extends Component {
 		const { style, ...childProps } = props;
 		this._childProps = childProps;
 	}
+	componentWillUnmount() {
+		this._childProps = null;
+	}
 	_handleSelect(event) {
 		if (this.props.onSelect && !this.props.disabled) {
 			this.props.onSelect(event, this.props.value);

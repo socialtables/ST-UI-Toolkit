@@ -26,6 +26,10 @@ export default class RoundTextBox extends Component {
 		this._childProps = childProps;
 	}
 
+	componentWillUnmount() {
+		this._childProps = null;
+	}
+
 	render() {
 		const disabledStyles = (this.props.style && this.props.style.disabledStyles) || styles.disabled;
 

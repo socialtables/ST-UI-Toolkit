@@ -34,6 +34,11 @@ export default class Checkbox extends Component {
 		}
 	}
 
+	componentWillUnmount() {
+		this._childProps = null;
+		this._customCheckbox = null;
+	}
+
 	_focusOnCustomCheckbox() {
 		this._customCheckbox.focus();
 	}

@@ -25,6 +25,10 @@ export default class Tab extends Component {
 		this._childProps = childProps;
 	}
 
+	componentWillUnmount() {
+		this._childProps = null;
+	}
+
 	_handleSelect(event) {
 		if (this.props.onSelect) {
 			this.props.onSelect(event, this);

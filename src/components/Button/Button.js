@@ -27,6 +27,10 @@ export default class Button extends Component {
 		this._childProps = childProps;
 	}
 
+	componentWillUnmount() {
+		this._childProps = null;
+	}
+
 	_getStyle(styleName, styles) {
 		return (this.props.style && this.props.style[styleName]) || styles[styleName];
 	}

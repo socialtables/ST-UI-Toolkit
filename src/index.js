@@ -7,6 +7,8 @@ import Tabs from "./components/Tabs/Tabs";
 import Modal from "./components/Modal/Modal";
 import RadioButton from "./components/RadioButton/RadioButton";
 import RadioButtonGroup from "./components/RadioButton/RadioButtonGroup";
+import RoundSelectBox from "./components/RoundSelectBox/RoundSelectBox";
+import RoundSelectBoxOption from "./components/RoundSelectBox/RoundSelectBoxOption";
 
 export default {
 	Button,
@@ -17,5 +19,7 @@ export default {
 	Tabs,
 	Modal,
 	RadioButton,
-	RadioButtonGroup
+	RadioButtonGroup,
+	RoundSelectBox,
+	RoundSelectBoxOption
 };

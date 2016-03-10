@@ -83,6 +83,7 @@ export default class Modal extends Component {
 		this._overlayElement = null;
 		this._modalContentElement = null;
 		this._cachedBodyElementReference = null;
+		this._childProps = null;
 	}
 
 	_hideShowModalContainer({ open }) {

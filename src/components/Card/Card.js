@@ -25,6 +25,10 @@ export default class Card extends Component {
 		this._childProps = childProps;
 	}
 
+	componentWillUnmount() {
+		this._childProps = null;
+	}
+
 	render() {
 		return (
 			<div
