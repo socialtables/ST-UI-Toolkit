@@ -39,7 +39,7 @@ export default class RoundSelectBox extends Component {
 
 	_renderDownArrowIcon() {
 		return (
-			<svg style={[styles.selectBox.arrowIcon]}
+			<svg style={[styles.selectBox.arrowIcon, this.props.style && this.props.style.selectBox && this.props.style.selectBox.arrowIcon]}
 				enable-background="new 0 0 50 50"
 				version="1.1"
 				viewBox="0 0 50 50">
@@ -56,6 +56,8 @@ export default class RoundSelectBox extends Component {
 	}
 
 	_renderOptionsList() {
+		const openStyles = this.props.style && this.props.style.optionList && this.props.style.optionList.open || styles.optionList.open;
+		const closedStyles = this.props.style && this.props.style.optionList && this.props.style.optionList.closed || styles.optionList.closed;
 		let maxHeightFromSizeProp = {};
 		if (this.props.size) {
 			maxHeightFromSizeProp.maxHeight = this.props.size * styles.option.minHeight;
@@ -66,7 +68,8 @@ export default class RoundSelectBox extends Component {
 			options = React.Children.map(this.props.children, (optionElement, index) => {
 				return React.cloneElement(optionElement, {
 					key: index,
-					onMouseDown: !this.props.disabled && this._selectOption
+					onMouseDown: !this.props.disabled && this._selectOption,
+					style: this.props.style
 				}, optionElement.props.children);
 			});
 		}
@@ -75,9 +78,10 @@ export default class RoundSelectBox extends Component {
 			<div
 				style={[
 					styles.optionList,
-					this.state.isOptionListOpen && styles.optionList.open,
+					this.state.isOptionListOpen && openStyles,
 					this.state.isOptionListOpen && this.props.size && maxHeightFromSizeProp,
-					!this.state.isOptionListOpen && styles.optionList.closed
+					!this.state.isOptionListOpen && closedStyles,
+					this.props.style && this.props.style.optionList
 				]}>
 				{options}
 			</div>
@@ -121,12 +125,15 @@ export default class RoundSelectBox extends Component {
 				valueIsSelected = false;
 			}
 		}
+		const selectedStyles = this.props.style && this.props.style.selectBox && this.props.style.selectBox.selectedOption && this.props.style.selectBox.selectedOption.selected || styles.selectBox.selectedOption.selected;
+		const unselectedStyles = this.props.style && this.props.style.selectBox && this.props.style.selectBox.selectedOption && this.props.style.selectBox.selectedOption.unselected || styles.selectBox.selectedOption.unselected
 
 		return (
 			<div style={[
 				styles.selectBox.selectedOption,
 				valueIsSelected && styles.selectBox.selectedOption.selected,
-				!valueIsSelected && styles.selectBox.selectedOption.unselected
+				!valueIsSelected && styles.selectBox.selectedOption.unselected,
+				this.props.style && this.props.style.selectBox && this.props.style.selectBox.selectedOption
 			]}>
 				<span className="st-ui-toolkit-roundselectbox-selected-option-text">{text}</span>
 			</div>
@@ -136,17 +143,20 @@ export default class RoundSelectBox extends Component {
 	_renderBox() {
 		const downIcon = this._renderDownArrowIcon();
 		const selectedOption = this._renderSelectedOption();
+		const enabledStyles = this.props.style && this.props.style.selectBox && this.props.style.selectBox.enabled || styles.selectBox.enabled;
+		const disabledStyles = this.props.style && this.props.style.selectBox && this.props.style.selectBox.disabled || styles.selectBox.disabled;
+		const contentStyles = this.props.style && this.props.style.selectBox && this.props.style.selectBox.content || styles.selectBox.content;
 
 		return (
 			<div
 				onClick={() => this._openOptionList()}
 				style={[
 					styles.selectBox,
-					!this.props.disabled && styles.selectBox.enabled,
-					this.props.disabled && styles.selectBox.disabled,
+					!this.props.disabled && enabledStyles,
+					this.props.disabled && disabledStyles,
 					this.props.style && this.props.style.selectBox
 				]}>
-				<div style={[styles.selectBox.content]}>
+				<div style={[contentStyles]}>
 					{selectedOption}
 					{downIcon}
 				</div>
