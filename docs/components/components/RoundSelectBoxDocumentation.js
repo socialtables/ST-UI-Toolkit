@@ -57,6 +57,29 @@ const radiumStylesCodeExample = `<RoundSelectBox
     <RoundSelectBoxOption value="B" displayLabel="B"></RoundSelectBoxOption>
     <RoundSelectBoxOption value="C" displayLabel="C"></RoundSelectBoxOption>
 </RoundSelectBox>`;
+const overrideStylesExample = `<RoundSelectBox
+  value={this.state.overrideOptionValue}
+  style={{
+    selectBox: {
+      background: "#494949",
+      color: "white",
+      arrowIcon: {fill: "white"},
+      selectedOption: {color: "white"}
+    },
+    optionList: {
+      background: "#494949",
+      color: "white"
+    },
+    option: {
+      enabled: {":hover": {background: "#cb5599"}}
+    }
+  }}
+  defaultText="Select a Color"
+  onChange={(v) => { this.setState({overrideOptionValue: v}) }}>
+  <RoundSelectBoxOption value="Red" displayLabel="Red"></RoundSelectBoxOption>
+  <RoundSelectBoxOption value="Blue" displayLabel="Blue"></RoundSelectBoxOption>
+  <RoundSelectBoxOption value="Yellow" displayLabel="Yellow"></RoundSelectBoxOption>
+</RoundSelectBox>`;
 
 export default class RoundSelectBoxDocumentation extends Component {
   constructor(props) {
@@ -290,6 +313,19 @@ export default class RoundSelectBoxDocumentation extends Component {
             <RoundSelectBoxOption value="C" displayLabel="C"></RoundSelectBoxOption>
           </RoundSelectBox>
           <Code value={ radiumStylesCodeExample } style={ {marginTop: 20} } />
+        </li>
+        <li>
+          <h4>Override Option Styles</h4>
+          <RoundSelectBox
+            value={this.state.overrideOptionValue}
+            style={{selectBox: {background: "#494949", color: "white", arrowIcon: {fill: "white"}, selectedOption: {color: "white"}}, optionList: {background: "#494949", color: "white"}, option: {enabled: {":hover": {background: "#cb5599"}}}}}
+            defaultText="Select a Color"
+            onChange={(v) => { this.setState({overrideOptionValue: v}) }}>
+            <RoundSelectBoxOption value="Red" displayLabel="Red"></RoundSelectBoxOption>
+            <RoundSelectBoxOption value="Blue" displayLabel="Blue"></RoundSelectBoxOption>
+            <RoundSelectBoxOption value="Yellow" displayLabel="Yellow"></RoundSelectBoxOption>
+          </RoundSelectBox>
+          <Code value={ overrideStylesExample } style={ {marginTop: 20} } />
         </li>
       </ul>
 

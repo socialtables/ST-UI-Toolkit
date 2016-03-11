@@ -36,7 +36,13 @@ export default class RoundSelectBoxOption extends Component {
 		}
 	}
 
+	_getStyle(styleName) {
+		return (this.props.style && this.props.style.option && this.props.style.option[styleName]) || styles.option[styleName];
+	}
+
 	render() {
+		const enabledStyles = this._getStyle("enabled");
+		const disabledStyles = this._getStyle("disabled");
 		const label = (this.props.displayLabel === undefined) ? this.props.value : this.props.displayLabel;
 
 		return (
@@ -45,8 +51,9 @@ export default class RoundSelectBoxOption extends Component {
 				onMouseDown={this._handleClick}
 				style={[
 					styles.option,
-					!this.props.disabled && styles.option.enabled,
-					this.props.disabled && styles.option.disabled
+					!this.props.disabled && enabledStyles,
+					this.props.disabled && disabledStyles,
+					this.props.style && this.props.style.option
 				]}
 				value={this.props.value}>
 				{label}
