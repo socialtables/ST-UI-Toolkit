@@ -9,7 +9,10 @@ export default function() {
 	return {
 		base: {
 			lineHeight: "initial",
-			margin: "5px 0px"
+			margin: "5px 0px",
+			disabled: {
+				opacity: "0.5"
+			}
 		},
 		radio: {
 			display: "table-cell",
@@ -23,18 +26,16 @@ export default function() {
 			borderWidth: 2,
 			cursor: "pointer",
 			transition: "all 0.20s",
-			lineHeight: "unset"
-
-		},
-		selected: {
-			background: colors.primary
-		},
-		disabled: {
-			background: colors.disabledBg,
-			cursor: "not-allowed",
-			opacity: "0.5",
-			":focus:": {
-				borderColor: stColorPalette.stSilver
+			lineHeight: "unset",
+			selected: {
+				background: colors.primary
+			},
+			disabled: {
+				background: colors.disabledBg,
+				cursor: "not-allowed",
+				":focus:": {
+					borderColor: stColorPalette.stSilver
+				}
 			}
 		},
 		row: {
