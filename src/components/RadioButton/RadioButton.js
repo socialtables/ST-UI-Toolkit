@@ -29,20 +29,22 @@ export default class RadioButton extends Component {
 	}
 	render() {
 		const styles = getStyles();
-		const selectedStyles = this._getStyle("selected", styles);
-		const disabledStyles = this._getStyle("disabled", styles);
-		const rowStyles = this._getStyle("row", styles)
+		const rowStyles = this._getStyle("row", styles);
+		const radioStyles = this._getStyle("radio", styles);
 		const makeRow = this.props.align === "row";
 
 		return (
-			<div {...this._childProps} style={[styles.base, makeRow && rowStyles]}>
+			<div {...this._childProps} style={[
+				styles.base,
+				this.props.disabled && styles.base.disabled,
+				makeRow && rowStyles]}>
 				<div
 				onClick={this._handleSelect}
 				style={[
 					styles.radio,
-					this.props.style && this.props.style.radio,
-					this.props.selected && selectedStyles,
-					this.props.disabled && disabledStyles]}>
+					this.props.selected && (radioStyles.selected || styles.radio.selected),
+					this.props.disabled && (radioStyles.disabled || styles.radio.disabled),
+					this.props.style && this.props.style.radio]}>
 					<div>
 						<input
 							type="radio"

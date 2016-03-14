@@ -3,7 +3,7 @@ import {RadioButton, RadioButtonGroup} from '@socialtables/st-ui-toolkit';
 import Code from '../Code';
 import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
-const basicCodeExample = `<RadioButtonGroup name="examples" defaultSelected="second">
+const basicCodeExample = `<RadioButtonGroup name="examples" defaultSelected="second" onSelect={(e, value) => console.log(value)}>
   <RadioButton
     value="first"
     label="First Choice"/>
@@ -29,10 +29,11 @@ const rowCodeExample = `<RadioButtonGroup name="row-example" align="row">
 
 const radiumStylesCodeExample = `<RadioButtonGroup
   style={{
-    selected: {background: "teal"},
     radio: {
       height: "20px",
-      width: "20px"}
+      width: "20px",
+      selected: {background: "teal"}
+    }
   }}
   defaultSelected="agree">
   <RadioButton value="agree" label="Agree"/>
@@ -254,10 +255,11 @@ export default class RadioButtonDocumentation extends Component {
           <h4>Override default Radium styles</h4>
           <RadioButtonGroup
             style={{
-              selected: {background: "teal"},
               radio: {
                 height: "20px",
-                width: "20px"}
+                width: "20px",
+                selected: {background: "teal"}
+              }
             }}
             defaultSelected="agree">
             <RadioButton value="agree" label="Agree"/>
