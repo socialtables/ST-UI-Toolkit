@@ -101,7 +101,7 @@ describe("RadioButton", () => {
 				<RadioButton value="test" label="Test" className="radioButton"/>
 			</RadioButtonGroup>
 		);
-		const labelDivNode = TestUtils.findRenderedDOMComponentWithClass(radioButtonGroup, "radioButton").children[0];
+		const labelDivNode = TestUtils.findRenderedDOMComponentWithClass(radioButtonGroup, "radioButton").children[1];
 
 		// Simulate a click
 		TestUtils.Simulate.click(labelDivNode);

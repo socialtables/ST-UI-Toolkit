@@ -45,7 +45,7 @@ export default class RadioButtonDocumentation extends Component {
 
       <h2 style={ {marginTop: 0, marginBottom: 40} }>Radio Button</h2>
 
-      <RadioButtonGroup name="examples" defaultSelected="second">
+      <RadioButtonGroup name="examples" defaultSelected="second" onSelect={(e, value) => console.log(value)}>
         <RadioButton
           value="first"
           label="First Choice"/>

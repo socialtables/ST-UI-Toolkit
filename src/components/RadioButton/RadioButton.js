@@ -58,7 +58,7 @@ export default class RadioButton extends Component {
 						/>
 					</div>
 				</div>
-				<div style={[styles.labelWrapper]}>
+				<div onClick={this._handleSelect} style={[styles.labelWrapper]}>
 				{this.props.label}
 				</div>
 			</div>
