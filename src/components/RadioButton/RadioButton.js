@@ -43,7 +43,7 @@ export default class RadioButton extends Component {
 					this.props.style && this.props.style.radio,
 					this.props.selected && selectedStyles,
 					this.props.disabled && disabledStyles]}>
-					<div style={[styles.radioButtonContentContainer]}>
+					<div>
 						<input
 							type="radio"
 							name={this.props.name}

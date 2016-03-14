@@ -56,12 +56,6 @@ export default function() {
 				cursor: "not-allowed"
 			}
 		},
-		// styles for radio button content container
-		radioButtonContentContainer: {
-			position: "absolute",
-			width: "100%",
-			height: "100%"
-		},
 		// styles for the radio button label
 		labelWrapper: {
 			display: "table-cell",
