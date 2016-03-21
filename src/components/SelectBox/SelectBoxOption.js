@@ -4,12 +4,12 @@ import React, {Component, PropTypes} from "react";
 import styles from "./styles";
 
 /**
- * RoundSelectBoxOption component
+ * SelectBoxOption component
  *
  * This component is the option for the select box
  */
 @Radium
-export default class RoundSelectBoxOption extends Component {
+export default class SelectBoxOption extends Component {
 
 	constructor(properties) {
 		super(properties);
@@ -62,15 +62,15 @@ export default class RoundSelectBoxOption extends Component {
 	}
 }
 
-RoundSelectBoxOption.displayName = "RoundSelectBoxOption";
+SelectBoxOption.displayName = "SelectBoxOption";
 
-RoundSelectBoxOption.propTypes = {
+SelectBoxOption.propTypes = {
 	disabled: PropTypes.bool,
 	value: PropTypes.any,
 	displayLabel: PropTypes.string
 };
 
-RoundSelectBoxOption.defaultProps = {
+SelectBoxOption.defaultProps = {
 	disabled: false,
 	value: undefined,
 	displayLabel: undefined
