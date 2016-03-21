@@ -6,6 +6,9 @@ import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 const basicCodeExample = `<Button onClick={() => console.log("yolo")}>Click Here</Button>`;
 const disabledButtonCodeExample = `<Button disabled>Follow</Button>`;
 const darkButtonCodeExample = `<Button color="dark">Dark Button</Button>`;
+const successButtonCodeExample = `<Button color="success">Success</Button>`;
+const failButtonCodeExample = `<Button color="fail">Fail</Button>`;
+const customButtonCodeExample = `<Button color="#49C6B7">Custom</Button>`;
 const roundButtonCodeExample = `<Button shape="round" style={{base: { width: 30, height: 30}}}>+</Button>`;
 const radiumStylesCodeExample = `<Button style={{ base: { background: "orange", border: "solid black 2px" } }}>Yolo</Button>`;
 
@@ -70,11 +73,16 @@ export default class ButtonDocumentation extends Component {
         <tr>
           <td style={ propertyDescriptionStyle }>
             <p>
-              <i>String</i> of 'light', 'dark', 'success', 'fail'
+              <i>String</i> of 'light', 'dark', 'success', 'fail', or valid CSS color
               <br />
               <b>default:</b>'light'
             </p>
-            <p>String used to set primary color of button</p>
+            <p>
+              String used to set primary color of button
+              <br/>
+              <br/>
+              <strong>NOTE:</strong> if this attribute is used to specify the button color, the button will automatically darken when in the hover state.
+            </p>
           </td>
         </tr>
 
@@ -92,6 +100,8 @@ export default class ButtonDocumentation extends Component {
             </p>
             <p>
               If the shape is specified as 'round', a borderRadius is applied to the button to give it a rounded appearance.
+              <br/>
+              <br/>
               If the shape is specified as 'square', a borderRadius of 0 is applied, which gives the button a square appearance.
             </p>
           </td>
@@ -109,7 +119,12 @@ export default class ButtonDocumentation extends Component {
               <br />
               <b>default:</b> See <b>/src/components/Button/styles.js</b> file
             </p>
-            <p>Radium-based inline-style</p>
+            <p>
+              Radium-based inline-style
+              <br/>
+              <br/>
+              <strong>NOTE:</strong> if this attribute is used to override the <i>base.background</i> style property, the button will not automatically darken on hover state.
+            </p>
           </td>
         </tr>
 
@@ -132,12 +147,28 @@ export default class ButtonDocumentation extends Component {
           <Code value={ darkButtonCodeExample } />
         </li>
         <li>
+          <h4>Success button</h4>
+          <Button color="success">Success</Button>
+          <Code value={ successButtonCodeExample } />
+        </li>
+        <li>
+          <h4>Fail button</h4>
+          <Button color="fail">Fail</Button>
+          <Code value={ failButtonCodeExample } />
+        </li>
+        <li>
+          <h4>Custom color button</h4>
+          <Button color="#49C6B7">Custom</Button>
+          <Code value={ customButtonCodeExample } />
+        </li>
+        <li>
           <h4>Rounded button</h4>
           <Button shape="round" style={{base: { width: 30, height: 30}}}>+</Button>
           <Code value={ roundButtonCodeExample } />
         </li>
         <li>
-          <h4>Override default Radium styles</h4>
+          <h4>Override default Radium styles via `style` attribute</h4>
+          <p><strong>NOTE</strong> on hover that button is not darkened. To automatically darken on hover, specify <i>color</i> property instead.</p>
           <Button style={{ base: { background: "orange", border: "solid black 2px" } }}>Yolo</Button>
           <Code value={ radiumStylesCodeExample } />
         </li>

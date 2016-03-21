@@ -19,7 +19,9 @@ function getBorderRadius(shape) {
 	Default Styles
 */
 export default function({ theme, shape }) {
-	const btnBackgroundColor = getColorFromTheme(theme);
+	let btnBackgroundColor = getColorFromTheme(theme);
+	btnBackgroundColor = (btnBackgroundColor === null) ? theme : btnBackgroundColor;
+
 	const borderRadius = getBorderRadius(shape);
 
 	return {
