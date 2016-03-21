@@ -11,6 +11,6 @@ export default function(theme) {
 		case "fail":
 			return stColorPalette.stRed;
 		default:
-			return stColorPalette.stPink;
+			return null;
 	}
 };
