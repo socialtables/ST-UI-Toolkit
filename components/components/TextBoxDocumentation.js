@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-import {RoundTextBox} from '@socialtables/st-ui-toolkit';
+import {TextBox} from '@socialtables/st-ui-toolkit';
 import Code from '../Code';
 import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
-const basicCodeExample = `<RoundTextBox placeholder="Placeholder Text"></RoundTextBox>`;
-const disabledRoundTextBoxCodeExample = `<RoundTextBox disabled placeholder="Placeholder Text"></RoundTextBox>`;
-const radiumStylesCodeExample = `<RoundTextBox style={{ base: {background: "orange", color: "black", borderColor: "black"} }}></RoundTextBox>`;
+const basicCodeExample = `<TextBox placeholder="Placeholder Text"></TextBox>`;
+const disabledTextBoxCodeExample = `<TextBox disabled placeholder="Placeholder Text"></TextBox>`;
+const radiumStylesCodeExample = `<TextBox style={{ base: {background: "orange", color: "black", borderColor: "black"} }}></TextBox>`;
 
-export default class RoundTextBoxDocumentation extends Component {
+export default class TextBoxDocumentation extends Component {
 
   render() {
     return (<div>
 
-      <h2 style={ {marginTop: 0, marginBottom: 40} }>RoundTextBox</h2>
+      <h2 style={ {marginTop: 0, marginBottom: 40} }>TextBox</h2>
 
-      <RoundTextBox placeholder="Placeholder Text"></RoundTextBox>
+      <TextBox placeholder="Placeholder Text"></TextBox>
 
       <Code value={ basicCodeExample } style={ {marginTop: 40} } />
 
@@ -85,7 +85,7 @@ export default class RoundTextBoxDocumentation extends Component {
             <p>
               <i>Object</i>
               <br />
-              <b>default:</b> See <b>/src/components/RoundTextBox/styles.js</b> file
+              <b>default:</b> See <b>/src/components/TextBox/styles.js</b> file
             </p>
             <p>Radium-based inline-style</p>
           </td>
@@ -101,12 +101,12 @@ export default class RoundTextBoxDocumentation extends Component {
       <ul>
         <li>
           <h4>Disabled input</h4>
-          <RoundTextBox disabled placeholder="Placeholder Text"></RoundTextBox>
-          <Code value={ disabledRoundTextBoxCodeExample } style={ {marginTop: 20} } />
+          <TextBox disabled placeholder="Placeholder Text"></TextBox>
+          <Code value={ disabledTextBoxCodeExample } style={ {marginTop: 20} } />
         </li>
         <li>
           <h4>Override default Radium styles</h4>
-          <RoundTextBox style={{ base: {background: "orange", color: "black", borderColor: "black"} }}></RoundTextBox>
+          <TextBox style={{ base: {background: "orange", color: "black", borderColor: "black"} }}></TextBox>
           <Code value={ radiumStylesCodeExample } />
         </li>
       </ul>

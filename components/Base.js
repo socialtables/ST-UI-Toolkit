@@ -140,12 +140,12 @@ export default React.createClass({
             <li>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/button">Button</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/card">Card</Link>
-              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/round-text-box">RoundTextBox</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/text-box">TextBox</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/checkbox">Checkbox</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/tabs">Tabs</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/modal">Modal</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/radio-button">Radio Button</Link>
-              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/round-select-box">RoundSelectBox</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/select-box">SelectBox</Link>
             </li>
           </ul>
           <span style={ { color: '#738088' } } >Guides / Philosophy</span>
