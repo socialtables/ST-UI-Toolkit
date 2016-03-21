@@ -5,12 +5,12 @@ import lodashFind from "lodash.find";
 import styles from "./styles";
 
 /**
- * RoundSelectBox component
+ * SelectBox component
  *
  * This component is the round select box
  */
 @Radium
-export default class RoundSelectBox extends Component {
+export default class SelectBox extends Component {
 
 	constructor(properties) {
 		super(properties);
@@ -209,9 +209,9 @@ export default class RoundSelectBox extends Component {
 	}
 }
 
-RoundSelectBox.displayName = "RoundSelectBox";
+SelectBox.displayName = "SelectBox";
 
-RoundSelectBox.propTypes = {
+SelectBox.propTypes = {
 	style: PropTypes.object,
 	disabled: PropTypes.bool,
 	value: PropTypes.any,
@@ -221,7 +221,7 @@ RoundSelectBox.propTypes = {
 	required: PropTypes.bool
 };
 
-RoundSelectBox.defaultProps = {
+SelectBox.defaultProps = {
 	disabled: false,
 	value: undefined,
 	defaultText: "",

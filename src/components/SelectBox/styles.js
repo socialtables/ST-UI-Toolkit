@@ -18,7 +18,6 @@ export default {
 		transition: "border-color .3s",
 		color: stColorPalette.stDarkGray,
 		borderColor: stColorPalette.stSilver,
-		borderRadius: 5,
 		borderStyle: "solid",
 		borderWidth: 2,
 		userSelect: "none",

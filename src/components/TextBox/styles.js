@@ -7,7 +7,6 @@ export default {
 		padding: 10,
 		transition: "all .2s",
 		borderColor: stColorPalette.stSilver,
-		borderRadius: 5,
 		borderStyle: "solid",
 		borderWidth: 2,
 		":focus": {

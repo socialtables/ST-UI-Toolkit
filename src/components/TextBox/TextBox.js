@@ -5,12 +5,12 @@ import styles from "./styles";
 import VALID_TYPES from "./valid_types";
 
 /**
- * RoundTextBox component
+ * TextBox component
  *
  * This component is the rounded-input box
  */
 @Radium
-export default class RoundTextBox extends Component {
+export default class TextBox extends Component {
 
 	constructor(properties) {
 		super(properties);
@@ -47,15 +47,15 @@ export default class RoundTextBox extends Component {
 	}
 }
 
-RoundTextBox.displayName = "RoundTextBox";
+TextBox.displayName = "TextBox";
 
-RoundTextBox.propTypes = {
+TextBox.propTypes = {
 	style: PropTypes.object,
 	type: React.PropTypes.oneOf(VALID_TYPES).isRequired,
 	disabled: PropTypes.bool
 };
 
-RoundTextBox.defaultProps = {
+TextBox.defaultProps = {
 	type: "text",
 	disabled: false
 };
