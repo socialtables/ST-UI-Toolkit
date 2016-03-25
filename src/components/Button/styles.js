@@ -1,6 +1,5 @@
 import colorLib from "color";
 import colors from "../../shared-styles/colors";
-import fonts from "../../shared-styles/fonts";
 import getColorFromTheme from "../../utils/get-color-from-theme";
 
 

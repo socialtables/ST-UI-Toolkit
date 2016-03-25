@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from "react";
+import {Component, PropTypes} from "react";
 import ReactDOM from "react-dom";
 
 import ModalContentWrapper from "./ModalContentWrapper";

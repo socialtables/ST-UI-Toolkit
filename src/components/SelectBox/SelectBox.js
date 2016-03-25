@@ -125,8 +125,6 @@ export default class SelectBox extends Component {
 				valueIsSelected = false;
 			}
 		}
-		const selectedStyles = this.props.style && this.props.style.selectBox && this.props.style.selectBox.selectedOption && this.props.style.selectBox.selectedOption.selected || styles.selectBox.selectedOption.selected;
-		const unselectedStyles = this.props.style && this.props.style.selectBox && this.props.style.selectBox.selectedOption && this.props.style.selectBox.selectedOption.unselected || styles.selectBox.selectedOption.unselected
 
 		return (
 			<div style={[

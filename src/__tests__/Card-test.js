@@ -2,7 +2,6 @@
 
 jest.dontMock("../components/Card/Card");
 
-import React from "react";
 import TestUtils from "react-addons-test-utils";
 
 // Babel would move an import in front of the jest.dontMock. That"s why require

@@ -1,6 +1,4 @@
-import colorLib from "color";
 import colors from "../../shared-styles/colors";
-import fonts from "../../shared-styles/fonts";
 import { stColorPalette } from "../../shared-styles/colors";
 
 const DEFAULT_RADIO_BUTTON_SIZE = 16;

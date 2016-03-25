@@ -2,10 +2,8 @@
 
 jest.dontMock("../components/SelectBox/SelectBox");
 
-import React from "react";
 import ReactDOM from "react-dom";
 import TestUtils from "react-addons-test-utils";
-import sinon from "sinon";
 
 
 // Babel would move an import in front of the jest.dontMock. That"s why require

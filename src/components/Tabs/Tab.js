@@ -1,5 +1,5 @@
 import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import {Component, PropTypes} from "react";
 import getStyles from "./styles";
 import Button from "../Button/Button";
 
@@ -40,17 +40,9 @@ export default class Tab extends Component {
 	}
 
 	render() {
-		const {
-			children,
-			label,
-			onSelect,
-			selected,
-			style,
-			value
-		} = this.props;
-
+		const { label, selected } = this.props;
 		const styles = getStyles();
-		const tabStyle = this.props.selected ? this._getStyle("selected", styles) : {};
+		const tabStyle = selected ? this._getStyle("selected", styles) : {};
 
 		return (
 			<Button

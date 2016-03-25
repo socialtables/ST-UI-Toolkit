@@ -18,7 +18,7 @@ export default class RadioButtonGroup extends Component {
 		this._updateRadioButtons = this._updateRadioButtons.bind(this);
 		this._handleChange = this._handleChange.bind(this);
 	}
-	componentWillReceiveProps(nextProps, nextContext) {
+	componentWillReceiveProps(nextProps) {
 		const { style, ...childProps } = nextProps;
 		this._childProps = childProps;
 

@@ -87,17 +87,9 @@ export default class Tabs extends Component {
 
 	render() {
 		const {
-			children,
-			initialSelectedIndex,
-			onChange,
-			style,
-			value
-		} = this.props;
-
-		const {
 			tabs,
 			tabContent
-		} = this._renderTabsAndContent(children);
+		} = this._renderTabsAndContent(this.props.children);
 
 		const styles = getStyles();
 		const tabContainerStyle = this._getStyle("tabContainer", styles);

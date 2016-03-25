@@ -2,11 +2,9 @@
 
 jest.dontMock("../components/TextBox/TextBox");
 
-import React from "react";
 import ReactDOM from "react-dom";
 import TestUtils from "react-addons-test-utils";
 import sinon from "sinon";
-
 
 // Babel would move an import in front of the jest.dontMock. That"s why require
 // is used instead of import.
@@ -49,7 +47,7 @@ describe("TextBox", () => {
 	it("cannot take an invalid 'type' prop such as 'checkbox'", () => {
 		let stub = sinon.stub(window.console, "error");
 
-		const textBox = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<TextBox type="checkbox"></TextBox>
 		);
 

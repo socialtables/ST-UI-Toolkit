@@ -1,4 +1,3 @@
-import colorLib from "color";
 import { default as colors, stColorPalette } from "../../shared-styles/colors";
 
 export default {

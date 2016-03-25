@@ -2,8 +2,6 @@
 
 jest.dontMock("../components/Tabs/Tabs");
 
-import React from "react";
-import ReactDOM from "react-dom";
 import TestUtils from "react-addons-test-utils";
 
 // Babel would move an import in front of the jest.dontMock. That"s why require
@@ -53,7 +51,7 @@ describe("Tabs", () => {
 				<Tab className="thirdTabNode"></Tab>
 			</Tabs>
 		);
-		const tabsNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "tabs");
+
 		const firstTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "firstTab");
 		const secondTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "secondTab");
 		const thirdTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "thirdTabNode");

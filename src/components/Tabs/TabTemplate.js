@@ -1,5 +1,5 @@
 import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import {Component, PropTypes} from "react";
 
 @Radium
 export default class TabTemplate extends Component {

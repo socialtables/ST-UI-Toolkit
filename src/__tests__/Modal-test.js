@@ -2,8 +2,6 @@
 
 jest.dontMock("../components/Modal/Modal");
 
-import React from "react";
-import ReactDOM from "react-dom";
 import TestUtils from "react-addons-test-utils";
 import sinon from "sinon";
 
@@ -29,7 +27,7 @@ const Modal = require("../components/Modal/Modal");
 describe("Modal", () => {
 
 	it("should be open if prop 'open' is 'true'", () => {
-		const modal = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Modal open={true}>
 				<div className="modal-content">Yolo Swag</div>
 			</Modal>
@@ -40,7 +38,7 @@ describe("Modal", () => {
 	});
 
 	it("should be closed if prop 'open' is 'false'", () => {
-		const modal = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Modal open={false}>
 				<div className="modal-content">Yolo Swag</div>
 			</Modal>
@@ -53,7 +51,7 @@ describe("Modal", () => {
 
 	it("should trigger 'onCloseRequest()' function when Esc key is pressed (if 'listenForExternalCloseEvent' prop is 'true')", () => {
 		const callback = sinon.spy();
-		const modal = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Modal
 				open={true}
 				listenForExternalCloseEvent={true}
@@ -69,7 +67,7 @@ describe("Modal", () => {
 
 	it("should not trigger 'onCloseRequest()' function when Esc key is pressed (if 'listenForExternalCloseEvent' prop is 'false')", () => {
 		const callback = sinon.spy();
-		const modal = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Modal
 				open={true}
 				listenForExternalCloseEvent={false}
@@ -85,7 +83,7 @@ describe("Modal", () => {
 
 	it("should trigger 'onCloseRequest()' function when clicked outside of modal content (if 'listenForExternalCloseEvent' prop is 'true')", (done) => {
 		const callback = sinon.spy();
-		const modal = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Modal
 				open={true}
 				listenForExternalCloseEvent={true}
@@ -107,7 +105,7 @@ describe("Modal", () => {
 
 	it("should not trigger 'onCloseRequest()' function when clicked outside of modal content (if 'listenForExternalCloseEvent' prop is 'false')", (done) => {
 		const callback = sinon.spy();
-		const modal = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Modal
 				open={true}
 				listenForExternalCloseEvent={false}
