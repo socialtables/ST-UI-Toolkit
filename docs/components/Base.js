@@ -144,6 +144,7 @@ export default React.createClass({
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/checkbox">Checkbox</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/tabs">Tabs</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/modal">Modal</Link>
+              <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/growler">Growler</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/radio-button">Radio Button</Link>
               <Link style={LEFT_HAND_MENU_LINK_STYLE} to="/component/select-box">SelectBox</Link>
             </li>
