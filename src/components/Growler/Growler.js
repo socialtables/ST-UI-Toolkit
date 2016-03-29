@@ -158,7 +158,6 @@ export default class Growler extends Component {
 		this._growlerContentElement.style.background = "black";
 		this._growlerContentElement.style.color = "white";
 		this._growlerContentElement.style.opacity = 0.7;
-		this._growlerContentElement.style.width = "30%";
 		this._growlerContentElement.style.maxWidth = "750px";
 
 		// Append growler layer to DOM
