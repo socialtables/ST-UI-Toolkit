@@ -24,7 +24,9 @@ export default class Growler extends Component {
 		this._fadeInGrowler = this._fadeInGrowler.bind(this);
 		this._fadeOutGrowler = this._fadeOutGrowler.bind(this);
 
-		this._createGrowlerContainer();
+		if (!this._growlerContentElement) {
+			this._createGrowlerContentElement();
+		}
 	}
 
 	/**
@@ -36,11 +38,11 @@ export default class Growler extends Component {
 	}
 
 	componentWillMount() {
-		this._hideShowGrowlerContainer(this.props);
+		this._hideShowGrowlerContentElement(this.props);
 	}
 
 	componentWillUpdate(nextProps) {
-		this._hideShowGrowlerContainer(nextProps);
+		this._hideShowGrowlerContentElement(nextProps);
 
 		if (nextProps.timeToClose && nextProps.open) {
 			setTimeout(this._fadeOutGrowler, nextProps.timeToClose);
@@ -61,7 +63,7 @@ export default class Growler extends Component {
 
 		// Remove growler content from DOM
 		if (this._growlerContentElement) {
-			ReactDOM.unmountComponentAtNode(this._growlerContentElement);
+			document.body.removeChild(this._growlerContentElement);
 		}
 
 		// Nullify references to DOM nodes to ensure proper garbage collection
@@ -70,7 +72,7 @@ export default class Growler extends Component {
 		this._childProps = null;
 	}
 
-	_hideShowGrowlerContainer({ open }) {
+	_hideShowGrowlerContentElement({ open }) {
 		if (open) {
 			// mark growler as revealed
 			this._growlerContentElement.className = ST_UI_REVEALED_GROWLER_CLASS;
@@ -83,13 +85,14 @@ export default class Growler extends Component {
 				this._bindCloseRequestListeners();
 			}
 		}
-
-		const revealedGrowlers = document.getElementsByClassName(ST_UI_REVEALED_GROWLER_CLASS) || {};
-		if (revealedGrowlers.length) {
-			this._cachedBodyElementReference.style.overflow = "hidden";
-		}
 		else {
-			this._cachedBodyElementReference.style.overflow = "";
+			// mark growler as hidden
+			this._growlerContentElement.className = ST_UI_HIDDEN_GROWLER_CLASS;
+
+			// remove event listeners
+			if (this.props.listenForExternalCloseEvent) {
+				this._removeCloseRequestListeners();
+			}
 		}
 	}
 
@@ -141,15 +144,15 @@ export default class Growler extends Component {
 		}
 	}
 
-	_createGrowlerContainer() {
+	_createGrowlerContentElement() {
 		// Create content element
 		this._growlerContentElement = document.createElement("div");
 		this._growlerContentElement.style.display = "block";
 		this._growlerContentElement.style.margin = "0 auto";
 		this._growlerContentElement.style.position = "fixed";
 		this._growlerContentElement.style.borderRadius = "10px";
-		this._growlerContentElement.style.top = "60px"; // allow user to change this position value
-		this._growlerContentElement.style.right = "30px"; // allow user to change this position value
+		this._growlerContentElement.style.top = "60px";
+		this._growlerContentElement.style.right = "30px";
 		this._growlerContentElement.style.transform = HIDDEN_GROWLER_CONTENT_TRANSFORM;
 		this._growlerContentElement.style.transition = "transform 0.28s ease-in";
 		this._growlerContentElement.style.background = "black";
