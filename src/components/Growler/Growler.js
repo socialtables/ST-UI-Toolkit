@@ -24,9 +24,7 @@ export default class Growler extends Component {
 		this._fadeInGrowler = this._fadeInGrowler.bind(this);
 		this._fadeOutGrowler = this._fadeOutGrowler.bind(this);
 
-		if (!this._growlerTopLayer) {
-			this._createGrowlerContainer();
-		}
+		this._createGrowlerContainer();
 	}
 
 	/**
@@ -104,7 +102,7 @@ export default class Growler extends Component {
 			else {
 				op += op * 0.1;
 				this._growlerContentElement.style.opacity = op;
-				this._growlerContentElement.style.filter = "alpha(opacity=" + op * 100 + ")";
+				this._growlerContentElement.style.filter = `alpha(opacity= ${op * 100} )`;
 				requestAnimationFrame(fadeIn);
 			}
 		};
@@ -121,7 +119,7 @@ export default class Growler extends Component {
 			else {
 				op -= op * 0.1;
 				this._growlerContentElement.style.opacity = op;
-				this._growlerContentElement.style.filter = "alpha(opacity=" + op * 100 + ")";
+				this._growlerContentElement.style.filter = `alpha(opacity= ${op * 100} )`;
 				requestAnimationFrame(fadeOut);
 			}
 		};
