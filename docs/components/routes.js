@@ -18,6 +18,7 @@ import TextBoxDocumentation from './components/TextBoxDocumentation';
 import CheckboxDocumentation from './components/CheckboxDocumentation';
 import TabsDocumentation from './components/TabsDocumentation';
 import ModalDocumentation from './components/ModalDocumentation';
+import GrowlerDocumentation from './components/GrowlerDocumentation';
 import RadioButtonDocumentation from './components/RadioButtonDocumentation';
 import SelectBoxDocumentation from './components/SelectBoxDocumentation';
 
@@ -30,6 +31,7 @@ const routes = (
     <Route path="component/checkbox" component={CheckboxDocumentation}/>
     <Route path="component/tabs" component={TabsDocumentation}/>
     <Route path="component/modal" component={ModalDocumentation}/>
+    <Route path="component/growler" component={GrowlerDocumentation}/>
     <Route path="component/radio-button" component={RadioButtonDocumentation}/>
     <Route path="component/select-box" component={SelectBoxDocumentation}/>
     <Route path="about" component={About}/>

@@ -5,6 +5,7 @@ import Checkbox from "./components/Checkbox/Checkbox";
 import Tab from "./components/Tabs/Tab";
 import Tabs from "./components/Tabs/Tabs";
 import Modal from "./components/Modal/Modal";
+import Growler from "./components/Growler/Growler";
 import RadioButton from "./components/RadioButton/RadioButton";
 import RadioButtonGroup from "./components/RadioButton/RadioButtonGroup";
 import SelectBox from "./components/SelectBox/SelectBox";
@@ -18,6 +19,7 @@ export default {
 	Tab,
 	Tabs,
 	Modal,
+	Growler,
 	RadioButton,
 	RadioButtonGroup,
 	SelectBox,
