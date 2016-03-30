@@ -2,8 +2,6 @@
 
 jest.dontMock("../components/Growler/Growler");
 
-import React from "react";
-import ReactDOM from "react-dom";
 import TestUtils from "react-addons-test-utils";
 import sinon from "sinon";
 
@@ -20,7 +18,7 @@ const Growler = require("../components/Growler/Growler");
 describe("Growler", () => {
 
 	it("should be open if prop 'open' is 'true'", () => {
-		const growler = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Growler open={true}>
 				<div className="growler-content">Grrrrrrrrrrr</div>
 			</Growler>
@@ -31,7 +29,7 @@ describe("Growler", () => {
 	});
 
 	it("should be closed if prop 'open' is 'false'", () => {
-		const growler = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Growler open={false}>
 				<div className="growler-content">Grrrrrrrrrrr</div>
 			</Growler>
@@ -43,7 +41,7 @@ describe("Growler", () => {
 
 	it("should trigger 'onCloseRequest()' function when Esc key is pressed (if 'listenForExternalCloseEvent' prop is 'true')", (done) => {
 		const callback = sinon.spy();
-		const growler = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Growler
 				open={true}
 				listenForExternalCloseEvent={true}
@@ -62,7 +60,7 @@ describe("Growler", () => {
 
 	it("should not trigger 'onCloseRequest()' function when Esc key is pressed (if 'listenForExternalCloseEvent' prop is 'false')", (done) => {
 		const callback = sinon.spy();
-		const growler = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Growler
 				open={true}
 				listenForExternalCloseEvent={false}
@@ -81,7 +79,7 @@ describe("Growler", () => {
 
 	it("should trigger 'onCloseRequest()' function after number of milliseconds specified by the 'timeToClose' prop", (done) => {
 		const callback = sinon.spy();
-		const growler = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Growler
 				open={true}
 				listenForExternalCloseEvent={true}
@@ -100,7 +98,7 @@ describe("Growler", () => {
 
 	it("should not trigger 'onCloseRequest()' function on its own if 'timeToClose' prop is not passed", (done) => {
 		const callback = sinon.spy();
-		const growler = TestUtils.renderIntoDocument(
+		TestUtils.renderIntoDocument(
 			<Growler
 				open={true}
 				listenForExternalCloseEvent={true}

@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from "react";
+import { Component, PropTypes } from "react";
 import ReactDOM from "react-dom";
 import GrowlerContentWrapper from "./GrowlerContentWrapper";
 
@@ -39,6 +39,10 @@ export default class Growler extends Component {
 
 	componentWillMount() {
 		this._hideShowGrowlerContentElement(this.props);
+
+		if (this.props.timeToClose && this.props.open) {
+			setTimeout(this._fadeOutGrowler, this.props.timeToClose);
+		}
 	}
 
 	componentWillUpdate(nextProps) {
