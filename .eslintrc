@@ -39,7 +39,8 @@
         "wrap-iife": [2, "outside"],
         "no-underscore-dangle": 0, // Allow leading underscores for method names - REASON: we use underscores to denote private methods
         "dot-notation": 0,
-        "no-unused-vars": 2
+        "no-unused-vars": 2,
+        "no-undef": 2
     },
     "ecmaFeatures": {
         "modules": true,
