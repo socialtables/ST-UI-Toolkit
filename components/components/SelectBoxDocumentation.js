@@ -61,13 +61,13 @@ const overrideStylesExample = `<SelectBox
   value={this.state.overrideOptionValue}
   style={{
     selectBox: {
-      background: "#494949",
+      backgroundColor: "#494949",
       color: "white",
       arrowIcon: {fill: "white"},
       selectedOption: {color: "white"}
     },
     optionList: {
-      background: "#494949",
+      backgroundColor: "#494949",
       color: "white"
     },
     option: {
@@ -318,7 +318,7 @@ export default class SelectBoxDocumentation extends Component {
           <h4>Override Option Styles</h4>
           <SelectBox
             value={this.state.overrideOptionValue}
-            style={{selectBox: {background: "#494949", color: "white", arrowIcon: {fill: "white"}, selectedOption: {color: "white"}}, optionList: {background: "#494949", color: "white"}, option: {enabled: {":hover": {background: "#cb5599"}}}}}
+            style={{selectBox: {backgroundColor: "#494949", color: "white", arrowIcon: {fill: "white"}, selectedOption: {color: "white"}}, optionList: {backgroundColor: "#494949", color: "white"}, option: {enabled: {":hover": {background: "#cb5599"}}}}}
             defaultText="Select a Color"
             onChange={(v) => { this.setState({overrideOptionValue: v}) }}>
             <SelectBoxOption value="Red" displayLabel="Red"></SelectBoxOption>
