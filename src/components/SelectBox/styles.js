@@ -89,6 +89,7 @@ export default {
 	},
 	option: {
 		minHeight: 35,
+		width: "100%",
 		padding: PADDING,
 		userSelect: "none",
 		transition: "background .4s ease-in-out",
