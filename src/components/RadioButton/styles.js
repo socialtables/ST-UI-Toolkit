@@ -20,16 +20,16 @@ export default function() {
 			borderRadius: "50%",
 			borderStyle: "solid",
 			borderColor: stColorPalette.stSilver,
-			background: stColorPalette.stSilver,
+			backgroundColor: stColorPalette.stSilver,
 			borderWidth: 2,
 			cursor: "pointer",
 			transition: "all 0.20s",
 			lineHeight: "unset",
 			selected: {
-				background: colors.primary
+				backgroundColor: colors.primary
 			},
 			disabled: {
-				background: colors.disabledBg,
+				backgroundColor: colors.disabledBg,
 				cursor: "not-allowed",
 				":focus:": {
 					borderColor: stColorPalette.stSilver

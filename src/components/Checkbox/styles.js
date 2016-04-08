@@ -50,14 +50,14 @@ export default {
 			}
 		},
 		checked: {
-			background: colors.primary,
+			backgroundColor: colors.primary,
 			borderColor: colors.primary,
 			":focus": {
 				borderColor: colors.primary
 			}
 		},
 		disabled: {
-			background: colors.disabledBg,
+			backgroundColor: colors.disabledBg,
 			borderColor: stColorPalette.stSilver,
 			cursor: "not-allowed",
 			":focus": {

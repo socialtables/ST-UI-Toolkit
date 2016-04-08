@@ -6,7 +6,7 @@ export default function() {
 			height: "50px",
 			padding: "0 20px",
 			lineHeight: "50px",
-			background: "transparent"
+			backgroundColor: "transparent"
 		},
 		active: {
 			transition: "color 0.2s",
@@ -15,21 +15,21 @@ export default function() {
 			}
 		},
 		selected: {
-			background: colors.white,
+			backgroundColor: colors.white,
 			color: colors.primary
 		},
 		tabContainer: {
-			background: colors.colorMain,
+			backgroundColor: colors.colorMain,
 			padding: "0 46px"
 		},
 		header: {
-			background: colors.colorMain,
+			backgroundColor: colors.colorMain,
 			color: colors.white,
 			fontSize: "24px",
 			padding: "20px 0"
 		},
 		tabBar: {
-			background: colors.colorMain
+			backgroundColor: colors.colorMain
 		},
 		tabContent: {
 			margin: "0 46px"

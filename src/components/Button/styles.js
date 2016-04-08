@@ -25,7 +25,7 @@ export default function({ theme, shape }) {
 
 	return {
 		base: {
-			background: btnBackgroundColor,
+			backgroundColor: btnBackgroundColor,
 			color: colors.white,
 			border: 0,
 			outline: 0,
@@ -36,11 +36,11 @@ export default function({ theme, shape }) {
 		},
 		active: {
 			":hover": {
-				background: colorLib(btnBackgroundColor).darken(0.25).hexString(),
+				backgroundColor: colorLib(btnBackgroundColor).darken(0.25).hexString(),
 			}
 		},
 		disabled: {
-			background: colors.disabled,
+			backgroundColor: colors.disabled,
 			color: colors.disabledText,
 			cursor: "not-allowed"
 		}
