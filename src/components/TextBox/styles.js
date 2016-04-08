@@ -14,7 +14,7 @@ export default {
 		}
 	},
 	disabled: {
-		background: colors.disabledBg,
+		backgroundColor: colors.disabledBg,
 		color: colors.disabledText,
 		cursor: "not-allowed"
 	}

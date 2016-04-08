@@ -35,7 +35,7 @@ export default {
 			}
 		},
 		disabled: {
-			background: colors.disabledBg,
+			backgroundColor: colors.disabledBg,
 			cursor: "not-allowed"
 		},
 		arrowIcon: {
@@ -65,7 +65,7 @@ export default {
 	/* Option Styles */
 	optionList: {
 		position: "absolute",
-		background: stColorPalette.stWhite,
+		backgroundColor: stColorPalette.stWhite,
 		overflow: "auto",
 		width: "100%",
 		left: 0,
@@ -96,12 +96,12 @@ export default {
 		enabled: {
 			":hover": {
 				cursor: "pointer",
-				background: colorLib(stColorPalette.stPink).lighten(0.6).hexString()
+				backgroundColor: colorLib(stColorPalette.stPink).lighten(0.6).hexString()
 			}
 		},
 		disabled: {
 			cursor: "not-allowed",
-			background: colors.disabledBg,
+			backgroundColor: colors.disabledBg,
 			color: colors.disabledText
 		}
 	},
