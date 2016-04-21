@@ -57,6 +57,50 @@ const multipleModalsCodeExample = `<Button onClick={() => this.setState({isFirst
   </section>
 </Modal>`;
 
+const fixedWidthCodeExample = `<Button onClick={() => this.setState({isFixedWidthModalOpen: true})}>
+  Click to Open
+</Button>
+
+<Modal
+  width="800px"
+  open={this.state.isFixedWidthModalOpen}>
+  <section style={{padding: 15}}>
+    <h2>Fixed Width Modal</h2>
+    <p>
+      This modal will always be 800px wide.
+    </p>
+    <Button
+      color="fail"
+      onClick={() => this.setState({isFixedWidthModalOpen: false})}>
+      Close
+    </Button>
+  </section>
+</Modal>`;
+
+const responsiveWidthCodeExample = `<Button onClick={() => this.setState({isResponsiveWidthModalOpen: true})}>
+  Click to Open
+</Button>
+
+<Modal
+  width="70%"
+  maxWidth="100%"
+  open={this.state.isResponsiveWidthModalOpen}>
+  <section style={{padding: 15}}>
+    <h2>Responsive Width Modal</h2>
+    <p>
+      Resize the browser window to see the responsive behavior of this modal's width.
+      <br/>
+      <br/>
+      The modal will always be 70% of the browser window width.
+    </p>
+    <Button
+      color="fail"
+      onClick={() => this.setState({isResponsiveWidthModalOpen: false})}>
+      Close
+    </Button>
+  </section>
+</Modal>`;
+
 const radiumStylesCodeExample = `<Button onClick={() => this.setState({isCustomModalOpen: true})}>
   Click to Open
 </Button>
@@ -101,6 +145,8 @@ export default class ModalDocumentation extends Component {
       modalHeader: "Modal Header",
       isFirstModalOpen: false,
       isSecondModalOpen: false,
+      isFixedWidthModalOpen: false,
+      isResponsiveWidthModalOpen: false,
       isCustomModalOpen: false
     };
   };
@@ -155,6 +201,46 @@ export default class ModalDocumentation extends Component {
               <b>default:</b> false
             </p>
             <p>If true, the modal will be displayed. If false, the modal will be hidden</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style={ propertyNameStyle }>
+            width
+          </td>
+        </tr>
+        <tr>
+          <td style={ propertyDescriptionStyle }>
+            <p >
+              <i>String</i>
+              <br />
+              <b>default:</b> "30%"
+            </p>
+            <p>Sets the width of the modal.
+            <br/>
+            <br/>
+            This value can be expressed as either a percent string or a pixel string</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style={ propertyNameStyle }>
+            maxWidth
+          </td>
+        </tr>
+        <tr>
+          <td style={ propertyDescriptionStyle }>
+            <p >
+              <i>String</i>
+              <br />
+              <b>default:</b> "750px"
+            </p>
+            <p>
+              The maximum width the modal can be.
+              <br/>
+              <br/>
+              This value can be expressed as either a percent string or a pixel string
+            </p>
           </td>
         </tr>
 
@@ -238,6 +324,58 @@ export default class ModalDocumentation extends Component {
             </section>
           </Modal>
           <Code value={ multipleModalsCodeExample } style={ {marginTop: 20} } />
+        </li>
+
+        <li>
+          <h4>Fixed Width Modal</h4>
+          <Button onClick={() => this.setState({isFixedWidthModalOpen: true})}>
+            Click to Open
+          </Button>
+
+          <Modal
+            width="800px"
+            open={this.state.isFixedWidthModalOpen}>
+            <section style={{padding: 15}}>
+              <h2>Fixed Width Modal</h2>
+              <p>
+                This modal will always be 800px wide.
+              </p>
+              <Button
+                color="fail"
+                onClick={() => this.setState({isFixedWidthModalOpen: false})}>
+                Close
+              </Button>
+            </section>
+          </Modal>
+          <Code value={ fixedWidthCodeExample } style={ {marginTop: 20} } />
+        </li>
+
+        <li>
+          <h4>Responsive Width Modal</h4>
+          <Button onClick={() => this.setState({isResponsiveWidthModalOpen: true})}>
+            Click to Open
+          </Button>
+
+          <Modal
+            width="70%"
+            maxWidth="100%"
+            open={this.state.isResponsiveWidthModalOpen}>
+            <section style={{padding: 15}}>
+              <h2>Responsive Width Modal</h2>
+              <p>
+                Resize the browser window to see the responsive behavior of this modal's width.
+                <br/>
+                <br/>
+                The modal will always be 70% of the browser window width.
+              </p>
+              <Button
+                color="fail"
+                onClick={() => this.setState({isResponsiveWidthModalOpen: false})}>
+                Close
+              </Button>
+            </section>
+          </Modal>
+          <Code value={ responsiveWidthCodeExample } style={ {marginTop: 20} } />
         </li>
 
         <li>

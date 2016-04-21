@@ -36,7 +36,7 @@ export default class Modal extends Component {
 		this._triggerOnCloseRequest = this._triggerOnCloseRequest.bind(this);
 
 		if (!this._modalTopLayer) {
-			this._createModalContainer();
+			this._createModalContainer(properties);
 		}
 	}
 
@@ -165,7 +165,7 @@ export default class Modal extends Component {
 		this.props.onCloseRequest(e);
 	}
 
-	_createModalContainer() {
+	_createModalContainer(props) {
 		// Create modal layer
 		this._modalTopLayer = document.createElement("div");
 		this._modalTopLayer.class = "STmodal";
@@ -200,7 +200,8 @@ export default class Modal extends Component {
 		this._modalContentElement.style.opacity = 1;
 		this._modalContentElement.style.transition = "transform 0.28s ease-in";
 		this._modalContentElement.style.background = "white";
-		this._modalContentElement.style.maxWidth = "750px";
+		this._modalContentElement.style.width = props.width;
+		this._modalContentElement.style.maxWidth = props.maxWidth;
 
 		// Construct complete modal layer
 		this._modalTopLayer.appendChild(this._overlayElement);
@@ -241,6 +242,8 @@ Modal.propTypes = {
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
 	]),
+	width: PropTypes.string,
+	maxWidth: PropTypes.string,
 	open: PropTypes.bool,
 	listenForExternalCloseEvent: PropTypes.bool,
 	onCloseRequest: PropTypes.func
@@ -248,6 +251,8 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
 	open: false,
+	width: "30%",
+	maxWidth: "750px",
 	listenForExternalCloseEvent: true,
 	onCloseRequest: function() {}
 };
