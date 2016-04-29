@@ -16,7 +16,6 @@ export default function() {
 			display: "table-cell",
 			height: DEFAULT_RADIO_BUTTON_SIZE,
 			width: DEFAULT_RADIO_BUTTON_SIZE,
-			lineHeight: "initial",
 			borderRadius: "50%",
 			borderStyle: "solid",
 			borderColor: stColorPalette.stSilver,
