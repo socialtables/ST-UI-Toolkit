@@ -65,7 +65,6 @@ export default {
 	/* Option Styles */
 	optionList: {
 		position: "absolute",
-		backgroundColor: stColorPalette.stWhite,
 		overflow: "auto",
 		width: "100%",
 		left: 0,
