@@ -9,7 +9,7 @@ function getBorderRadius(shape) {
 			return "50%";
 		case "square":
 		default:
-			return "0";
+			return 0;
 	}
 }
 

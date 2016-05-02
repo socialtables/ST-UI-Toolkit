@@ -10,7 +10,7 @@ const successButtonCodeExample = `<Button color="success">Success</Button>`;
 const failButtonCodeExample = `<Button color="fail">Fail</Button>`;
 const customButtonCodeExample = `<Button color="#49C6B7">Custom</Button>`;
 const roundButtonCodeExample = `<Button shape="round" style={{base: { width: 30, height: 30}}}>+</Button>`;
-const radiumStylesCodeExample = `<Button style={{ base: { background: "orange", border: "solid black 2px" } }}>Yolo</Button>`;
+const radiumStylesCodeExample = `<Button style={{ base: { backgroundColor: "orange", border: "solid black 2px" } }}>Yolo</Button>`;
 
 export default class ButtonDocumentation extends Component {
 
@@ -169,7 +169,7 @@ export default class ButtonDocumentation extends Component {
         <li>
           <h4>Override default Radium styles via `style` attribute</h4>
           <p><strong>NOTE</strong> on hover that button is not darkened. To automatically darken on hover, specify <i>color</i> property instead.</p>
-          <Button style={{ base: { background: "orange", border: "solid black 2px" } }}>Yolo</Button>
+          <Button style={{ base: { backgroundColor: "orange", border: "solid black 2px" } }}>Yolo</Button>
           <Code value={ radiumStylesCodeExample } />
         </li>
       </ul>

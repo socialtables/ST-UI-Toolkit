@@ -102,35 +102,43 @@ export default class Growler extends Component {
 
 	_fadeInGrowler() {
 		let op = 0.1;  // initial opacity
-		var fadeIn = () => {
-			if (op >= 0.7) {
-				this._growlerContentElement.style.transform = REVEALED_GROWLER_CONTENT_TRANSFORM;
-			}
-			else {
-				op += op * 0.1;
-				this._growlerContentElement.style.opacity = op;
-				this._growlerContentElement.style.filter = `alpha(opacity= ${op * 100} )`;
-				requestAnimationFrame(fadeIn);
+
+		var fadeIn = (op) => {
+			if (this._growlerContentElement) {
+				if (op >= 0.7) {
+					this._growlerContentElement.style.transform = REVEALED_GROWLER_CONTENT_TRANSFORM;
+				}
+				else {
+					op += op * 0.1;
+					this._growlerContentElement.style.opacity = op;
+					this._growlerContentElement.style.filter = `alpha(opacity= ${op * 100} )`;
+					requestAnimationFrame(() => fadeIn(op));
+				}
 			}
 		};
-		fadeIn();
+
+		fadeIn(op);
 	}
 
 	_fadeOutGrowler() {
 		let op = 0.7;  // initial opacity
-		var fadeOut = () => {
-			if (op <= 0.1) {
-				this._growlerContentElement.style.transform = HIDDEN_GROWLER_CONTENT_TRANSFORM;
-				this.props.onCloseRequest();
-			}
-			else {
-				op -= op * 0.1;
-				this._growlerContentElement.style.opacity = op;
-				this._growlerContentElement.style.filter = `alpha(opacity= ${op * 100} )`;
-				requestAnimationFrame(fadeOut);
+
+		var fadeOut = (op) => {
+			if (this._growlerContentElement) {
+				if (op <= 0.1) {
+					this._growlerContentElement.style.transform = HIDDEN_GROWLER_CONTENT_TRANSFORM;
+					this.props.onCloseRequest();
+				}
+				else {
+					op -= op * 0.1;
+					this._growlerContentElement.style.opacity = op;
+					this._growlerContentElement.style.filter = `alpha(opacity= ${op * 100} )`;
+					requestAnimationFrame(() => fadeOut(op));
+				}
 			}
 		};
-		fadeOut();
+
+		fadeOut(op);
 	}
 
 	_bindCloseRequestListeners() {
