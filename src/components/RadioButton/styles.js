@@ -60,4 +60,4 @@ export default function() {
 			padding: "0px 5px"
 		}
 	};
-};
+}

@@ -1,9 +1,10 @@
-/* global jest describe beforeEach it expect */
+//* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/Growler/Growler");
+jest.dontMock("../../components/Growler/Growler");
 
 import TestUtils from "react-addons-test-utils";
 import sinon from "sinon";
+import Growler from "../../components/Growler/Growler";
 
 // Helpers
 function _triggerEscKeyUpEvent() {
@@ -11,9 +12,6 @@ function _triggerEscKeyUpEvent() {
 	document.dispatchEvent(keyboardEvent);
 }
 
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const Growler = require("../components/Growler/Growler");
 
 describe("Growler", () => {
 

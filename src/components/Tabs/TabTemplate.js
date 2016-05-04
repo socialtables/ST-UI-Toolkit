@@ -19,7 +19,7 @@ export default class TabTemplate extends Component {
 			</div>
 		)
 	}
-};
+}
 
 TabTemplate.displayName = "TabTemplate";
 

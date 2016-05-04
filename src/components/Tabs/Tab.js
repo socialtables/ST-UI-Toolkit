@@ -12,7 +12,7 @@ import Button from "../Button/Button";
 export default class Tab extends Component {
 	constructor(props) {
 		super(props);
-		const { style, ...childProps } = props;
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 		this._handleSelect = this._handleSelect.bind(this);
 	}
@@ -21,7 +21,7 @@ export default class Tab extends Component {
 	 * Update the childProps based on the updated props passed to the tab.
 	 */
 	componentWillReceiveProps(props) {
-		const { style, ...childProps } = props;
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 

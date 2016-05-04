@@ -19,7 +19,7 @@ export default class GrowlerContentWrapper extends Component {
 			</div>
 		);
 	}
-};
+}
 
 GrowlerContentWrapper.displayName = "GrowlerContentWrapper";
 
@@ -27,5 +27,6 @@ GrowlerContentWrapper.propTypes = {
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
-	])
+	]),
+	style: PropTypes.object
 };

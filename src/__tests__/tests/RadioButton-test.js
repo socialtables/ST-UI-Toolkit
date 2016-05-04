@@ -1,32 +1,12 @@
 /* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/RadioButton/RadioButton");
+jest.dontMock("../../components/RadioButton/RadioButton");
 
 import TestUtils from "react-addons-test-utils";
-
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const RadioButtonGroup = require("../components/RadioButton/RadioButtonGroup");
-const RadioButton = require("../components/RadioButton/RadioButton");
+import RadioButtonGroup from "../../components/RadioButton/RadioButtonGroup";
+import RadioButton from "../../components/RadioButton/RadioButton";
 
 describe("RadioButton", () => {
-	it("should be able to set a default selected radio button", () => {
-		const radioButtonGroup = TestUtils.renderIntoDocument(
-			<RadioButtonGroup defaultSelected="first">
-				<RadioButton value="first" label="First" className="firstRadioButton"/>
-				<RadioButton value="second" label="Second" className="secondRadioButton"/>
-				<RadioButton value="third" label="Third" className="thirdRadioButton"/>
-			</RadioButtonGroup>
-		);
-		const firstRadioButtonNode = TestUtils.findRenderedDOMComponentWithClass(radioButtonGroup, "firstRadioButton");
-		const secondRadioButtonNode = TestUtils.findRenderedDOMComponentWithClass(radioButtonGroup, "secondRadioButton");
-		const thirdRadioButtonNode = TestUtils.findRenderedDOMComponentWithClass(radioButtonGroup, "thirdRadioButton");
-
-		expect(firstRadioButtonNode.hasAttribute("selected")).toBe(true);
-		expect(secondRadioButtonNode.hasAttribute("selected")).toBe(false);
-		expect(thirdRadioButtonNode.hasAttribute("selected")).toBe(false);
-	});
-
 	it("should be able to provide a className", () => {
 		const radioButtonGroup = TestUtils.renderIntoDocument(
 			<RadioButtonGroup className="test">
@@ -69,7 +49,7 @@ describe("RadioButton", () => {
 		const el = TestUtils.scryRenderedDOMComponentsWithTag(radioButtonGroup, "input")[1]
 		TestUtils.Simulate.click(el);
 		const calledWith = handler.mock.calls[0]
-		
+
 		// make sure called with a synthetic event
 		expect(calledWith[0].nativeEvent).toBeDefined()
 		expect(calledWith[1]).toBe("test2");

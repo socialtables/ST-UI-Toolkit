@@ -1,20 +1,15 @@
 /* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/Tabs/Tabs");
+jest.dontMock("../../components/Tabs/Tabs");
 
 import TestUtils from "react-addons-test-utils";
-
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const Tabs = require("../components/Tabs/Tabs");
-const Tab = require("../components/Tabs/Tab");
+import Tabs from "../../components/Tabs/Tabs";
+import Tab from "../../components/Tabs/Tab";
 
 describe("Tabs", () => {
 	describe("without any properties", () => {
 		let tabs;
 		let tabsNode;
-		let firstTabNode;
-		let secondTabNode;
 
 		beforeEach(() => {
 			tabs = TestUtils.renderIntoDocument(
@@ -24,8 +19,6 @@ describe("Tabs", () => {
 				</Tabs>
 			);
 			tabsNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "tabs");
-			firstTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "firstTab");
-			secondTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "secondTab");
 		});
 
 		it("tabs should not allow user to override container styles", () => {
@@ -36,29 +29,6 @@ describe("Tabs", () => {
 			expect(tabsNode.children[0].hasAttribute("style")).toBeTruthy();
 			expect(tabsNode.children[1].hasAttribute("style")).toBeTruthy();
 		});
-
-		it("should default the initial selected index to 0", () => {
-			expect(firstTabNode.hasAttribute("selected")).toBe(true);
-			expect(secondTabNode.hasAttribute("selected")).toBe(false);
-		});
-	});
-
-	it("should be able to change the initial selected index", () => {
-		const tabs = TestUtils.renderIntoDocument(
-			<Tabs className="tabs" initialSelectedIndex={1}>
-				<Tab className="firstTab"></Tab>
-				<Tab className="secondTab"></Tab>
-				<Tab className="thirdTabNode"></Tab>
-			</Tabs>
-		);
-
-		const firstTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "firstTab");
-		const secondTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "secondTab");
-		const thirdTabNode = TestUtils.findRenderedDOMComponentWithClass(tabs, "thirdTabNode");
-
-		expect(firstTabNode.hasAttribute("selected")).toBe(false);
-		expect(secondTabNode.hasAttribute("selected")).toBe(true);
-		expect(thirdTabNode.hasAttribute("selected")).toBe(false);
 	});
 
 	it("should only accept Tab Components as children", () => {

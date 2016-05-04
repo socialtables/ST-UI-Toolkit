@@ -1,12 +1,9 @@
 /* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/Card/Card");
+jest.dontMock("../../components/Card/Card");
 
 import TestUtils from "react-addons-test-utils";
-
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const Card = require("../components/Card/Card");
+import Card from "../../components/Card/Card";
 
 describe("Card", () => {
 

@@ -11,7 +11,7 @@ import RadioButtonGroup from "./components/RadioButton/RadioButtonGroup";
 import SelectBox from "./components/SelectBox/SelectBox";
 import SelectBoxOption from "./components/SelectBox/SelectBoxOption";
 
-export default {
+export {
 	Button,
 	Card,
 	TextBox,
@@ -23,18 +23,5 @@ export default {
 	RadioButton,
 	RadioButtonGroup,
 	SelectBox,
-	SelectBoxOption,
-	// NOTE: These will be removed on the next minor version
-	get RoundTextBox() {
-		console.warn("ST UI Toolkit Warning: RoundTextBox aliases to TextBox and will be removed on next minor version bump");
-		return TextBox;
-	},
-	get RoundSelectBox() {
-		console.warn("ST UI Toolkit Warning: RoundSelectBox aliases to SelectBox and will be removed on next minor version bump");
-		return SelectBox;
-	},
-	get RoundSelectBoxOption() {
-		console.warn("ST UI Toolkit Warning: RoundSelectBoxOption aliases to SelectBoxOption and will be removed on next minor version bump");
-		return SelectBoxOption;
-	}
+	SelectBoxOption
 };

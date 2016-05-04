@@ -7,7 +7,7 @@ import getStyles from "./styles";
 export default class RadioButtonGroup extends Component {
 	constructor(props) {
 		super(props);
-		const { style, ...childProps } = props;
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 
 		this.state = {
 			numberCheckedRadioButtons: 0,
@@ -19,7 +19,7 @@ export default class RadioButtonGroup extends Component {
 		this._handleChange = this._handleChange.bind(this);
 	}
 	componentWillReceiveProps(nextProps) {
-		const { style, ...childProps } = nextProps;
+		const { style, ...childProps } = nextProps; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
 		if (nextProps.hasOwnProperty("valueSedlected")) {
@@ -54,19 +54,18 @@ export default class RadioButtonGroup extends Component {
 				name,
 				value,
 				label,
-				onSelect,
-				...other,
+				...other
 			} = option.props;
 
 			return (
 				<RadioButton
 					{...other}
+					key={option.props.value}
 					style={this.props.style}
 					ref={option.props.value}
-					name={this.props.name}
-					key={option.props.value}
-					value={option.props.value}
-					label={option.props.label}
+					name={name}
+					value={value}
+					label={label}
 					align={this.props.align}
 					onSelect={this._handleChange}
 					checked={option.props.value === this.state.selected}
@@ -81,7 +80,7 @@ export default class RadioButtonGroup extends Component {
 			</div>
 		)
 	}
-};
+}
 
 RadioButtonGroup.displayName = "RadioButtonGroup";
 
@@ -92,5 +91,8 @@ RadioButtonGroup.propTypes = {
 	]),
 	style: PropTypes.object,
 	name: PropTypes.string,
-	defaultSelected: PropTypes.string
+	align: PropTypes.string,
+	defaultSelected: PropTypes.string,
+	valueSelected: PropTypes.bool,
+	onSelect: PropTypes.func
 };

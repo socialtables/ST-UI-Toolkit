@@ -32,7 +32,7 @@ const radiumStylesCodeExample = `<RadioButtonGroup
     radio: {
       height: "20px",
       width: "20px",
-      selected: {background: "teal"}
+      selected: {backgroundColor: "teal"}
     }
   }}
   defaultSelected="agree">
@@ -258,7 +258,7 @@ export default class RadioButtonDocumentation extends Component {
               radio: {
                 height: "20px",
                 width: "20px",
-                selected: {background: "teal"}
+                selected: {backgroundColor: "teal"}
               }
             }}
             defaultSelected="agree">

@@ -1,15 +1,11 @@
 /* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/SelectBox/SelectBox");
+jest.dontMock("../../components/SelectBox/SelectBox");
 
 import ReactDOM from "react-dom";
 import TestUtils from "react-addons-test-utils";
-
-
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const SelectBox = require("../components/SelectBox/SelectBox");
-const SelectBoxOption = require("../components/SelectBox/SelectBoxOption");
+import SelectBox from "../../components/SelectBox/SelectBox";
+import SelectBoxOption from "../../components/SelectBox/SelectBoxOption";
 
 describe("SelectBox", () => {
 
@@ -17,8 +13,8 @@ describe("SelectBox", () => {
 		const selectBox = TestUtils.renderIntoDocument(
 			<SelectBox className="test-me">
 				<SelectBoxOption value="round" displayLabel="Round"></SelectBoxOption>
-  			<SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
-  			<SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
+				<SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
+				<SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
 			</SelectBox>
 		);
 
@@ -30,8 +26,8 @@ describe("SelectBox", () => {
 		const selectBox = TestUtils.renderIntoDocument(
 			<SelectBox disabled value="round">
 				<SelectBoxOption value="round" displayLabel="Round"></SelectBoxOption>
-  			<SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
-  			<SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
+				<SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
+				<SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
 			</SelectBox>
 		);
 
@@ -45,10 +41,10 @@ describe("SelectBox", () => {
 		const defaultText = "My Default Text";
 
 		const selectBox = TestUtils.renderIntoDocument(
-			<SelectBox defaultText={defaultText} value={null}>
+			<SelectBox defaultText={defaultText} value={""}>
 				<SelectBoxOption value="round" displayLabel="Round"></SelectBoxOption>
-  			<SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
-  			<SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
+				<SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
+				<SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
 			</SelectBox>
 		);
 
@@ -64,8 +60,8 @@ describe("SelectBox", () => {
 		const selectBox = TestUtils.renderIntoDocument(
 			<SelectBox value="round" onChange={(v) => newOptionValue = v}>
 				<SelectBoxOption value="round"></SelectBoxOption>
-  			<SelectBoxOption className="rectangle-option" value="rectangle"></SelectBoxOption>
-  			<SelectBoxOption value="square"></SelectBoxOption>
+				<SelectBoxOption className="rectangle-option" value="rectangle"></SelectBoxOption>
+				<SelectBoxOption value="square"></SelectBoxOption>
 			</SelectBox>
 		);
 
@@ -87,8 +83,8 @@ describe("SelectBox", () => {
 		const selectBox = TestUtils.renderIntoDocument(
 			<SelectBox value="round" onChange={(v) => newOptionValue = v}>
 				<SelectBoxOption value="round"></SelectBoxOption>
-  			<SelectBoxOption disabled className="rectangle-option" value="rectangle"></SelectBoxOption>
-  			<SelectBoxOption value="square"></SelectBoxOption>
+				<SelectBoxOption disabled className="rectangle-option" value="rectangle"></SelectBoxOption>
+				<SelectBoxOption value="square"></SelectBoxOption>
 			</SelectBox>
 		);
 
@@ -110,8 +106,8 @@ describe("SelectBox", () => {
 		const selectBox = TestUtils.renderIntoDocument(
 			<SelectBox value="rectangle" onChange={(v) => newOptionValue = v}>
 				<SelectBoxOption value="round"></SelectBoxOption>
-  			<SelectBoxOption className="rectangle-option" value="rectangle"></SelectBoxOption>
-  			<SelectBoxOption value="square"></SelectBoxOption>
+				<SelectBoxOption className="rectangle-option" value="rectangle"></SelectBoxOption>
+				<SelectBoxOption value="square"></SelectBoxOption>
 			</SelectBox>
 		);
 

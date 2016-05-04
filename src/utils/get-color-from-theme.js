@@ -13,4 +13,4 @@ export default function(theme) {
 		default:
 			return null;
 	}
-};
+}

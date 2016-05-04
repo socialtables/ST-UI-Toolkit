@@ -9,7 +9,7 @@ function getBorderRadius(shape) {
 			return "50%";
 		case "square":
 		default:
-			return "0";
+			return 0;
 	}
 }
 
@@ -36,7 +36,7 @@ export default function({ theme, shape }) {
 		},
 		active: {
 			":hover": {
-				backgroundColor: colorLib(btnBackgroundColor).darken(0.25).hexString(),
+				backgroundColor: colorLib(btnBackgroundColor).darken(0.25).hexString()
 			}
 		},
 		disabled: {
@@ -45,4 +45,4 @@ export default function({ theme, shape }) {
 			cursor: "not-allowed"
 		}
 	};
-};
+}

@@ -1,9 +1,10 @@
 /* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/Modal/Modal");
+jest.dontMock("../../components/Modal/Modal");
 
 import TestUtils from "react-addons-test-utils";
 import sinon from "sinon";
+import Modal from "../../components/Modal/Modal";
 
 // Helpers
 function _triggerEscKeyUpEvent() {
@@ -19,10 +20,6 @@ function _triggerClickEventOnOpenModalOverlay() {
 	const overlayElement = document.querySelectorAll(".ST_UI_REVEALED_MODAL_CLASS .ST_UI_MODAL_OVERLAY");
 	overlayElement.dispatchEvent(mouseClick);
 }
-
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const Modal = require("../components/Modal/Modal");
 
 describe("Modal", () => {
 
@@ -81,6 +78,7 @@ describe("Modal", () => {
 		expect(callback.called).toBeFalsy();
 	});
 
+	// NOTE: Jest is not respecting setTimeout
 	it("should trigger 'onCloseRequest()' function when clicked outside of modal content (if 'listenForExternalCloseEvent' prop is 'true')", (done) => {
 		const callback = sinon.spy();
 		TestUtils.renderIntoDocument(
@@ -93,14 +91,13 @@ describe("Modal", () => {
 		);
 
 		// Must wait some time for component to appear fully rendered before triggering click event
-		requestAnimationFrame(() => {
+		window.requestAnimationFrame(function() {
 			_triggerClickEventOnOpenModalOverlay();
 
 			expect(callback.called).toBeTruthy();
 
 			done();
 		});
-
 	});
 
 	it("should not trigger 'onCloseRequest()' function when clicked outside of modal content (if 'listenForExternalCloseEvent' prop is 'false')", (done) => {
@@ -115,7 +112,7 @@ describe("Modal", () => {
 		);
 
 		// Must wait some time for component to appear fully rendered before triggering click event
-		requestAnimationFrame(() => {
+		window.requestAnimationFrame(function() {
 			_triggerClickEventOnOpenModalOverlay();
 
 			expect(callback.called).toBeFalsy();

@@ -29,5 +29,6 @@ ModalContentWrapper.propTypes = {
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
-	])
+	]),
+	style: PropTypes.object
 };

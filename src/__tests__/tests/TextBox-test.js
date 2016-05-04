@@ -1,14 +1,11 @@
 /* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/TextBox/TextBox");
+jest.dontMock("../../components/TextBox/TextBox");
 
 import ReactDOM from "react-dom";
 import TestUtils from "react-addons-test-utils";
 import sinon from "sinon";
-
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const TextBox = require("../components/TextBox/TextBox");
+import TextBox from "../../components/TextBox/TextBox";
 
 describe("TextBox", () => {
 
