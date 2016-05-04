@@ -29,7 +29,7 @@ export default class Modal extends Component {
 
 	constructor(properties) {
 		super(properties);
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
 		this._triggerOnCloseRequestOnEscKeyPress = this._triggerOnCloseRequestOnEscKeyPress.bind(this);
@@ -44,7 +44,7 @@ export default class Modal extends Component {
 	 * Update the childProps based on the updated properties passed to the modal.
 	 */
 	componentWillReceiveProps(properties) {
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
@@ -145,13 +145,13 @@ export default class Modal extends Component {
 
 	_bindCloseRequestListeners() {
 		// trigger closeRequest on ESC key press
-		document.addEventListener("keyup", this._triggerOnCloseRequestOnEscKeyPress, false);
+		window.document.addEventListener("keyup", this._triggerOnCloseRequestOnEscKeyPress, false);
 		// trigger closeRequest when clicking outside modal content
 		this._overlayElement.addEventListener("click", this._triggerOnCloseRequest, false);
 	}
 
 	_removeCloseRequestListeners() {
-		document.removeEventListener("keyup", this._triggerOnCloseRequestOnEscKeyPress, false);
+		window.document.removeEventListener("keyup", this._triggerOnCloseRequestOnEscKeyPress, false);
 		this._overlayElement.removeEventListener("click", this._triggerOnCloseRequest, false);
 	}
 
@@ -167,7 +167,7 @@ export default class Modal extends Component {
 
 	_createModalContainer(props) {
 		// Create modal layer
-		this._modalTopLayer = document.createElement("div");
+		this._modalTopLayer = window.document.createElement("div");
 		this._modalTopLayer.class = "STmodal";
 		this._modalTopLayer.style.display = HIDDEN_MODAL_STYLES.MODAL_TOP_LAYER_DISPLAY;
 		this._modalTopLayer.style.position = "fixed";
@@ -179,7 +179,7 @@ export default class Modal extends Component {
 		this._modalTopLayer.className = ST_UI_HIDDEN_MODAL_CLASS;
 
 		// Create overlay element
-		this._overlayElement = document.createElement("div");
+		this._overlayElement = window.document.createElement("div");
 		this._overlayElement.style.position = "absolute";
 		this._overlayElement.style.background = HIDDEN_MODAL_STYLES.OVERLAY_BACKGROUND;
 		this._overlayElement.style.opacity = 0.7;
@@ -189,7 +189,7 @@ export default class Modal extends Component {
 		this._overlayElement.className = "ST_UI_MODAL_OVERLAY";
 
 		// Create content element
-		this._modalContentElement = document.createElement("div");
+		this._modalContentElement = window.document.createElement("div");
 		this._modalContentElement.style.display = "block";
 		this._modalContentElement.style.margin = "0 auto";
 		this._modalContentElement.style.position = "absolute";
@@ -208,7 +208,7 @@ export default class Modal extends Component {
 		this._modalTopLayer.appendChild(this._modalContentElement);
 
 		// Append modal layer to DOM
-		this._cachedBodyElementReference = this._cachedBodyElementReference || document.body;
+		this._cachedBodyElementReference = this._cachedBodyElementReference || window.document.body;
 
 		requestAnimationFrame(() => {
 			this._cachedBodyElementReference.appendChild(this._modalTopLayer);
@@ -246,7 +246,8 @@ Modal.propTypes = {
 	maxWidth: PropTypes.string,
 	open: PropTypes.bool,
 	listenForExternalCloseEvent: PropTypes.bool,
-	onCloseRequest: PropTypes.func
+	onCloseRequest: PropTypes.func,
+	style: PropTypes.object
 };
 
 Modal.defaultProps = {

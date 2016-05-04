@@ -35,4 +35,4 @@ export default function() {
 			margin: "0 46px"
 		}
 	}
-};
+}

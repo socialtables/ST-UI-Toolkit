@@ -12,7 +12,7 @@ import getStyles from "./styles";
 export default class Tabs extends Component {
 	constructor(props) {
 		super(props);
-		const { style, ...childProps } = props;
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
 		const initialIndex = props.initialSelectedIndex
@@ -28,7 +28,7 @@ export default class Tabs extends Component {
 	 * Update the childProps based on the updated properties passed to the card.
 	 */
 	componentWillReceiveProps(properties) {
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
@@ -62,7 +62,7 @@ export default class Tabs extends Component {
 		let tabContent = [];
 		let tabs = React.Children.map(children, (tab, index) => {
 			if (tab.type && tab.type.displayName !== "Tab") {
-				console.warn(`Tabs only accepts Tab Components as children.
+				window.console.warn(`Tabs only accepts Tab Components as children.
 					Found ${tab.type.displayName || tab.type} as child number ${index + 1} of Tabs`);
 			}
 			else {
@@ -125,6 +125,7 @@ Tabs.propTypes = {
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
 	]),
+	label: PropTypes.string,
 	initialSelectedIndex: PropTypes.number,
 	onChange: PropTypes.func,
 	style: PropTypes.object,

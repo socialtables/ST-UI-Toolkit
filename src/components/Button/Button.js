@@ -15,7 +15,7 @@ export default class Button extends Component {
 
 	constructor(properties) {
 		super(properties);
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
@@ -23,7 +23,7 @@ export default class Button extends Component {
 	 * Update the childProps based on the updated properties passed to the button.
 	 */
 	componentWillReceiveProps(properties) {
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
@@ -36,7 +36,7 @@ export default class Button extends Component {
 	}
 
 	render() {
-		const styles = getStyles({ theme: this.props.color, shape: this.props.shape });
+		const styles = getStyles({theme: this.props.color, shape: this.props.shape });
 		const activeStateStyles = this._getStyle("active", styles);
 		const disabledStateStyles = this._getStyle("disabled", styles);
 
@@ -68,7 +68,8 @@ Button.propTypes = {
 	type: PropTypes.string,
 	disabled: PropTypes.bool,
 	color: PropTypes.string,
-	shape: PropTypes.string
+	shape: PropTypes.string,
+	onClick: PropTypes.func
 };
 
 Button.defaultProps = {

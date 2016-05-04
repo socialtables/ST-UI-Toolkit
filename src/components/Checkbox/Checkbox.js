@@ -12,7 +12,7 @@ export default class Checkbox extends Component {
 
 	constructor(properties) {
 		super(properties);
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
 		this.state = {
@@ -24,7 +24,7 @@ export default class Checkbox extends Component {
 	 * Update the childProps based on the updated properties passed to the checkbox.
 	 */
 	componentWillReceiveProps(properties) {
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
 		if (properties.hasOwnProperty("checked")) {
@@ -55,7 +55,7 @@ export default class Checkbox extends Component {
 			return (e) => {
 				if ( !this.props.hasOwnProperty("checked") ) {
 					this.setState({ checked: !this.state.checked });
-				};
+				}
 				this._customCheckbox.blur();
 				this.props.onChange(e);
 			};
@@ -89,6 +89,7 @@ export default class Checkbox extends Component {
 		const disabledStateStyles = this._getStyle("disabled");
 		const onChangeHandler = this._getOnChangeHandler();
 
+
 		return (
 			<div style={[styles.base, this.props.style && this.props.style && this.props.style.base]}>
 				<div style={[styles.contentWrapper]}>
@@ -109,6 +110,7 @@ export default class Checkbox extends Component {
 					</div>
 					<input
 						{...this._childProps}
+						value={this.props.checked}
 						tabIndex="-1"
 						onChange={onChangeHandler}
 						onFocus={() => this._focusOnCustomCheckbox()}

@@ -36,7 +36,7 @@ export default function({ theme, shape }) {
 		},
 		active: {
 			":hover": {
-				backgroundColor: colorLib(btnBackgroundColor).darken(0.25).hexString(),
+				backgroundColor: colorLib(btnBackgroundColor).darken(0.25).hexString()
 			}
 		},
 		disabled: {
@@ -45,4 +45,4 @@ export default function({ theme, shape }) {
 			cursor: "not-allowed"
 		}
 	};
-};
+}

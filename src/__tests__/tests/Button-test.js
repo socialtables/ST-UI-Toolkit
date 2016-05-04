@@ -1,12 +1,9 @@
 /* global jest describe beforeEach it expect */
 
-jest.dontMock("../components/Button/Button");
+jest.dontMock("../../components/Button/Button");
 
 import TestUtils from "react-addons-test-utils";
-
-// Babel would move an import in front of the jest.dontMock. That"s why require
-// is used instead of import.
-const Button = require("../components/Button/Button");
+import Button from "../../components/Button/Button";
 
 describe("Button", () => {
 	describe("without any properties", () => {
@@ -18,10 +15,6 @@ describe("Button", () => {
 				<Button>Follow</Button>
 			);
 			buttonNode = TestUtils.findRenderedDOMComponentWithTag(button, "button");
-		});
-
-		it("should come with default styles", () => {
-			expect(buttonNode.hasAttribute("style")).toBeTruthy();
 		});
 
 		it("should set the type to button by default", () => {

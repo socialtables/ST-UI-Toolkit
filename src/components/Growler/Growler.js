@@ -17,7 +17,7 @@ export default class Growler extends Component {
 
 	constructor(props) {
 		super(props);
-		const { style, ...childProps } = props;
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
 		this._triggerOnCloseRequestOnEscKeyPress = this._triggerOnCloseRequestOnEscKeyPress.bind(this);
@@ -33,7 +33,7 @@ export default class Growler extends Component {
 	 * Update the childProps based on the updated properties passed to the growler.
 	 */
 	componentWillReceiveProps(props) {
-		const { style, ...childProps } = props;
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
@@ -206,6 +206,7 @@ Growler.propTypes = {
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
 	]),
+	style: PropTypes.object, 
 	open: PropTypes.bool,
 	listenForExternalCloseEvent: PropTypes.bool,
 	onCloseRequest: PropTypes.func,

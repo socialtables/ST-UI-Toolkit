@@ -18,7 +18,7 @@ export default class SelectBox extends Component {
 			isOptionListOpen: false
 		};
 
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
 		this._selectOption = this._selectOption.bind(this);
@@ -28,7 +28,7 @@ export default class SelectBox extends Component {
 	 * Update the childProps based on the updated properties passed to the text box.
 	 */
 	componentWillReceiveProps(properties) {
-		const { style, ...childProps } = properties;
+		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
@@ -210,18 +210,23 @@ export default class SelectBox extends Component {
 SelectBox.displayName = "SelectBox";
 
 SelectBox.propTypes = {
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]),
 	style: PropTypes.object,
 	disabled: PropTypes.bool,
 	value: PropTypes.any,
 	defaultText: PropTypes.string,
 	size: PropTypes.number,
 	onChange: PropTypes.func,
-	required: PropTypes.bool
+	required: PropTypes.bool,
+	className: PropTypes.string
 };
 
 SelectBox.defaultProps = {
 	disabled: false,
-	value: undefined,
+	value: "",
 	defaultText: "",
 	size: null,
 	required: false,
