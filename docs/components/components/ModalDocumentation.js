@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Modal, Button} from '@socialtables/st-ui-toolkit';
 import Code from '../Code';
 import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
+import Loader from "@socialtables/react-loader";
 
 const basicCodeExample = `<Button onClick={() => this.setState({isOpen: true})}>
   Click to Open Modal
@@ -134,6 +135,16 @@ const radiumStylesCodeExample = `<Button onClick={() => this.setState({isCustomM
   </section>
 </Modal>`;
 
+const backgroundOverrideExample = `<Button onClick={() => this.setState({isBackgroundModalOpen: true})}>
+ Click to Open
+   </Button>
+   <Modal
+ background={"none"}
+ open={this.state.isBackgroundModalOpen}
+ listenForExternalCloseEvent={true}
+ onCloseRequest={() => this.setState({isBackgroundModalOpen: false})}>
+ <Loader style={{width: "200px", margin: "50px auto"}} />
+</Modal>`;
 
 export default class ModalDocumentation extends Component {
 
@@ -147,7 +158,8 @@ export default class ModalDocumentation extends Component {
       isSecondModalOpen: false,
       isFixedWidthModalOpen: false,
       isResponsiveWidthModalOpen: false,
-      isCustomModalOpen: false
+      isCustomModalOpen: false,
+      isBackgroundModalOpen: false
     };
   };
 
@@ -286,6 +298,24 @@ export default class ModalDocumentation extends Component {
           </td>
         </tr>
 
+        <tr>
+          <td style={ propertyNameStyle }>
+            background
+          </td>
+        </tr>
+        <tr>
+          <td style={ propertyDescriptionStyle }>
+            <p >
+              <i>String</i>
+              <br />
+              <b>default:</b> "white"
+            </p>
+            <div>
+              The background property of the modal will be set to the value specified.
+            </div>
+          </td>
+        </tr>
+
       </tbody></table>
 
 
@@ -412,6 +442,22 @@ export default class ModalDocumentation extends Component {
             </section>
           </Modal>
           <Code value={ radiumStylesCodeExample } style={ {marginTop: 20} } />
+        </li>
+
+        <li>
+          <h4>Override Modal Background Property</h4>
+          <p>An example use case is to specify `background: none` when using the Modal in combination with React Loader.</p>
+          <Button onClick={() => this.setState({isBackgroundModalOpen: true})}>
+            Click to Open
+          </Button>
+          <Modal
+            background={"none"}
+            open={this.state.isBackgroundModalOpen}
+            listenForExternalCloseEvent={true}
+            onCloseRequest={() => this.setState({isBackgroundModalOpen: false})}>
+            <Loader style={{width: "200px", margin: "50px auto"}} />
+          </Modal>
+          <Code value={ backgroundOverrideExample } style={ {marginTop: 20} } />
         </li>
 
       </ul>
