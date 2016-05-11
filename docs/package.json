@@ -13,6 +13,7 @@
     "url": "http://github.com/socialtables/st-ui-toolkit.git"
   },
   "dependencies": {
+    "@socialtables/react-loader": "^3.0.0",
     "highlight.js": "=8.9.1",
     "history": "^1.13.1",
     "react": "15.0.2",

@@ -199,7 +199,7 @@ export default class Modal extends Component {
 		this._modalContentElement.style.transform = HIDDEN_MODAL_STYLES.MODAL_CONTENT_TRANSFORM;
 		this._modalContentElement.style.opacity = 1;
 		this._modalContentElement.style.transition = "transform 0.28s ease-in";
-		this._modalContentElement.style.background = "white";
+		this._modalContentElement.style.background = this.props.background || "white";
 		this._modalContentElement.style.width = props.width;
 		this._modalContentElement.style.maxWidth = props.maxWidth;
 
@@ -244,6 +244,7 @@ Modal.propTypes = {
 	]),
 	width: PropTypes.string,
 	maxWidth: PropTypes.string,
+	transparent: PropTypes.string,
 	open: PropTypes.bool,
 	listenForExternalCloseEvent: PropTypes.bool,
 	onCloseRequest: PropTypes.func,
@@ -254,6 +255,7 @@ Modal.defaultProps = {
 	open: false,
 	width: "30%",
 	maxWidth: "750px",
+	backgound: "none",
 	listenForExternalCloseEvent: true,
 	onCloseRequest: function() {}
 };
