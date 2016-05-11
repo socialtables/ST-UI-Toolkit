@@ -298,6 +298,24 @@ export default class ModalDocumentation extends Component {
           </td>
         </tr>
 
+        <tr>
+          <td style={ propertyNameStyle }>
+            background
+          </td>
+        </tr>
+        <tr>
+          <td style={ propertyDescriptionStyle }>
+            <p >
+              <i>String</i>
+              <br />
+              <b>default:</b> "white"
+            </p>
+            <div>
+              The background property of the modal will be set to the value specified.
+            </div>
+          </td>
+        </tr>
+
       </tbody></table>
 
 
