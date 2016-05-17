@@ -8,7 +8,7 @@ export default class Home extends Component {
     return (
       <div style={{ marginTop: -20 }}>
         <div>
-          ST-UI-Toolkit provides you with a set of React components that can be used across Social Table's projects.
+          ST-UI-Toolkit provides you with a set of React components that are themed according to the ST brand guidelines.
         </div>
 
         <div>
