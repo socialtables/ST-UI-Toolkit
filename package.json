@@ -83,7 +83,7 @@
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
     "setupTestFrameworkScriptFile": "<rootDir>/src/__tests__/utils/setupTestFrameworkScriptFile.js"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "color": "^0.11.1",
     "exenv": "^1.2.1",
