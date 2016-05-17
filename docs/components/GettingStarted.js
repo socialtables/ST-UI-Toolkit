@@ -45,7 +45,7 @@ export default class GettingStarted extends Component {
       <h2 style={ {marginTop: 0, marginBottom: 40} }>Getting Started</h2>
 
       <p>
-        ST-UI-Toolkit is available as a private <a href="http://npmjs.org">NPM</a> package under the @socialtables organization. Once you have npm you can install ST-UI-Toolkit in your project folder with:
+        ST-UI-Toolkit is available as a public <a href="http://npmjs.org">NPM</a> package scoped under the @socialtables organization. Once you have npm you can install ST-UI-Toolkit in your project folder with:
       </p>
 
       <Code value={ installCommand } style={ {marginTop: 40} } />
