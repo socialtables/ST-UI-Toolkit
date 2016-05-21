@@ -10,7 +10,7 @@ Website & Documentation: http://socialtables.github.io/ST-UI-Toolkit
 
 ## Getting Started
 
-ST-UI-Toolkit is available as a private [npm](http://npmjs.org) package. Once you have npm you can install ST-UI-Toolkit in your project folder with:
+ST-UI-Toolkit is available as a public [npm](http://npmjs.org) package. Once you have npm you can install ST-UI-Toolkit in your project folder with:
 
 ```
 npm install @socialtables/st-ui-toolkit
