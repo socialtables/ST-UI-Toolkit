@@ -109,7 +109,7 @@ To run the test continuously you can use `npm run test:watch`.
 
 ## Special Thanks
 
-- [Belle](https://github.com/nikgraf/belle) for providing the initial starting point/framework
+- [Belle](https://github.com/nikgraf/belle) for providing the initial starting point/scaffolding for the repository
 - [Julian Haddad (Lead Designer at Social Tables)](http://julianhaddad.com/) for designing most if not all of the components!
 
 ## License
