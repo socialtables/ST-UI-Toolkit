@@ -6,7 +6,10 @@
   ],
   "plugins": [
     "transform-decorators-legacy",
-    "syntax-decorators"
+    "syntax-decorators",
+    ["transform-react-jsx", {
+        "pragma": "_react.createElement" // default pragma is React.createElement
+    }]
   ],
   "env": {
     "development": {
