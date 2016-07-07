@@ -1,4 +1,4 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 
 import getStyles from "./styles";
@@ -10,7 +10,7 @@ import getStyles from "./styles";
  * - Once a user clicks on the button it will loose focus
  * - By default every button is of type="button" instead of "submit"
  */
-@Radium
+@ConfiguredRadium
 export default class Button extends Component {
 
 	constructor(properties) {

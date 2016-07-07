@@ -1,9 +1,9 @@
-import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
+import {Children, Component, PropTypes} from "react";
 import RadioButton from "./RadioButton";
 import getStyles from "./styles";
 
-@Radium
+@ConfiguredRadium
 export default class RadioButtonGroup extends Component {
 	constructor(props) {
 		super(props);
@@ -49,7 +49,7 @@ export default class RadioButtonGroup extends Component {
 	render() {
 		const styles = getStyles();
 		const radioButtonGroupStyles = this._getStyle("radioButtonGroup", styles);
-		const options = React.Children.map(this.props.children, (option) => {
+		const options = Children.map(this.props.children, (option) => {
 			const {
 				name,
 				value,

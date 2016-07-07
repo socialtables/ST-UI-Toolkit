@@ -1,5 +1,11 @@
-import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
+import {
+	Children,
+	Component,
+	PropTypes,
+	createElement,
+	cloneElement
+} from "react";
 import TabTemplate from "./TabTemplate";
 import getStyles from "./styles";
 
@@ -8,7 +14,7 @@ import getStyles from "./styles";
  *
  * TODO: add description
 */
-@Radium
+@ConfiguredRadium
 export default class Tabs extends Component {
 	constructor(props) {
 		super(props);
@@ -37,7 +43,7 @@ export default class Tabs extends Component {
 	}
 
 	getTabCount() {
-		return React.Children.count(this.props.children);
+		return Children.count(this.props.children);
 	}
 
 	_getSelected(tab, index) {
@@ -60,20 +66,20 @@ export default class Tabs extends Component {
 
 	_renderTabsAndContent(children) {
 		let tabContent = [];
-		let tabs = React.Children.map(children, (tab, index) => {
+		let tabs = Children.map(children, (tab, index) => {
 			if (tab.type && tab.type.displayName !== "Tab") {
 				window.console.warn(`Tabs only accepts Tab Components as children.
 					Found ${tab.type.displayName || tab.type} as child number ${index + 1} of Tabs`);
 			}
 			else {
 				tabContent.push(
-					(tab.props.children) ? React.createElement(TabTemplate, {
+					(tab.props.children) ? createElement(TabTemplate, {
 						key: index,
 						selected: this._getSelected(tab, index)
 					}, tab.props.children) : undefined
 				);
 
-				return React.cloneElement(tab, {
+				return cloneElement(tab, {
 					key: index,
 					selected: this._getSelected(tab, index),
 					tabIndex: index,

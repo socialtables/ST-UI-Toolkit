@@ -1,11 +1,11 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 import styles from "./styles";
 
 /**
  * ModalContentWrapper component
  */
-@Radium
+@ConfiguredRadium
 export default class ModalContentWrapper extends Component {
 	constructor(props) {
 		super(props);

@@ -1,4 +1,4 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 
 import styles from "./styles";
@@ -8,7 +8,7 @@ import styles from "./styles";
  *
  * This component is the option for the select box
  */
-@Radium
+@ConfiguredRadium
 export default class SelectBoxOption extends Component {
 
 	constructor(properties) {

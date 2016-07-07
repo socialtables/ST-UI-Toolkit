@@ -1,4 +1,4 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 import getStyles from "./styles";
 import Button from "../Button/Button";
@@ -8,7 +8,7 @@ import Button from "../Button/Button";
  *
  * TODO: add description
  */
-@Radium
+@ConfiguredRadium
 export default class Tab extends Component {
 	constructor(props) {
 		super(props);

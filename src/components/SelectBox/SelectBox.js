@@ -1,5 +1,10 @@
-import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
+import {
+	cloneElement,
+	Children,
+	Component,
+	PropTypes
+} from "react";
 import lodashFind from "lodash.find";
 
 import styles from "./styles";
@@ -9,7 +14,7 @@ import styles from "./styles";
  *
  * This component is the round select box
  */
-@Radium
+@ConfiguredRadium
 export default class SelectBox extends Component {
 
 	constructor(properties) {
@@ -65,8 +70,8 @@ export default class SelectBox extends Component {
 
 		let options = null;
 		if (this.state.isOptionListOpen) {
-			options = React.Children.map(this.props.children, (optionElement, index) => {
-				return React.cloneElement(optionElement, {
+			options = Children.map(this.props.children, (optionElement, index) => {
+				return cloneElement(optionElement, {
 					key: index,
 					onMouseDown: !this.props.disabled && this._selectOption,
 					style: this.props.style
@@ -108,7 +113,7 @@ export default class SelectBox extends Component {
 			valueIsSelected = false;
 		}
 		else {
-			const children = React.Children.toArray(this.props.children);
+			const children = Children.toArray(this.props.children);
 			const option = lodashFind(children, (c) => {
 				return c.props.value === this.props.value;
 			});

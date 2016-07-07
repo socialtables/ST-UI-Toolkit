@@ -1,5 +1,5 @@
-import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
+import {Component, PropTypes} from "react";
 
 import styles from "./styles";
 import VALID_TYPES from "./valid_types";
@@ -9,7 +9,7 @@ import VALID_TYPES from "./valid_types";
  *
  * This component is the rounded-input box
  */
-@Radium
+@ConfiguredRadium
 export default class TextBox extends Component {
 
 	constructor(properties) {
@@ -51,7 +51,7 @@ TextBox.displayName = "TextBox";
 
 TextBox.propTypes = {
 	style: PropTypes.object,
-	type: React.PropTypes.oneOf(VALID_TYPES).isRequired,
+	type: PropTypes.oneOf(VALID_TYPES).isRequired,
 	disabled: PropTypes.bool
 };
 
