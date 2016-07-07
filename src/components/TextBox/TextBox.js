@@ -1,5 +1,5 @@
 import Radium from "radium";
-import React, {Component, PropTypes} from "react";
+import {Component, PropTypes} from "react";
 
 import styles from "./styles";
 import VALID_TYPES from "./valid_types";
@@ -51,7 +51,7 @@ TextBox.displayName = "TextBox";
 
 TextBox.propTypes = {
 	style: PropTypes.object,
-	type: React.PropTypes.oneOf(VALID_TYPES).isRequired,
+	type: PropTypes.oneOf(VALID_TYPES).isRequired,
 	disabled: PropTypes.bool
 };
 
