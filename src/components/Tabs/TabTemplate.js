@@ -1,7 +1,7 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 
-@Radium
+@ConfiguredRadium
 export default class TabTemplate extends Component {
 	render() {
 		const styles = {

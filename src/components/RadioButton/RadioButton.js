@@ -1,8 +1,8 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 import getStyles from "./styles";
 
-@Radium
+@ConfiguredRadium
 export default class RadioButton extends Component {
 	constructor(props) {
 		super(props);

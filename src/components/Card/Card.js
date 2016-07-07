@@ -1,4 +1,4 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 import styles from "./styles";
 
@@ -8,7 +8,7 @@ import styles from "./styles";
  * This component will apply any attribute to the div that has been provided as
  * property & is valid for a div.
  */
-@Radium
+@ConfiguredRadium
 export default class Card extends Component {
 
 	constructor(properties) {

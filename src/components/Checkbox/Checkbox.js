@@ -1,4 +1,4 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {Component, PropTypes} from "react";
 import styles from "./styles";
 
@@ -7,7 +7,7 @@ const ROLE = "checkbox";
 /**
  * Checkbox component
  */
-@Radium
+@ConfiguredRadium
 export default class Checkbox extends Component {
 
 	constructor(properties) {

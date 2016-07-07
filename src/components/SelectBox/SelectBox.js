@@ -1,4 +1,4 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {
 	cloneElement,
 	Children,
@@ -14,7 +14,7 @@ import styles from "./styles";
  *
  * This component is the round select box
  */
-@Radium
+@ConfiguredRadium
 export default class SelectBox extends Component {
 
 	constructor(properties) {

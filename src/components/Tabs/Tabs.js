@@ -1,4 +1,4 @@
-import Radium from "radium";
+import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import {
 	Children,
 	Component,
@@ -14,7 +14,7 @@ import getStyles from "./styles";
  *
  * TODO: add description
 */
-@Radium
+@ConfiguredRadium
 export default class Tabs extends Component {
 	constructor(props) {
 		super(props);
