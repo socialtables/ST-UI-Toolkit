@@ -6,12 +6,16 @@
   ],
   "plugins": [
     "transform-decorators-legacy",
-    "syntax-decorators",
-    ["transform-react-jsx", {
-        "pragma": "_react.createElement" // default pragma is React.createElement
-    }]
+    "syntax-decorators"
   ],
   "env": {
+    "production": {
+      "plugins": [
+        ["transform-react-jsx", {
+          "pragma": "_react.createElement" // default pragma is React.createElement
+        }]
+      ]
+    },
     "development": {
       "plugins": [
         // must be an array with options object as second item
