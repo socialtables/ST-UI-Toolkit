@@ -15,11 +15,9 @@ export default class FuturePlans extends Component {
 
       <h2 style={ {marginTop: 40, marginBottom: 40} }>Future Plans</h2>
 
-      <ul>
-        <li>Add more components!</li>
-        <li>Continue to dogfood the library interally until we deem it worthy of open-sourcing</li>
-        <li>Flesh out the test-suite</li>
-      </ul>
+      <a href="https://github.com/socialtables/ST-UI-Toolkit#future-plans" target="_blank">
+        Please see our README for future plans.
+      </a>
     </div>);
   }
 }

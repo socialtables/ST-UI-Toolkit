@@ -106,6 +106,7 @@ To run the test continuously you can use `npm run test:watch`.
 
 - Continue to add more components to the library
 - Work to flesh out the overall design of the module
+- Add in support for accessibility
 
 ## Special Thanks
 
