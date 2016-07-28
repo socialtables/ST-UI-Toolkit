@@ -67,6 +67,7 @@ export default class Growler extends Component {
 
 		// Remove growler content from DOM
 		if (this._growlerContentElement) {
+			ReactDOM.unmountComponentAtNode(this._growlerContentElement);
 			document.body.removeChild(this._growlerContentElement);
 		}
 
