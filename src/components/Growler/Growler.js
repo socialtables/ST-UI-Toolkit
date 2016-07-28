@@ -99,6 +99,14 @@ export default class Growler extends Component {
 				this._removeCloseRequestListeners();
 			}
 		}
+
+		var revealedGrowlers = document.getElementsByClassName(ST_UI_REVEALED_GROWLER_CLASS) || {};
+		if (revealedGrowlers.length) {
+			this._cachedBodyElementReference.style.overflow = "hidden";
+		} 
+		else {
+			this._cachedBodyElementReference.style.overflow = "";
+		}
 	}
 
 	_fadeInGrowler() {
