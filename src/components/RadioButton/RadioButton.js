@@ -6,14 +6,14 @@ import getStyles from "./styles";
 export default class RadioButton extends Component {
 	constructor(props) {
 		super(props);
-		const { style, align, ...childProps } = props; // eslint-disable-line no-unused-vars
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 		this._handleSelect = this._handleSelect.bind(this);
 		this._getStyle = this._getStyle.bind(this);
 		this.onSelect = this.props.onSelect.bind(this);
 	}
 	componentWillReceiveProps(props) {
-		const { style, align, ...childProps } = props; // eslint-disable-line no-unused-vars
+		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 	componentWillUnmount() {

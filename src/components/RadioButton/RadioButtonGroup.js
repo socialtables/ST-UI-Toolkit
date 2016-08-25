@@ -54,7 +54,6 @@ export default class RadioButtonGroup extends Component {
 				name,
 				value,
 				label,
-				align,
 				...other
 			} = option.props;
 
@@ -67,7 +66,7 @@ export default class RadioButtonGroup extends Component {
 					name={name}
 					value={value}
 					label={label}
-					align={align}
+					align={this.props.align}
 					onSelect={this._handleChange}
 					checked={option.props.value === this.state.selected}
 					selected={option.props.value === this.state.selected}
