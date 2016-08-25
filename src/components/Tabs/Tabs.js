@@ -18,12 +18,11 @@ import getStyles from "./styles";
 export default class Tabs extends Component {
 	constructor(props) {
 		super(props);
-		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
+		const { style, initialSelectedIndex, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 
-		const initialIndex = props.initialSelectedIndex
 		this.state = {
-			selectedIndex: (initialIndex < this.getTabCount()) ? initialIndex : 0
+			selectedIndex: (initialSelectedIndex < this.getTabCount()) ? initialSelectedIndex : 0
 		};
 
 		this._handleTabSelection = this._handleTabSelection.bind(this);
@@ -34,7 +33,7 @@ export default class Tabs extends Component {
 	 * Update the childProps based on the updated properties passed to the card.
 	 */
 	componentWillReceiveProps(properties) {
-		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
+		const { style, initialSelectedIndex, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 

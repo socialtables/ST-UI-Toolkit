@@ -57,4 +57,20 @@ describe("Checkbox", () => {
 		expect(wasClicked).toBeFalsy();
 	});
 
+	it("should correctly set the 'value' property on the wrapped <input type='checkbox'> element", () => {
+		// Setup
+		const checkboxValue = "yolo";
+
+		// Render
+		const checkbox = TestUtils.renderIntoDocument(
+			<Checkbox checked value={checkboxValue} />
+		);
+
+		// Extract the nested <input type='checkbox'> element
+		const nativeInputElement = TestUtils.findRenderedDOMComponentWithTag(checkbox, "input");
+
+		// Assert
+		expect(nativeInputElement.value).toEqual(checkboxValue);
+	});
+
 });
