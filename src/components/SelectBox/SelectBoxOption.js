@@ -13,7 +13,7 @@ export default class SelectBoxOption extends Component {
 
 	constructor(properties) {
 		super(properties);
-		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
+		const { style, displayLabel, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 		this._handleClick = this._handleClick.bind(this);
 	}

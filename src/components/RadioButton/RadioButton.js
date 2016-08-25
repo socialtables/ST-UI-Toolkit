@@ -6,14 +6,14 @@ import getStyles from "./styles";
 export default class RadioButton extends Component {
 	constructor(props) {
 		super(props);
-		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
+		const { style, align, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 		this._handleSelect = this._handleSelect.bind(this);
 		this._getStyle = this._getStyle.bind(this);
 		this.onSelect = this.props.onSelect.bind(this);
 	}
 	componentWillReceiveProps(props) {
-		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
+		const { style, align, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 	componentWillUnmount() {
@@ -34,17 +34,22 @@ export default class RadioButton extends Component {
 		const makeRow = this.props.align === "row";
 
 		return (
-			<div {...this._childProps} style={[
-				styles.base,
-				this.props.disabled && styles.base.disabled,
-				makeRow && rowStyles]}>
-				<div
-				onClick={this._handleSelect}
+			<div
+				{...this._childProps}
 				style={[
-					styles.radio,
-					this.props.selected && (radioStyles.selected || styles.radio.selected),
-					this.props.disabled && (radioStyles.disabled || styles.radio.disabled),
-					this.props.style && this.props.style.radio]}>
+					styles.base,
+					this.props.disabled && styles.base.disabled,
+					makeRow && rowStyles
+				]}
+				>
+				<div
+					onClick={this._handleSelect}
+					style={[
+						styles.radio,
+						this.props.selected && (radioStyles.selected || styles.radio.selected),
+						this.props.disabled && (radioStyles.disabled || styles.radio.disabled),
+						this.props.style && this.props.style.radio
+					]}>
 					<div>
 						<input
 							type="radio"

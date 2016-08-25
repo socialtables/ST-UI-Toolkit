@@ -45,7 +45,7 @@ export default class SelectBox extends Component {
 	_renderDownArrowIcon() {
 		return (
 			<svg style={[styles.selectBox.arrowIcon, this.props.style && this.props.style.selectBox && this.props.style.selectBox.arrowIcon]}
-				enable-background="new 0 0 50 50"
+				enableBackground="new 0 0 50 50"
 				version="1.1"
 				viewBox="0 0 50 50">
 				<rect fill="none" height="50" width="50"/>

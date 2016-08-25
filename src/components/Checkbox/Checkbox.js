@@ -110,7 +110,6 @@ export default class Checkbox extends Component {
 					</div>
 					<input
 						{...this._childProps}
-						value={this.props.checked}
 						tabIndex="-1"
 						onChange={onChangeHandler}
 						onFocus={() => this._focusOnCustomCheckbox()}
