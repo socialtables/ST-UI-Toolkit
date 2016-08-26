@@ -15,11 +15,12 @@ window.requestAnimationFrame = function(cb) {
 /*
 * Throw a run-time error on React Warnings that occur in test-suite
 * This will help ensure that we catch these types of issues in our CI check versus at run-time
+*
+* Using a suggestion found in this issue: https://github.com/facebook/react/issues/4302
+*
 */
 const errorFn = window.console.error;
 window.console.error = function(msg) {
-	window.console.log("ROLO: ", msg);
-
 	// Detect react warnings & error
 	if (/^Warning: /.test(msg)) {
 		throw new Error(`React: ${msg}`);
