@@ -25,7 +25,7 @@
     "react-dom": ">=0.14.0"
   },
   "scripts": {
-    "build": "babel --out-dir='lib' --ignore='__tests__/*' src",
+    "build": "BABEL_ENV=production babel --out-dir='lib' --ignore='__tests__/*' src",
     "prepublish": "npm run build",
     "postpublish": "./scripts/publish_gh_pages.sh",
     "pretest": "npm run lint",
