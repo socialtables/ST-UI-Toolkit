@@ -48,6 +48,15 @@ const sizeOptionCodeExample = `<SelectBox
   <SelectBoxOption value="5.5-square" displayLabel="5.5' Square Table"></SelectBoxOption>
   <SelectBoxOption value="6-square" displayLabel="6' Square Table"></SelectBoxOption>
 </SelectBox>`;
+const transitionDurationCodeExample = `<SelectBox
+  value={this.state.transitionDurationSelectedValue}
+  transitionDuration={0.8}
+  defaultText="Select a Table Type..."
+  onChange={(v) => { this.setState({transitionDurationSelectedValue: v}) }}>
+  <SelectBoxOption value="round" displayLabel="Round"></SelectBoxOption>
+  <SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
+  <SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
+</SelectBox>`;
 const radiumStylesCodeExample = `<SelectBox
   value={this.state.overrideRadiumValue}
   style={{base: { width: 150 }}}
@@ -184,6 +193,20 @@ export default class SelectBoxDocumentation extends Component {
 
         <tr>
           <td style={ propertyNameStyle }>
+            transitionDuration
+          </td>
+        </tr>
+        <tr>
+          <td style={ propertyDescriptionStyle }>
+            <i>Number</i>
+            <br />
+            <b>default:</b> null
+            <p>The duration of the dropdown transition in seconds</p>
+          </td>
+        </tr>           
+
+        <tr>
+          <td style={ propertyNameStyle }>
             style
           </td>
         </tr>
@@ -196,7 +219,7 @@ export default class SelectBoxDocumentation extends Component {
             </p>
             <p>Radium-based inline-style</p>
           </td>
-        </tr>
+        </tr>     
 
       </tbody></table>
 
@@ -301,6 +324,19 @@ export default class SelectBoxDocumentation extends Component {
           </SelectBox>
           <Code value={ sizeOptionCodeExample } style={ {marginTop: 20} } />
         </li>
+        <li>
+          <h4><i>transitionDuration</i> property specified</h4>
+          <SelectBox
+            value={this.state.transitionDurationSelectedValue}
+            transitionDuration={0.8}
+            defaultText="Select a Table Type..."
+            onChange={(v) => { this.setState({transitionDurationSelectedValue: v}) }}>
+            <SelectBoxOption value="round" displayLabel="Round"></SelectBoxOption>
+            <SelectBoxOption value="rectangle" displayLabel="Rectangle"></SelectBoxOption>
+            <SelectBoxOption value="square" displayLabel="Square"></SelectBoxOption>
+          </SelectBox>
+          <Code value={ transitionDurationCodeExample } style={ {marginTop: 20} } />
+        </li>        
         <li>
           <h4>Override Radium Styles</h4>
           <SelectBox
