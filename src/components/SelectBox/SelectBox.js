@@ -89,11 +89,11 @@ export default class SelectBox extends Component {
 			<div
 				style={[
 					styles.optionList,
+					this.props.transitionDuration && transitionDurationFromProp,
 					this.state.isOptionListOpen && openStyles,
 					this.state.isOptionListOpen && this.props.size && maxHeightFromSizeProp,
 					!this.state.isOptionListOpen && closedStyles,
-					this.props.style && this.props.style.optionList,
-					this.props.style && this.props.transitionDuration && transitionDurationFromProp
+					this.props.style && this.props.style.optionList
 				]}>
 				{options}
 			</div>
