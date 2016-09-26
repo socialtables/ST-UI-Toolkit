@@ -122,4 +122,24 @@ describe("SelectBox", () => {
 		// Assert
 		expect(newOptionValue).toBeNull();
 	});
+
+	pit("does change the dropdown transformation duration when a transformationDuration prop is specified", function() {
+		return new Promise((resolve) => {
+
+			const selectBox = TestUtils.renderIntoDocument(
+				<SelectBox value="rectangle" transitionDuration={0.8} onTransitionEnd={(e) => {
+					expect(e.elapsedTime).toBe(0.8);
+					resolve();
+				}}>
+					<SelectBoxOption value="round"></SelectBoxOption>
+					<SelectBoxOption className="rectangle-option" value="rectangle"></SelectBoxOption>
+					<SelectBoxOption value="square"></SelectBoxOption>
+				</SelectBox>
+			);
+
+			// Open menu by simulating click
+			const selectBoxNode = TestUtils.findRenderedDOMComponentWithTag(selectBox, "select");
+			TestUtils.Simulate.focus(selectBoxNode);
+		});
+	});
 });
