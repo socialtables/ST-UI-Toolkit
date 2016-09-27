@@ -69,9 +69,9 @@ export default class SelectBox extends Component {
 			maxHeightFromSizeProp.maxHeight = this.props.size * styles.option.minHeight;
 		}
 
-		let transitionDurationFromProp = {};
+		let transitionStyles = {};
 		if (this.props.transitionDuration) {
-			transitionDurationFromProp.transition = `max-height ${this.props.transitionDuration}s ease-in, opacity 0.2s ease-out`;
+			transitionStyles.transition = `max-height ${this.props.transitionDuration}s ease-in, opacity 0.2s ease-out`;
 		}
 
 		let options = null;
@@ -89,7 +89,7 @@ export default class SelectBox extends Component {
 			<div
 				style={[
 					styles.optionList,
-					this.props.transitionDuration && transitionDurationFromProp,
+					this.props.transitionDuration && transitionStyles,
 					this.state.isOptionListOpen && openStyles,
 					this.state.isOptionListOpen && this.props.size && maxHeightFromSizeProp,
 					!this.state.isOptionListOpen && closedStyles,
