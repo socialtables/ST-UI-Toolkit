@@ -28,8 +28,16 @@ export default function() {
 			fontSize: "24px",
 			padding: "20px 0"
 		},
+		inlineHeader: {
+			display: "inline-block",
+			width: "40%",
+			paddingBottom: "0px"
+		},
 		tabBar: {
 			backgroundColor: colors.colorMain
+		},
+		inlineTabBar: {
+			display: "inline-block"
 		},
 		tabContent: {
 			margin: "0 46px"
