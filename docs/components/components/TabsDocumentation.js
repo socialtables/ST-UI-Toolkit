@@ -33,10 +33,28 @@ const radiumStylesCodeExample = `<Tabs style={{
 		paddingLeft: 120
 	}
 }}>
-  <Tab label="First Tab">
+  <Tab label="First Tab"
+    style={{
+      base: {
+        height: "50px",
+        padding: "0 20px",
+        lineHeight: "50px",
+        backgroundColor: "#cb5599",
+        color: "black"
+      }
+    }}>
     First Tab
   </Tab>
-  <Tab label="Second Tab">
+  <Tab label="Second Tab"
+    style={{
+      base: {
+        height: "50px",
+        padding: "0 20px",
+        lineHeight: "50px",
+        backgroundColor: "#cb5599",
+        color: "black"
+      }
+    }}>
     Second Tab
   </Tab>
 </Tabs>`;
@@ -160,10 +178,28 @@ export default class TabsDocumentation extends Component {
 							paddingLeft: 120
 						}
 					}}>
-					  <Tab label="First Tab">
+					  <Tab label="First Tab"
+							style={{
+								base: {
+									height: "50px",
+									padding: "0 20px",
+									lineHeight: "50px",
+									backgroundColor: "#cb5599",
+									color: "black"
+								}
+							}}>
 					    First Tab
 					  </Tab>
-					  <Tab label="Second Tab">
+					  <Tab label="Second Tab"
+							style={{
+								base: {
+									height: "50px",
+									padding: "0 20px",
+									lineHeight: "50px",
+									backgroundColor: "#cb5599",
+									color: "black"
+								}
+							}}>
 					    Second Tab
 					  </Tab>
 					</Tabs>

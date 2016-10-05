@@ -43,13 +43,15 @@ export default class Tab extends Component {
 		const { label, selected } = this.props;
 		const styles = getStyles();
 		const tabStyle = selected ? this._getStyle("selected", styles) : {};
+		const baseStyle = this._getStyle("base", styles);
+		const activeStyle = this._getStyle("active", styles);
 
 		return (
 			<Button
 				{...this._childProps}
 				style={{
-					base: [styles.base, tabStyle],
-					active: styles.active
+					base: [baseStyle, tabStyle],
+					active: activeStyle
 				}}
 				color="dark"
 				onClick={this._handleSelect}
