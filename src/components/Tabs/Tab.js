@@ -42,16 +42,16 @@ export default class Tab extends Component {
 	render() {
 		const { label, selected } = this.props;
 		const styles = getStyles();
-		const selectedStyle = selected ? [styles.selected, this._getStyle("selected", styles)] : {};
-		const overrideBaseStyle = this._getStyle("base", styles);
-		const overrideActiveStyle = this._getStyle("active", styles);
+		const tabStyle = selected ? this._getStyle("selected", styles) : {};
+		const baseStyle = this._getStyle("base", styles);
+		const activeStyle = this._getStyle("active", styles);
 
 		return (
 			<Button
 				{...this._childProps}
 				style={{
-					base: [styles.base, overrideBaseStyle, selectedStyle],
-					active: [styles.active, overrideActiveStyle]
+					base: [baseStyle, tabStyle],
+					active: activeStyle
 				}}
 				color="dark"
 				onClick={this._handleSelect}

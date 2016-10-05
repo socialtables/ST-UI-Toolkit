@@ -99,12 +99,10 @@ export default class Tabs extends Component {
 		const styles = getStyles();
 		const tabContainerStyle = this._getStyle("tabContainer", styles);
 		const headerStyle = this._getStyle("header", styles);
-		const inlineHeaderStyle = this.props.inlineLabel ? this._getStyle("inlineHeader", styles): {};
 		const tabBarStyle = this._getStyle("tabBar", styles);
-		const inlineTabBarStyle = this.props.inlineLabel ? styles.inlineTabBar : {};
 		const tabContentStyle = this._getStyle("tabContent", styles);
 		const label = (this.props.label) ? (
-			<div style={[headerStyle, inlineHeaderStyle]}>
+			<div style={headerStyle}>
 				{this.props.label}
 			</div>
 		) : null;
@@ -113,7 +111,7 @@ export default class Tabs extends Component {
 			<div {...this._childProps}>
 				<div style={tabContainerStyle}>
 					{label}
-					<div style={[tabBarStyle, inlineTabBarStyle]}>
+					<div style={tabBarStyle}>
 						{tabs}
 					</div>
 				</div>
@@ -136,8 +134,7 @@ Tabs.propTypes = {
 	initialSelectedIndex: PropTypes.number,
 	onChange: PropTypes.func,
 	style: PropTypes.object,
-	value: PropTypes.any,
-	inlineLabel: PropTypes.bool
+	value: PropTypes.any
 };
 
 Tabs.defaultProps = {
