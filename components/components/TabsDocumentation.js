@@ -3,7 +3,7 @@ import {Tab, Tabs, Checkbox} from "@socialtables/st-ui-toolkit";
 import Code from "../Code";
 import {propertyNameStyle, propertyDescriptionStyle} from '../../style';
 
-const basicCodeExample = `<Tabs label="Example Tabs With Label">
+const basicCodeExample = `<Tabs label={"Example Tabs With Label"}>
   <Tab label="Tab 1">
     <p>This is example tab content. Update the checkbox and watch how I keep my state!</p>
     <Checkbox defaultChecked={true}></Checkbox>
@@ -15,19 +15,6 @@ const basicCodeExample = `<Tabs label="Example Tabs With Label">
     <p>This is the third example tab. Only Tab Components can be passed as children to Tabs.</p>
   </Tab>
 </Tabs>`;
-
-const inlineLabelExample = `<Tabs label="Example Tabs With Inline Label" inlineLabel>
-  <Tab label="Tab 1">
-    <p>Tab 1!</p>
-  </Tab>
-  <Tab label="Tab 2">
-    <p>Tab 2!</p>
-  </Tab>
-  <Tab label="Tab 3">
-    <p>Tab 3!</p>
-  </Tab>
-</Tabs>`;
-
 const noLabelExample = `<Tabs>
   <Tab label="TAB A">
     <p>This example doesn't have a label.</p>
@@ -37,7 +24,7 @@ const noLabelExample = `<Tabs>
   </Tab>
 </Tabs>`;
 
-const radiumTabsStylesCodeExample = `<Tabs style={{
+const radiumStylesCodeExample = `<Tabs style={{
 	tabContainer: {
 		background: "black"
 	},
@@ -46,28 +33,14 @@ const radiumTabsStylesCodeExample = `<Tabs style={{
 		paddingLeft: 120
 	}
 }}>
-  <Tab label="First Tab">
-    First Tab
-  </Tab>
-  <Tab label="Second Tab">
-    Second Tab
-  </Tab>
-</Tabs>`;
-
-const radiumTabStylesCodeExample = `<Tabs>
   <Tab label="First Tab"
     style={{
       base: {
+        height: "50px",
+        padding: "0 20px",
+        lineHeight: "50px",
+        backgroundColor: "#cb5599",
         color: "black"
-      },
-      active: {
-        ":hover": {
-          backgroundColor: "black",
-          color: "#cb5599"
-        }
-      },
-      selected: {
-        border: "2px solid #cb5599"
       }
     }}>
     First Tab
@@ -75,16 +48,11 @@ const radiumTabStylesCodeExample = `<Tabs>
   <Tab label="Second Tab"
     style={{
       base: {
+        height: "50px",
+        padding: "0 20px",
+        lineHeight: "50px",
+        backgroundColor: "#cb5599",
         color: "black"
-      },
-      active: {
-        ":hover": {
-          backgroundColor: "black",
-          color: "#cb5599"
-        }
-      },
-      selected: {
-        border: "2px solid #cb5599"
       }
     }}>
     Second Tab
@@ -98,7 +66,7 @@ export default class TabsDocumentation extends Component {
 
 			<h2 style={ {marginTop: 0, marginBottom: 40} }>Tabs</h2>
 
-			<Tabs label="Example Tabs With Label">
+			<Tabs label={"Example Tabs With Label"}>
 				<Tab label="Tab 1">
 					<p>This is example tab content. Update the checkbox and watch how I keep my state!</p>
 					<Checkbox defaultChecked={true}></Checkbox>
@@ -112,20 +80,6 @@ export default class TabsDocumentation extends Component {
 			</Tabs>
 
 			<Code value={ basicCodeExample } style={ {marginTop: 40} } />
-
-			<Tabs label="Example Tabs With Inline Label" inlineLabel>
-				<Tab label="Tab 1">
-					<p>Tab 1!</p>
-				</Tab>
-				<Tab label="Tab 2">
-					<p>Tab 2!</p>
-				</Tab>
-				<Tab label="Tab 3">
-					<p>Tab 3!</p>
-				</Tab>
-			</Tabs>
-
-			<Code value={ inlineLabelExample } style={ {marginTop: 40} } />
 
 			<Tabs>
 				<Tab label="TAB A">
@@ -194,22 +148,6 @@ export default class TabsDocumentation extends Component {
 
 			<tr>
 				<td style={ propertyNameStyle }>
-				inlineLabel
-				</td>
-			</tr>
-			<tr>
-				<td style={ propertyDescriptionStyle }>
-				<p >
-					<i>Boolean</i>
-					<br />
-					<b>default:</b> false
-				</p>
-				<p>If true, the label will appear to the left of the tabs rather than above.</p>
-				</td>
-			</tr>
-
-			<tr>
-				<td style={ propertyNameStyle }>
 				style
 				</td>
 			</tr>
@@ -230,7 +168,7 @@ export default class TabsDocumentation extends Component {
 
       <ul>
         <li>
-          <h4>Override Tabs Component Radium Styles</h4>
+          <h4>Override Radium Styles</h4>
           <Tabs style={{
 						tabContainer: {
 							background: "black"
@@ -240,54 +178,33 @@ export default class TabsDocumentation extends Component {
 							paddingLeft: 120
 						}
 					}}>
-					  <Tab label="First Tab">
+					  <Tab label="First Tab"
+							style={{
+								base: {
+									height: "50px",
+									padding: "0 20px",
+									lineHeight: "50px",
+									backgroundColor: "#cb5599",
+									color: "black"
+								}
+							}}>
 					    First Tab
 					  </Tab>
-					  <Tab label="Second Tab">
+					  <Tab label="Second Tab"
+							style={{
+								base: {
+									height: "50px",
+									padding: "0 20px",
+									lineHeight: "50px",
+									backgroundColor: "#cb5599",
+									color: "black"
+								}
+							}}>
 					    Second Tab
 					  </Tab>
 					</Tabs>
-          <Code value={ radiumTabsStylesCodeExample } style={ {marginTop: 20} } />
+          <Code value={ radiumStylesCodeExample } style={ {marginTop: 20} } />
         </li>
-				<li>
-					<h4>Override Tab Component Radium Styles</h4>
-					<Tabs>
-						<Tab label="First Tab"
-							style={{
-								base: {
-									color: "black"
-								},
-								active: {
-									":hover": {
-										backgroundColor: "black",
-										color: "#cb5599"
-									}
-								},
-								selected: {
-									border: "2px solid #cb5599"
-								}
-							}}>
-							First Tab
-						</Tab>
-						<Tab label="Second Tab" style={{
-								base: {
-									color: "black"
-								},
-								active: {
-									":hover": {
-										backgroundColor: "black",
-										color: "#cb5599"
-									}
-								},
-								selected: {
-									border: "2px solid #cb5599"
-								}
-							}}>
-							Second Tab
-						</Tab>
-					</Tabs>
-					<Code value={ radiumTabStylesCodeExample } style={ {marginTop: 20} } />
-				</li>
       </ul>
 
 		</div>)
