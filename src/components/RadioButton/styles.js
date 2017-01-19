@@ -57,7 +57,10 @@ export default function() {
 		// styles for the radio button label
 		labelWrapper: {
 			display: "table-cell",
-			padding: "0px 5px"
+			paddingTop: "0px",
+			paddingBottom: "0px",
+			paddingLeft: "5px",
+			paddingRight: "5px"
 		}
 	};
 }

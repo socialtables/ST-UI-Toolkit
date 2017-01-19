@@ -12,7 +12,10 @@ export default {
 	},
 	/* Main Box Styles */
 	selectBox: {
-		padding: PADDING,
+		paddingLeft: PADDING,
+		paddingRight: PADDING,
+		paddingTop: PADDING,
+		paddingBottom: PADDING,
 		width: "100%",
 		height: "100%",
 		transition: "border-color .3s",
@@ -89,7 +92,10 @@ export default {
 	option: {
 		minHeight: 35,
 		width: "100%",
-		padding: PADDING,
+		paddingLeft: PADDING,
+		paddingRight: PADDING,
+		paddingTop: PADDING,
+		paddingBottom: PADDING,
 		userSelect: "none",
 		transition: "background .4s ease-in-out",
 		enabled: {

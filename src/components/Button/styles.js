@@ -27,7 +27,10 @@ export default function({ theme, shape }) {
 		base: {
 			backgroundColor: btnBackgroundColor,
 			color: colors.white,
-			border: 0,
+			borderLeft: 0,
+			borderRight: 0,
+			borderTop: 0,
+			borderBottom: 0,
 			outline: 0,
 			userSelect: "none",
 			cursor: "pointer",

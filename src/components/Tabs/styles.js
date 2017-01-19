@@ -4,7 +4,10 @@ export default function() {
 	return {
 		base: {
 			height: "50px",
-			padding: "0 20px",
+			paddingTop: "0px",
+			paddingBottom: "0px",
+			paddingLeft: "20px",
+			paddingRight: "20px",
 			lineHeight: "50px",
 			backgroundColor: "transparent"
 		},
@@ -20,19 +23,28 @@ export default function() {
 		},
 		tabContainer: {
 			backgroundColor: colors.colorMain,
-			padding: "0 46px"
+			paddingTop: "0px",
+			paddingBottom: "0px",
+			paddingLeft: "46px",
+			paddingRight: "46px"
 		},
 		header: {
 			backgroundColor: colors.colorMain,
 			color: colors.white,
 			fontSize: "24px",
-			padding: "20px 0"
+			paddingTop: "20px",
+			paddingBottom: "20px",
+			paddingLeft: "0px",
+			paddingRight: "0px"
 		},
 		tabBar: {
 			backgroundColor: colors.colorMain
 		},
 		tabContent: {
-			margin: "0 46px"
+			marginTop: "0px",
+			marginBotton: "0px",
+			marginLeft: "46px",
+			marginRight: "46px"
 		}
 	}
 }
