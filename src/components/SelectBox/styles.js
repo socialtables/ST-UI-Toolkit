@@ -1,7 +1,8 @@
 import colorLib from "color";
 import { default as colors, stColorPalette } from "../../shared-styles/colors";
 
-const PADDING = "5px 10px";
+const PADDING_HORIZONTAL = "10px";
+const PADDING_VERTICAL = "5px";
 
 export default {
 	content: {
@@ -12,10 +13,10 @@ export default {
 	},
 	/* Main Box Styles */
 	selectBox: {
-		paddingLeft: PADDING,
-		paddingRight: PADDING,
-		paddingTop: PADDING,
-		paddingBottom: PADDING,
+		paddingLeft: PADDING_HORIZONTAL,
+		paddingRight: PADDING_HORIZONTAL,
+		paddingTop: PADDING_VERTICAL,
+		paddingBottom: PADDING_VERTICAL,
 		width: "100%",
 		height: "100%",
 		transition: "border-color .3s",
@@ -92,10 +93,10 @@ export default {
 	option: {
 		minHeight: 35,
 		width: "100%",
-		paddingLeft: PADDING,
-		paddingRight: PADDING,
-		paddingTop: PADDING,
-		paddingBottom: PADDING,
+		paddingLeft: PADDING_HORIZONTAL,
+		paddingRight: PADDING_HORIZONTAL,
+		paddingTop: PADDING_VERTICAL,
+		paddingBottom: PADDING_VERTICAL,
 		userSelect: "none",
 		transition: "background .4s ease-in-out",
 		enabled: {
