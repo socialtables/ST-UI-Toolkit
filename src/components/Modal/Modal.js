@@ -49,7 +49,10 @@ export default class Modal extends Component {
 	}
 
 	componentWillMount() {
-		this._hideShowModalContainer(this.props)
+		this._hideShowModalContainer(this.props);
+
+		// When modal is mounted, users won't be able to scroll the body behind
+		this._cachedBodyElementReference.style.overflow = "hidden";
 	}
 
 	componentWillUpdate(nextProps) {
@@ -77,6 +80,9 @@ export default class Modal extends Component {
 		this._modalTopLayer.removeChild(this._overlayElement);
 		this._modalTopLayer.removeChild(this._modalContentElement);
 		this._cachedBodyElementReference.removeChild(this._modalTopLayer);
+
+		// Unfreeze non-modal content, allowing users to scroll the <body> once again
+		this._cachedBodyElementReference.style.overflow = "";
 
 		// Nullify references to DOM nodes to ensure proper garbage collection
 		this._modalTopLayer = null;
@@ -110,14 +116,6 @@ export default class Modal extends Component {
 			if (this.props.listenForExternalCloseEvent) {
 				this._removeCloseRequestListeners();
 			}
-		}
-
-		const revealedModals = document.getElementsByClassName(ST_UI_REVEALED_MODAL_CLASS) || {};
-		if (revealedModals.length) {
-			this._cachedBodyElementReference.style.overflow = "hidden";
-		}
-		else {
-			this._cachedBodyElementReference.style.overflow = "";
 		}
 	}
 
