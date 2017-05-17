@@ -14,11 +14,17 @@ module.exports = {
     alias: {
       "@socialtables/st-ui-toolkit": path.join(__dirname, '..', 'src'),
       react: path.join(__dirname, 'node_modules', 'react'),
+      "react-dom": path.join(__dirname, 'node_modules', 'react-dom')
     },
     extensions: ['', '.js'],
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify("production")
+      }
+    })
   ],
   module: {
     loaders: [
