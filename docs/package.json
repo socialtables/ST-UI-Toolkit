@@ -16,9 +16,9 @@
     "@socialtables/react-loader": "^3.0.0",
     "highlight.js": "=8.9.1",
     "history": "^1.13.1",
-    "react": "15.0.2",
-    "react-addons-linked-state-mixin": "15.0.2",
-    "react-dom": "15.0.2",
+    "react": ">=15.0.2 <15.5",
+    "react-addons-linked-state-mixin": ">=15.0.2 <15.5",
+    "react-dom": ">=15.0.2 <15.5",
     "react-router": "=v1.0.0",
     "uglify-js": "=2.6.1",
     "underscore": "=1.8.3"
