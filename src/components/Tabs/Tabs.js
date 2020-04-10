@@ -1,11 +1,11 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {
+import React, {
 	Children,
 	Component,
-	PropTypes,
 	createElement,
 	cloneElement
 } from "react";
+import PropTypes from "prop-types";
 import TabTemplate from "./TabTemplate";
 import getStyles from "./styles";
 

@@ -1,5 +1,6 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 
 @ConfiguredRadium
 export default class TabTemplate extends Component {

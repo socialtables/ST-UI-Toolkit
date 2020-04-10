@@ -1,5 +1,6 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {Children, Component, PropTypes} from "react";
+import React, {Children, Component} from "react";
+import PropTypes from "prop-types";
 import RadioButton from "./RadioButton";
 import getStyles from "./styles";
 
