@@ -12,10 +12,11 @@ export default class GrowlerContentWrapper extends Component {
 
 	render() {
 		return (
-			<div style={[
+			<div style={Object.assign(
+				{},
 				styles.base,
 				this.props.style && this.props.style.base
-			]}>
+			)}>
 				{this.props.children}
 			</div>
 		);
