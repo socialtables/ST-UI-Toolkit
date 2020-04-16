@@ -17,3 +17,5 @@ bundle.js
 npm-debug.log
 npm-debug.log*
 Status API Training Shop Blog About Pricing
+
+storybook-static

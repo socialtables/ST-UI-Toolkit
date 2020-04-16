@@ -48,6 +48,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
     "alex": "^1.5.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "eslint": "^2.9.0",
     "eslint-plugin-babel": "^3.2.0",
