@@ -1,4 +1,5 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
+import filterReactDomProps from "filter-react-dom-props";
 import React, {
 	Children,
 	Component,
@@ -109,7 +110,7 @@ export default class Tabs extends Component {
 
 
 		return (
-			<div {...this._childProps}>
+			<div {...filterReactDomProps(this._childProps)}>
 				<div style={tabContainerStyle}>
 					{label}
 					<div style={tabBarStyle}>
