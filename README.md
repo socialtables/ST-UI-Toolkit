@@ -8,6 +8,10 @@ Website & Documentation: http://socialtables.github.io/ST-UI-Toolkit
 
 [![Circle CI](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/master.svg?style=svg&circle-token=f6ba2e6c4db055963a0b4fd2ff2a79a378eb857c)](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/master)
 
+### V2
+
+Version 2.x requires React 16.8 at minimum.  For React 15 please use version 1.x.
+
 ## Getting Started
 
 ST-UI-Toolkit is available as a public [npm](http://npmjs.org) package. Once you have npm you can install ST-UI-Toolkit in your project folder with:
@@ -83,14 +87,11 @@ npm install
 
 `npm run build` will trigger a build into the `lib` folder.
 
-While developing a component, it's convenient to use the docs application. To do so, create a documentation file for your component in `/docs/components/components`, add a path to that file in `/docs/componenents/routes` and link to it from `/docs/components/Base.js`.
-
-
 ### Run the examples or docs application
 
-To run the examples/docs you go into the folder `/docs` and run `npm install` and `npm start`. The app will run with hot reloading on `http://localhost:3000`.
+To run the examples/docs run `npm run storybook`.
 
-As you update the code for the docs or the components, the changes will update in real-time within the browser via webpack-dev-server.
+As you update the storybook for the docs or the components, the changes will update in real-time within the browser.
 
 ### Tests
 
@@ -104,9 +105,7 @@ To run the test continuously you can use `npm run test:watch`.
 
 ## Future Plans
 
-- Continue to add more components to the library
-- Work to flesh out the overall design of the module
-- Add in support for accessibility
+- Deprecate this.
 
 ## Special Thanks
 
