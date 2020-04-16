@@ -6,11 +6,6 @@ import { propertyNameStyle, propertyDescriptionStyle, storyStyle } from "./style
 import "./css/normalize.css";
 import "./css/style.css";
 
-export default {
-	title: "Buttons",
-	component: Button
-};
-
 const basicCodeExample = `<Button onClick={() => console.log("yolo")}>Click Here</Button>`;
 const disabledButtonCodeExample = `<Button disabled>Follow</Button>`;
 const darkButtonCodeExample = `<Button color="dark">Dark Button</Button>`;
@@ -19,6 +14,11 @@ const failButtonCodeExample = `<Button color="fail">Fail</Button>`;
 const customButtonCodeExample = `<Button color="#49C6B7">Custom</Button>`;
 const roundButtonCodeExample = `<Button shape="round" style={{base: { width: 30, height: 30}}}>+</Button>`;
 const radiumStylesCodeExample = `<Button style={{ base: { backgroundColor: "orange", border: "solid black 2px" } }}>Yolo</Button>`;
+
+export default {
+	title: "Buttons",
+	component: Button
+};
 
 export const ButtonStory = () => (
 	<div style={storyStyle}>
