@@ -1,5 +1,7 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {Component, PropTypes} from "react";
+import filterReactDomProps from "filter-react-dom-props";
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 
 import styles from "./styles";
 import VALID_TYPES from "./valid_types";
@@ -35,7 +37,7 @@ export default class TextBox extends Component {
 
 		return (
 			<input
-				{...this._childProps}
+				{...filterReactDomProps(this._childProps)}
 				type={this.props.type}
 				style={[
 					styles.base,

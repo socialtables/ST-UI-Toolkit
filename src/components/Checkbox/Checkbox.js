@@ -1,5 +1,7 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {Component, PropTypes} from "react";
+import filterReactDomProps from "filter-react-dom-props";
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 import styles from "./styles";
 
 const ROLE = "checkbox";
@@ -109,7 +111,7 @@ export default class Checkbox extends Component {
 						</div>
 					</div>
 					<input
-						{...this._childProps}
+						{...filterReactDomProps(this._childProps)}
 						tabIndex="-1"
 						onChange={onChangeHandler}
 						onFocus={() => this._focusOnCustomCheckbox()}

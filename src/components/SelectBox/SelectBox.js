@@ -1,10 +1,10 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {
+import React, {
 	cloneElement,
 	Children,
-	Component,
-	PropTypes
+	Component
 } from "react";
+import PropTypes from "prop-types";
 import lodashFind from "lodash.find";
 
 import styles from "./styles";

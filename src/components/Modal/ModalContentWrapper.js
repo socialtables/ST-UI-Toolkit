@@ -1,5 +1,6 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 import styles from "./styles";
 
 /**

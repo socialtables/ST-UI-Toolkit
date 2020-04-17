@@ -1,4 +1,5 @@
-import { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import styles from "./styles";
 
 /**
@@ -11,10 +12,11 @@ export default class GrowlerContentWrapper extends Component {
 
 	render() {
 		return (
-			<div style={[
+			<div style={Object.assign(
+				{},
 				styles.base,
 				this.props.style && this.props.style.base
-			]}>
+			)}>
 				{this.props.children}
 			</div>
 		);

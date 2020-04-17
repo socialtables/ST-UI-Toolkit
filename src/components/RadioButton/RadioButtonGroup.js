@@ -1,5 +1,7 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import {Children, Component, PropTypes} from "react";
+import filterReactDomProps from "filter-react-dom-props";
+import React, {Children, Component} from "react";
+import PropTypes from "prop-types";
 import RadioButton from "./RadioButton";
 import getStyles from "./styles";
 
@@ -76,7 +78,7 @@ export default class RadioButtonGroup extends Component {
 		}, this);
 
 		return (
-			<div {...this._childProps} style={[radioButtonGroupStyles]}>
+			<div {...filterReactDomProps(this._childProps)} style={[radioButtonGroupStyles]}>
 				{options}
 			</div>
 		)

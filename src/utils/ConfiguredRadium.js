@@ -1,4 +1,4 @@
-const Radium = require("radium")({ userAgent: "all" });
+const Radium = require("radium").default({ userAgent: "all" });
 
 const isRadiumDefinedAsFunction = (typeof Radium === "function");
 
