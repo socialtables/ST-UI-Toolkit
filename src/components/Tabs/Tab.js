@@ -1,5 +1,5 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import filterReactDomProps from "filter-react-dom-props";
+import filterReactProps from "filter-react-props";
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import getStyles from "./styles";
@@ -50,7 +50,7 @@ export default class Tab extends Component {
 
 		return (
 			<Button
-				{...filterReactDomProps(this._childProps)}
+				{...filterReactProps(this._childProps)}
 				style={{
 					base: [baseStyle, tabStyle],
 					active: activeStyle

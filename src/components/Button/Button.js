@@ -1,6 +1,6 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
 import React, {Component} from "react";
-import filterReactDomProps from "filter-react-dom-props";
+import filterReactProps from "filter-react-props";
 import PropTypes from "prop-types";
 
 import getStyles from "./styles";
@@ -44,7 +44,7 @@ export default class Button extends Component {
 
 		return (
 			<button
-				{...filterReactDomProps(this._childProps)}
+				{...filterReactProps(this._childProps)}
 				type={this.props.type}
 				style={[
 					styles.base,
