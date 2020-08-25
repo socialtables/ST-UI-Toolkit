@@ -44,16 +44,16 @@ export default class Modal extends Component {
 	/**
 	 * Update the childProps based on the updated properties passed to the modal.
 	 */
-	componentWillReceiveProps(properties) {
+	UNSAFE_componentWillReceiveProps(properties) {
 		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		this._hideShowModalContainer(this.props)
 	}
 
-	componentWillUpdate(nextProps) {
+	UNSAFE_componentWillUpdate(nextProps) {
 		this._hideShowModalContainer(nextProps);
 	}
 

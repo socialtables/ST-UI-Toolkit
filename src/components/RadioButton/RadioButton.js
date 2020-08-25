@@ -14,7 +14,7 @@ export default class RadioButton extends Component {
 		this._getStyle = this._getStyle.bind(this);
 		this.onSelect = this.props.onSelect.bind(this);
 	}
-	componentWillReceiveProps(props) {
+	UNSAFE_componentWillReceiveProps(props) {
 		const { style, align, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}

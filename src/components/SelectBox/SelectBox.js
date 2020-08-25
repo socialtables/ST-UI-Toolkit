@@ -32,7 +32,7 @@ export default class SelectBox extends Component {
 	/**
 	 * Update the childProps based on the updated properties passed to the text box.
 	 */
-	componentWillReceiveProps(properties) {
+	UNSAFE_componentWillReceiveProps(properties) {
 		const { style, ...childProps } = properties; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}

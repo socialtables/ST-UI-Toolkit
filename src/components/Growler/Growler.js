@@ -33,12 +33,12 @@ export default class Growler extends Component {
 	/**
 	 * Update the childProps based on the updated properties passed to the growler.
 	 */
-	componentWillReceiveProps(props) {
+	UNSAFE_componentWillReceiveProps(props) {
 		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
 
-	componentWillMount() {
+	UNSAFE_componentWillMount() {
 		this._hideShowGrowlerContentElement(this.props);
 
 		if (this.props.timeToClose && this.props.open) {
@@ -46,7 +46,7 @@ export default class Growler extends Component {
 		}
 	}
 
-	componentWillUpdate(nextProps) {
+	UNSAFE_componentWillUpdate(nextProps) {
 		this._hideShowGrowlerContentElement(nextProps);
 
 		if (nextProps.timeToClose && nextProps.open) {
