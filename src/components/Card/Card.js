@@ -1,5 +1,5 @@
 import ConfiguredRadium from "../../utils/ConfiguredRadium";
-import filterReactDomProps from "filter-react-dom-props";
+import filterReactProps from "filter-react-props";
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import styles from "./styles";
@@ -34,7 +34,7 @@ export default class Card extends Component {
 	render() {
 		return (
 			<div
-				{...filterReactDomProps(this._childProps)}
+				{...filterReactProps(this._childProps)}
 				style={[
 					styles.base,
 					this.props.style && this.props.style && this.props.style.base
