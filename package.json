@@ -26,7 +26,6 @@
   },
   "scripts": {
     "build": "BABEL_ENV=production babel --out-dir='lib' --ignore='__tests__/*' src",
-    "postpublish": "./scripts/publish_gh_pages.sh",
     "pretest": "npm run lint",
     "test": "npm run test:js",
     "test:js": "BABEL_ENV=test BABEL_JEST_STAGE=2 ./node_modules/.bin/jest",
