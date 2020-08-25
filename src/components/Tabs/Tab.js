@@ -22,7 +22,7 @@ export default class Tab extends Component {
 	/**
 	 * Update the childProps based on the updated props passed to the tab.
 	 */
-	componentWillReceiveProps(props) {
+	UNSAFE_componentWillReceiveProps(props) {
 		const { style, ...childProps } = props; // eslint-disable-line no-unused-vars
 		this._childProps = childProps;
 	}
