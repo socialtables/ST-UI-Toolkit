@@ -6,11 +6,11 @@ Website & Documentation: http://socialtables.github.io/ST-UI-Toolkit
 
 ## Status
 
-[![Circle CI](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/master.svg?style=svg&circle-token=f6ba2e6c4db055963a0b4fd2ff2a79a378eb857c)](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/master)
+[![Circle CI](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/main.svg?style=svg&circle-token=f6ba2e6c4db055963a0b4fd2ff2a79a378eb857c)](https://circleci.com/gh/socialtables/ST-UI-Toolkit/tree/main)
 
 ### V2
 
-Version 2.x requires React 16.8 at minimum.  For React 15 please use version 1.x.
+Version 2.x requires React 16.8 at minimum. For React 15 please use version 1.x.
 
 ## Getting Started
 
@@ -25,19 +25,19 @@ npm install @socialtables/st-ui-toolkit
 We recommend you get started with [React](https://facebook.github.io/react/) first. Once you have a simple application setup you can import any component and use it right away. No stylesheets, font or any other prerequisite needed.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <div id="react-root"></div>
-  <!--
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="react-root"></div>
+    <!--
     You can use browserify, webpack or similar tools
     to compile & combine your JSX code
   -->
-  <script src="bundle.js"></script>
-</body>
+    <script src="bundle.js"></script>
+  </body>
 </html>
 ```
 
@@ -49,17 +49,19 @@ const Button = STUIToolkit.Button;
 
 class App extends React.Component {
   _clickHandler() {
-    alert("YOLO");
+    alert('YOLO');
   }
 
   render() {
-    return <div>
-      <Button onClick={this._clickHandler} />
-    </div>;
+    return (
+      <div>
+        <Button onClick={this._clickHandler} />
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('react-root'));
+ReactDOM.render(<App />, document.getElementById('react-root'));
 ```
 
 ### Learn more

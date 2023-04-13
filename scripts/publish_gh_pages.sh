@@ -1,4 +1,4 @@
-git checkout master
+git checkout main
 git checkout -b tmp-gh-pages
 rm .gitignore
 
@@ -13,6 +13,6 @@ git commit -am 'add files'
 cd ..
 git subtree split --prefix docs -b gh-pages
 git push -f origin gh-pages:gh-pages
-git checkout master
+git checkout main
 git branch -D tmp-gh-pages
 git branch -D gh-pages
